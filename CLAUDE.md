@@ -35,20 +35,25 @@ deploys to **GitHub Pages**.
   (`/CampMatch-Kids-Society/`) or assets 404 in production. If the repo is
   renamed or moved to a custom domain, update `base`.
 
-## Design system — friendly, photo-led charity style
+## Design system — clean teal + orange charity site
 
-Inspired by kids.org.uk: white base, big rounded shapes, chunky pill buttons,
-real photography, warm accent palette. Passes the `impeccable` detector (no
-cream bg, glassmorphism, per-section eyebrows, 01/02/03 markers, or identical
-card grids).
+Hand-designed (the `impeccable` plugin is installed but intentionally NOT used to
+drive design — the user asked to override it). Light, airy, premium: teal as the
+anchor, orange used sparingly for CTAs/emphasis, real photography in offset
+frames, subtle fade-up motion only.
 
-- **Palette** (CSS vars in `:root`): `--terracotta #c1492b` (brand), `--ember
-  #f4a14e` (accent), `--dusk #2f4858` (secondary), `--ink #2b1a13` (text),
-  `--bg #ffffff` (white), `--tint #fdeee2` (soft section blocks).
-- **Type**: Fredoka (display headings) + Hanken Grotesk (body), loaded via
-  `<link>` in `index.html`. Avoid impeccable's font ban list (Fraunces,
-  Newsreader, Inter, DM Sans, Space Grotesk, Outfit, Plus Jakarta…) when
-  changing fonts.
+- **Brand**: name stays "Camp Match Kids Society". Logo is a teal backpack +
+  orange map-pin (related to campmatch.ca). Logo file pending — see below.
+- **Palette** (CSS vars in `:root`): `--teal #2c8a80` (brand), `--orange #e3793c`
+  (accent/CTA), `--teal-ink #163b37` (headings/dark band), `--ink #1d2b29`
+  (body), `--muted #5b6b68`, `--bg #ffffff`, `--surface #f4f8f7` (tint sections).
+- **Type**: Bricolage Grotesque (display) + Hanken Grotesk (body), loaded via
+  `<link>` in `index.html`.
+- Hero = split layout, photo in an offset frame (`.hero-figure::before/after`).
+  One dark teal "promise" band for contrast. Sticky blurred nav.
+- **Logo TODO**: when `public/logo.png` exists, swap the inline `.brand-mark`
+  SVG (in `src/main.js`, header + footer) for `<img class="brand-logo">` and set
+  it as favicon in `index.html`.
 - **Photography**: real Unsplash photos in `src/main.js` via the `img()` helper.
   Currently used (all verified to resolve): `1606092195730-5d7b9af1efc5`
   (hero parachute), `1638202951770-2240942c7d1c` (mission hammock),
