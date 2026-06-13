@@ -35,22 +35,28 @@ deploys to **GitHub Pages**.
   (`/CampMatch-Kids-Society/`) or assets 404 in production. If the repo is
   renamed or moved to a custom domain, update `base`.
 
-## Design system — clean teal + orange charity site
+## Design system — playful kindergarten style (Kiddoz-inspired)
 
 Hand-designed (the `impeccable` plugin is installed but intentionally NOT used to
-drive design — the user asked to override it). Light, airy, premium: teal as the
-anchor, orange used sparingly for CTAs/emphasis, real photography in offset
-frames, subtle fade-up motion only.
+drive design — the user asked to override it). Warm, joyful, kid-focused: cream
+canvas inside a rounded `.frame`, floating pill nav, hand-drawn doodle stickers,
+a scalloped hero photo, multicolour soft cards.
 
 - **Brand**: name stays "Camp Match Kids Society". Logo is a teal backpack +
   orange map-pin (related to campmatch.ca). Logo file pending — see below.
-- **Palette** (CSS vars in `:root`): `--teal #2c8a80` (brand), `--orange #e3793c`
-  (accent/CTA), `--teal-ink #163b37` (headings/dark band), `--ink #1d2b29`
-  (body), `--muted #5b6b68`, `--bg #ffffff`, `--surface #f4f8f7` (tint sections).
-- **Type**: Bricolage Grotesque (display) + Hanken Grotesk (body), loaded via
-  `<link>` in `index.html`.
-- Hero = split layout, photo in an offset frame (`.hero-figure::before/after`).
-  One dark teal "promise" band for contrast. Sticky blurred nav.
+- **Palette** (CSS vars in `:root`): `--cream #fdf6ec` (canvas), `--frame #e7dcc9`
+  (outer matte), `--ink #2c2747` (text), `--pink #f43f8e` (primary CTA), plus
+  multicolour accents `--green #2fae7a`, `--purple #8b5cf6`, `--blue #38b0e3`,
+  `--yellow #f6b73c`, `--orange #e3793c`.
+- **Type**: Fredoka (display) + Hanken Grotesk (body) + Caveat (script eyebrows/
+  kickers), loaded via `<link>` in `index.html`.
+- **Scalloped photo**: `.hero-photo img` uses a CSS `mask` recipe (linear body +
+  two repeating radial-gradients) for the convex cloud-bump top/bottom edges.
+  Tune bump size via the `--r` variable.
+- **Doodles**: inline SVG stickers in `src/main.js` (`.doodle` elements),
+  absolutely positioned, gentle `bob` float; hidden under 620px.
+- **Placeholder data**: the `.stats` numbers (120+, 40+, 12, 100%) are
+  placeholders — replace with real figures.
 - **Logo TODO**: when `public/logo.png` exists, swap the inline `.brand-mark`
   SVG (in `src/main.js`, header + footer) for `<img class="brand-logo">` and set
   it as favicon in `index.html`.
