@@ -5,6 +5,7 @@ const img = (id, w) => `${PHOTO}${id}?auto=format&fit=crop&w=${w}&q=80`
 
 document.querySelector('#app').innerHTML = `
   <div class="page">
+    <div class="first-screen">
     <header class="masthead">
       <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
         <span class="brand-mark" aria-hidden="true">
@@ -28,7 +29,6 @@ document.querySelector('#app').innerHTML = `
       <a class="btn btn-solid btn-sm" href="#involve">Support now</a>
     </header>
 
-    <main>
       <section class="hero" id="top">
         <div class="hero-text">
           <span class="badge">Camp access for every kid</span>
@@ -64,7 +64,9 @@ document.querySelector('#app').innerHTML = `
           <span class="media-sticker" aria-hidden="true">Summer, sorted ☀️</span>
         </div>
       </section>
+    </div>
 
+    <main>
       <section class="promise">
         <p>
           We work so a family&apos;s first question is not &quot;Can we make camp happen?&quot;

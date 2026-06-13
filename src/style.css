@@ -219,14 +219,20 @@ p {
 
 /* ---------- Hero ---------- */
 
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 .hero {
+  flex: 1 0 auto;
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
   gap: clamp(24px, 4vw, 56px);
   align-items: center;
   padding: clamp(8px, 2vw, 24px) 4px clamp(20px, 3vw, 40px);
-  min-height: calc(100vh - 108px);
-  min-height: calc(100svh - 108px);
 }
 
 .badge {
@@ -626,7 +632,8 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero {
+  .first-screen {
+    display: block;
     min-height: 0;
   }
 
