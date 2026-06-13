@@ -1,13 +1,16 @@
 import './style.css'
 
+const PHOTO = 'https://images.unsplash.com/photo-'
+const img = (id, w) => `${PHOTO}${id}?auto=format&fit=crop&w=${w}&q=80`
+
 document.querySelector('#app').innerHTML = `
   <div class="page">
     <header class="masthead">
       <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="32" height="32">
+          <svg viewBox="0 0 32 32" width="30" height="30">
             <path d="M16 4 4 27h24L16 4Z" fill="currentColor" />
-            <path d="M16 12 9.5 24h13L16 12Z" fill="rgba(255,255,255,0.35)" />
+            <path d="M16 12 9.5 24h13L16 12Z" fill="rgba(255,255,255,0.4)" />
           </svg>
         </span>
         <span class="brand-text">
@@ -22,12 +25,13 @@ document.querySelector('#app').innerHTML = `
         <a href="#involve">Get involved</a>
       </nav>
 
-      <a class="btn btn-ghost btn-sm" href="#involve">Support now</a>
+      <a class="btn btn-solid btn-sm" href="#involve">Support now</a>
     </header>
 
     <main>
       <section class="hero" id="top">
         <div class="hero-text">
+          <span class="badge">Camp access for every kid</span>
           <h1>Helping kids find the kind of summer that changes everything.</h1>
           <p class="lead">
             Camp Match Kids Society connects families, camp partners, and community
@@ -40,48 +44,24 @@ document.querySelector('#app').innerHTML = `
           </div>
 
           <ul class="trust-row" aria-label="Key priorities">
-            <li>Family-first camp matching</li>
-            <li>Needs-based bursary support</li>
-            <li>Inclusive partner camp network</li>
+            <li>Family-first matching</li>
+            <li>Needs-based bursaries</li>
+            <li>Inclusive camp network</li>
           </ul>
         </div>
 
-        <div class="hero-scene" role="img" aria-label="A warm sunset over forested hills with pine trees and a campfire glow.">
-          <svg viewBox="0 0 520 520" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ffd9a0" />
-                <stop offset="0.45" stop-color="#f4a14e" />
-                <stop offset="1" stop-color="#c1492b" />
-              </linearGradient>
-              <radialGradient id="sun" cx="50%" cy="50%" r="50%">
-                <stop offset="0" stop-color="#fff3dc" />
-                <stop offset="0.6" stop-color="#ffd58f" />
-                <stop offset="1" stop-color="#ffd58f" stop-opacity="0" />
-              </radialGradient>
-            </defs>
-
-            <rect width="520" height="520" fill="url(#sky)" />
-            <circle cx="260" cy="240" r="170" fill="url(#sun)" />
-            <circle cx="260" cy="248" r="78" fill="#fff1d4" opacity="0.92" />
-
-            <path d="M0 360 Q130 300 260 338 T520 332 V520 H0 Z" fill="#b8431f" />
-            <path d="M0 408 Q160 356 300 392 T520 388 V520 H0 Z" fill="#8f3018" opacity="0.96" />
-            <path d="M0 458 Q150 432 300 452 T520 446 V520 H0 Z" fill="#5c1e10" />
-
-            <g fill="#3c160b">
-              <path d="M86 430 l16 -54 16 54 Z" />
-              <path d="M96 412 l6 -44 6 44 Z" />
-              <path d="M404 438 l20 -64 20 64 Z" />
-              <path d="M416 416 l8 -52 8 52 Z" />
-            </g>
-
-            <g>
-              <path d="M250 506 l20 -34 M270 506 l-20 -34" stroke="#3c160b" stroke-width="6" stroke-linecap="round" />
-              <path d="M236 506 q24 -40 48 0 Z" fill="#f4a14e" />
-              <path d="M246 506 q14 -26 28 0 Z" fill="#ffd58f" />
-            </g>
-          </svg>
+        <div class="hero-media">
+          <img
+            class="hero-photo"
+            src="${img('1606092195730-5d7b9af1efc5', 1200)}"
+            srcset="${img('1606092195730-5d7b9af1efc5', 800)} 800w, ${img('1606092195730-5d7b9af1efc5', 1400)} 1400w"
+            sizes="(max-width: 940px) 92vw, 46vw"
+            width="1200"
+            height="1100"
+            alt="Children laughing as they lift a bright parachute together on a sunny field"
+            fetchpriority="high"
+          />
+          <span class="media-sticker" aria-hidden="true">Summer, sorted ☀️</span>
         </div>
       </section>
 
@@ -93,38 +73,49 @@ document.querySelector('#app').innerHTML = `
       </section>
 
       <section class="section mission" id="mission">
-        <div class="mission-intro">
+        <div class="mission-media">
+          <img
+            src="${img('1638202951770-2240942c7d1c', 900)}"
+            srcset="${img('1638202951770-2240942c7d1c', 700)} 700w, ${img('1638202951770-2240942c7d1c', 1100)} 1100w"
+            sizes="(max-width: 940px) 92vw, 42vw"
+            width="900"
+            height="900"
+            loading="lazy"
+            alt="Kids relaxing together in a hammock among the trees at camp"
+          />
+        </div>
+
+        <div class="mission-body">
           <h2>We remove the friction that keeps children from camp.</h2>
-          <p>
+          <p class="section-lead">
             Through practical matching, funding support, and strong partner
             relationships, we help families move from uncertainty to a clear plan.
           </p>
-          <a class="btn btn-line" href="#involve">Help a child get there</a>
-        </div>
 
-        <ul class="mission-list">
-          <li>
-            <h3>Match families to the right experience</h3>
-            <p>
-              We help parents compare options, understand camp environments, and find
-              programs that fit their child&apos;s needs and interests.
-            </p>
-          </li>
-          <li>
-            <h3>Open the door through funding support</h3>
-            <p>
-              We connect donors and sponsors to bursaries, reducing cost barriers that
-              stop children from taking part.
-            </p>
-          </li>
-          <li>
-            <h3>Grow a welcoming partner network</h3>
-            <p>
-              We build relationships with camps committed to inclusion, so every child
-              we match arrives somewhere ready to welcome them.
-            </p>
-          </li>
-        </ul>
+          <ul class="mission-list">
+            <li>
+              <h3>Match families to the right experience</h3>
+              <p>
+                We help parents compare options, understand camp environments, and find
+                programs that fit their child&apos;s needs and interests.
+              </p>
+            </li>
+            <li>
+              <h3>Open the door through funding support</h3>
+              <p>
+                We connect donors and sponsors to bursaries, reducing cost barriers that
+                stop children from taking part.
+              </p>
+            </li>
+            <li>
+              <h3>Grow a welcoming partner network</h3>
+              <p>
+                We build relationships with camps committed to inclusion, so every child
+                we match arrives somewhere ready to welcome them.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="section journey" id="journey">
@@ -164,32 +155,44 @@ document.querySelector('#app').innerHTML = `
       <section class="section why">
         <div class="why-copy">
           <h2>Camp is more than time away. It is practice for belonging.</h2>
-          <p>
+          <p class="section-lead">
             In the right camp environment, children build confidence, try new things,
             and experience what it feels like to be included in a caring community.
           </p>
+
+          <div class="why-points">
+            <p>
+              Belonging grows when children feel safe, seen, and encouraged by trusted
+              adults.
+            </p>
+            <p>
+              New routines and outdoor experiences can build resilience that carries into
+              school and everyday life.
+            </p>
+            <p>
+              Community support works best when families, camps, and donors move in the
+              same direction.
+            </p>
+          </div>
         </div>
 
-        <div class="why-points">
-          <p>
-            Belonging grows when children feel safe, seen, and encouraged by trusted
-            adults.
-          </p>
-          <p>
-            New routines and outdoor experiences can build resilience that carries into
-            school and everyday life.
-          </p>
-          <p>
-            Community support works best when families, camps, and donors move in the
-            same direction.
-          </p>
+        <div class="why-media">
+          <img
+            src="${img('1517164850305-99a3e65bb47e', 900)}"
+            srcset="${img('1517164850305-99a3e65bb47e', 700)} 700w, ${img('1517164850305-99a3e65bb47e', 1100)} 1100w"
+            sizes="(max-width: 940px) 92vw, 42vw"
+            width="900"
+            height="1000"
+            loading="lazy"
+            alt="A group of children pulling together in a friendly game of tug-of-war"
+          />
         </div>
       </section>
 
       <section class="section involve" id="involve">
         <div class="involve-head">
           <h2>Back the next child&apos;s camp story.</h2>
-          <p>
+          <p class="section-lead">
             Whether you give, volunteer, or open your camp to more families, you help
             turn access into action.
           </p>

@@ -1,5 +1,6 @@
-/* Camp Match Kids Society — "Sunset Campfire"
-   Type: Young Serif (display) + Hanken Grotesk (text). */
+/* Camp Match Kids Society — friendly, photo-led charity style
+   (kids.org.uk-inspired layout, warm palette).
+   Type: Fredoka (display) + Hanken Grotesk (text). */
 
 :root {
   --terracotta: #c1492b;
@@ -9,17 +10,18 @@
   --dusk: #2f4858;
   --ink: #2b1a13;
   --ink-soft: #5a463c;
-  --bg: #f5f3f0;
-  --surface: #ffffff;
-  --surface-warm: #fbeede;
-  --line: #e4ddd4;
-  --line-strong: #d6cabb;
-  --on-dark: #fbe9d8;
-  --on-dark-soft: #f0cdb0;
+  --bg: #ffffff;
+  --tint: #fdeee2;
+  --line: #ece3d8;
+  --line-strong: #ddd0c1;
+  --on-dark: #fff3ea;
+  --on-dark-soft: #f3d3ba;
 
-  --radius: 18px;
-  --radius-lg: 28px;
-  --shadow: 0 18px 44px rgba(67, 28, 12, 0.14);
+  --radius: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 44px;
+  --shadow: 0 20px 44px rgba(67, 28, 12, 0.14);
+  --shadow-soft: 0 12px 28px rgba(67, 28, 12, 0.1);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   font-family: 'Hanken Grotesk', system-ui, sans-serif;
@@ -57,15 +59,16 @@ p {
 h1,
 h2,
 h3 {
-  font-family: 'Young Serif', Georgia, serif;
-  font-weight: 400;
-  line-height: 1.04;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.08;
   letter-spacing: -0.01em;
   text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.3rem);
+  font-weight: 700;
 }
 
 h2 {
@@ -74,23 +77,27 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
-  letter-spacing: 0;
 }
 
 p {
   text-wrap: pretty;
 }
 
-/* ---------- Layout shell ---------- */
+.section-lead {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Shell ---------- */
 
 .page {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 18px;
+  padding: 18px clamp(14px, 3vw, 28px) 0;
 }
 
 .section {
-  padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 56px);
+  padding: clamp(56px, 8vw, 110px) clamp(4px, 2vw, 28px);
 }
 
 /* ---------- Masthead ---------- */
@@ -100,7 +107,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px clamp(8px, 2vw, 20px);
+  padding: 10px 4px 22px;
 }
 
 .brand {
@@ -115,10 +122,10 @@ p {
   place-items: center;
   width: 46px;
   height: 46px;
-  border-radius: 14px;
+  border-radius: 16px;
   background: linear-gradient(150deg, var(--ember), var(--terracotta));
   color: var(--terracotta-deep);
-  box-shadow: 0 8px 18px rgba(155, 54, 32, 0.32);
+  box-shadow: 0 8px 18px rgba(155, 54, 32, 0.3);
 }
 
 .brand-mark svg {
@@ -132,23 +139,23 @@ p {
 }
 
 .brand-text strong {
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .brand-text span {
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .masthead-nav {
   display: flex;
   gap: 28px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .masthead-nav a {
-  position: relative;
   text-decoration: none;
   color: var(--ink-soft);
   padding: 4px 0;
@@ -160,14 +167,14 @@ p {
   color: var(--terracotta);
 }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons (chunky pills) ---------- */
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.85rem 1.4rem;
+  padding: 0.95rem 1.6rem;
   border: 2px solid transparent;
   border-radius: 999px;
   font: inherit;
@@ -182,14 +189,14 @@ p {
 }
 
 .btn-sm {
-  padding: 0.6rem 1.1rem;
-  font-size: 0.92rem;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.95rem;
 }
 
 .btn-solid {
   background: var(--terracotta);
   color: #fff6ef;
-  box-shadow: 0 12px 24px rgba(155, 54, 32, 0.32);
+  box-shadow: 0 12px 22px rgba(155, 54, 32, 0.28);
 }
 
 .btn-solid:hover,
@@ -207,46 +214,39 @@ p {
 .btn-line:focus-visible {
   border-color: var(--terracotta);
   color: var(--terracotta);
+  transform: translateY(-2px);
 }
 
-.btn-ghost {
-  border-color: var(--line-strong);
-  color: var(--ink);
-}
-
-.btn-ghost:hover,
-.btn-ghost:focus-visible {
-  border-color: var(--terracotta);
-  color: var(--terracotta);
-}
-
-/* ---------- Hero (drenched sunset) ---------- */
+/* ---------- Hero ---------- */
 
 .hero {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(24px, 4vw, 56px);
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: clamp(28px, 5vw, 64px);
   align-items: center;
-  margin-top: 10px;
-  padding: clamp(32px, 4vw, 60px) clamp(24px, 4vw, 60px);
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(120% 120% at 85% 15%, rgba(255, 217, 160, 0.5), transparent 55%),
-    linear-gradient(155deg, var(--terracotta) 0%, var(--terracotta-deep) 100%);
-  color: var(--on-dark);
-  overflow: hidden;
+  padding: clamp(16px, 3vw, 48px) 4px clamp(40px, 6vw, 72px);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--terracotta-deep);
+  font-weight: 700;
+  font-size: 0.92rem;
 }
 
 .hero h1 {
-  color: #fff6ee;
-  max-width: 13ch;
+  max-width: 14ch;
 }
 
 .hero .lead {
-  max-width: 38ch;
-  margin-top: 1.4rem;
-  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
-  color: var(--on-dark);
+  max-width: 42ch;
+  margin-top: 1.3rem;
+  font-size: clamp(1.08rem, 1.4vw, 1.25rem);
+  color: var(--ink-soft);
 }
 
 .hero-actions {
@@ -254,29 +254,6 @@ p {
   flex-wrap: wrap;
   gap: 14px;
   margin: 2rem 0 1.8rem;
-}
-
-.hero .btn-solid {
-  background: #fff6ee;
-  color: var(--terracotta-deep);
-  box-shadow: 0 14px 26px rgba(58, 18, 6, 0.34);
-}
-
-.hero .btn-solid:hover,
-.hero .btn-solid:focus-visible {
-  background: var(--ember-soft);
-}
-
-.hero .btn-line {
-  border-color: rgba(255, 240, 224, 0.55);
-  color: #fff6ee;
-}
-
-.hero .btn-line:hover,
-.hero .btn-line:focus-visible {
-  border-color: #fff6ee;
-  color: #fff6ee;
-  background: rgba(255, 246, 238, 0.1);
 }
 
 .trust-row {
@@ -290,74 +267,92 @@ p {
 
 .trust-row li {
   position: relative;
-  padding-left: 22px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--on-dark);
+  padding-left: 24px;
+  font-weight: 600;
+  color: var(--ink-soft);
 }
 
 .trust-row li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.55em;
-  width: 9px;
-  height: 9px;
+  top: 0.5em;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--ember-soft);
+  background: var(--ember);
 }
 
-.hero-scene {
-  align-self: stretch;
-  min-height: 320px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(50, 16, 6, 0.38);
+.hero-media {
+  position: relative;
 }
 
-.hero-scene svg {
+.hero-photo {
   display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 11 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
 }
 
-/* ---------- Promise band ---------- */
+.media-sticker {
+  position: absolute;
+  left: -8px;
+  bottom: 22px;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: var(--ember);
+  color: var(--ink);
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transform: rotate(-4deg);
+}
+
+/* ---------- Promise band (drenched) ---------- */
 
 .promise {
-  margin: clamp(40px, 6vw, 72px) 0;
-  padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 60px);
+  margin: clamp(8px, 2vw, 24px) 4px;
+  padding: clamp(34px, 5vw, 60px) clamp(26px, 4vw, 60px);
   border-radius: var(--radius-lg);
-  background: var(--ink);
+  background: linear-gradient(150deg, var(--terracotta), var(--terracotta-deep));
   color: var(--on-dark);
 }
 
 .promise p {
-  max-width: 30ch;
-  font-family: 'Young Serif', Georgia, serif;
+  max-width: 28ch;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
   font-size: clamp(1.5rem, 3vw, 2.3rem);
   line-height: 1.18;
   text-wrap: balance;
-  color: #fdeede;
+  color: #fff3ea;
+}
+
+/* ---------- Generic media ---------- */
+
+.mission-media img,
+.why-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
 }
 
 /* ---------- Mission ---------- */
 
 .mission {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(28px, 4vw, 64px);
-  align-items: start;
+  align-items: center;
 }
 
-.mission-intro {
-  position: sticky;
-  top: 28px;
-}
-
-.mission-intro p {
-  margin: 1.1rem 0 1.6rem;
-  color: var(--ink-soft);
-  font-size: 1.08rem;
+.mission-body .section-lead {
+  margin: 1rem 0 1.8rem;
 }
 
 .mission-list {
@@ -370,28 +365,30 @@ p {
 }
 
 .mission-list li {
-  padding: 1.6rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
 }
 
 .mission-list h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .mission-list p {
   color: var(--ink-soft);
-  max-width: 56ch;
+  max-width: 54ch;
 }
 
-/* ---------- Journey (a real sequence — numbers earn their place) ---------- */
+/* ---------- Journey ---------- */
 
 .journey {
-  background: var(--surface-warm);
+  margin: 0 4px;
+  padding: clamp(48px, 6vw, 88px) clamp(26px, 4vw, 60px);
+  background: var(--tint);
   border-radius: var(--radius-lg);
 }
 
 .journey-head {
-  max-width: 44ch;
+  max-width: 46ch;
   margin-bottom: clamp(28px, 4vw, 48px);
 }
 
@@ -408,30 +405,40 @@ p {
   padding: 0;
   margin: 0;
   list-style: none;
-  counter-reset: none;
 }
 
 .journey-steps li {
-  position: relative;
-  padding-top: 1.4rem;
-  border-top: 3px solid var(--terracotta);
+  padding: clamp(22px, 2.4vw, 30px);
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 .step-num {
   display: inline-grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   margin-bottom: 1rem;
-  border-radius: 12px;
+  border-radius: 50%;
   background: var(--terracotta);
   color: #fff6ee;
-  font-family: 'Young Serif', serif;
-  font-size: 1.2rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.journey-steps li:nth-child(2) .step-num {
+  background: var(--dusk);
+}
+
+.journey-steps li:nth-child(3) .step-num {
+  background: var(--ember);
+  color: var(--ink);
 }
 
 .journey-steps h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .journey-steps p {
@@ -442,46 +449,30 @@ p {
 
 .why {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(28px, 4vw, 64px);
   align-items: center;
-}
-
-.why-copy p {
-  margin-top: 1.1rem;
-  color: var(--ink-soft);
-  font-size: 1.08rem;
 }
 
 .why-points {
   display: grid;
-  gap: 14px;
+  gap: 12px;
+  margin-top: 1.6rem;
 }
 
 .why-points p {
-  padding: 1.2rem 1.4rem;
+  padding: 1.1rem 1.4rem;
   border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: var(--tint);
   color: var(--ink);
-}
-
-.why-points p:nth-child(1) {
-  border-left-color: var(--line);
-  background: linear-gradient(120deg, var(--surface-warm), var(--surface));
+  font-weight: 500;
 }
 
 /* ---------- Get involved ---------- */
 
 .involve-head {
-  max-width: 44ch;
+  max-width: 46ch;
   margin-bottom: clamp(28px, 4vw, 48px);
-}
-
-.involve-head p {
-  margin-top: 0.9rem;
-  color: var(--ink-soft);
-  font-size: 1.08rem;
 }
 
 .involve-grid {
@@ -494,7 +485,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding: clamp(24px, 3vw, 34px);
+  padding: clamp(26px, 3vw, 38px);
   border-radius: var(--radius-lg);
   text-decoration: none;
   transition:
@@ -503,10 +494,10 @@ p {
 }
 
 .involve-card strong {
-  font-family: 'Young Serif', serif;
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.12;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1.45rem;
+  line-height: 1.14;
 }
 
 .involve-card p {
@@ -514,20 +505,18 @@ p {
 }
 
 .involve-role {
-  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.92rem;
 }
 
 .involve-go {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   font-weight: 700;
 }
 
 .involve-card:hover,
 .involve-card:focus-visible {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
 
@@ -567,7 +556,7 @@ p {
   justify-content: space-between;
   gap: 16px;
   margin-top: clamp(32px, 5vw, 56px);
-  padding: 28px clamp(20px, 4vw, 40px);
+  padding: 30px 4px;
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
 }
@@ -577,12 +566,14 @@ p {
   align-items: center;
   gap: 10px;
   color: var(--ink);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
 }
 
 .footer-brand .brand-mark-sm {
   width: 34px;
   height: 34px;
-  border-radius: 10px;
+  border-radius: 11px;
 }
 
 .site-footer p {
@@ -594,29 +585,23 @@ p {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-text > *,
+  .hero-media,
   .section > *,
   .promise p {
     animation: rise 0.7s var(--ease) both;
   }
 
-  .mission-list li,
   .journey-steps li,
   .involve-card {
     animation: rise 0.6s var(--ease) both;
   }
 
-  .journey-steps li:nth-child(2) {
-    animation-delay: 0.08s;
-  }
-
-  .journey-steps li:nth-child(3) {
-    animation-delay: 0.16s;
-  }
-
+  .journey-steps li:nth-child(2),
   .involve-card:nth-child(2) {
     animation-delay: 0.08s;
   }
 
+  .journey-steps li:nth-child(3),
   .involve-card:nth-child(3) {
     animation-delay: 0.16s;
   }
@@ -638,13 +623,13 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .mission-intro {
-    position: static;
+  .hero-media,
+  .why-media {
+    order: -1;
   }
 
-  .hero-scene {
-    min-height: 260px;
-    order: -1;
+  .hero-photo {
+    aspect-ratio: 16 / 11;
   }
 
   .journey-steps,
