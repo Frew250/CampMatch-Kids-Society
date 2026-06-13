@@ -43,6 +43,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
 }
 
 a {
@@ -232,7 +233,12 @@ p {
   grid-template-columns: 1.02fr 0.98fr;
   gap: clamp(24px, 4vw, 56px);
   align-items: center;
-  padding: clamp(8px, 2vw, 24px) 4px clamp(20px, 3vw, 40px);
+  margin: 6px 12px 26px 6px;
+  padding: clamp(26px, 3.2vw, 54px) clamp(24px, 3vw, 52px);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(155deg, #fff6ee 0%, #ffe7d3 100%);
+  box-shadow: var(--shadow-soft);
+  transform: rotate(-1.4deg);
 }
 
 .badge {
@@ -659,6 +665,11 @@ p {
 @media (max-width: 620px) {
   .masthead-nav {
     display: none;
+  }
+
+  .hero {
+    transform: none;
+    margin: 6px 2px 18px;
   }
 
   .hero-actions {
