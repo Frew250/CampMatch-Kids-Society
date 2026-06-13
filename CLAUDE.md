@@ -35,19 +35,26 @@ deploys to **GitHub Pages**.
   (`/CampMatch-Kids-Society/`) or assets 404 in production. If the repo is
   renamed or moved to a custom domain, update `base`.
 
-## Design system — "Sunset Campfire"
+## Design system — friendly, photo-led charity style
 
-Redesigned with the `impeccable` plugin to avoid AI-slop tells (no cream bg, no
-glassmorphism, no per-section eyebrows, no 01/02/03 markers, no identical card
-grids).
+Inspired by kids.org.uk: white base, big rounded shapes, chunky pill buttons,
+real photography, warm accent palette. Passes the `impeccable` detector (no
+cream bg, glassmorphism, per-section eyebrows, 01/02/03 markers, or identical
+card grids).
 
 - **Palette** (CSS vars in `:root`): `--terracotta #c1492b` (brand), `--ember
   #f4a14e` (accent), `--dusk #2f4858` (secondary), `--ink #2b1a13` (text),
-  `--bg #f5f3f0` (near-neutral off-white — deliberately NOT warm cream).
-- **Type**: Young Serif (display headings) + Hanken Grotesk (body), loaded via
-  `<link>` in `index.html`. Avoid the impeccable font ban list (Fraunces,
-  Newsreader, Inter, Space Grotesk, etc.) when changing fonts.
-- Hero is a drenched terracotta band with an inline SVG sunset scene.
+  `--bg #ffffff` (white), `--tint #fdeee2` (soft section blocks).
+- **Type**: Fredoka (display headings) + Hanken Grotesk (body), loaded via
+  `<link>` in `index.html`. Avoid impeccable's font ban list (Fraunces,
+  Newsreader, Inter, DM Sans, Space Grotesk, Outfit, Plus Jakarta…) when
+  changing fonts.
+- **Photography**: real Unsplash photos in `src/main.js` via the `img()` helper.
+  Currently used (all verified to resolve): `1606092195730-5d7b9af1efc5`
+  (hero parachute), `1638202951770-2240942c7d1c` (mission hammock),
+  `1517164850305-99a3e65bb47e` (tug-of-war). **Always HTTP-verify a new
+  Unsplash ID before referencing it** — guessed IDs 404 and ship as broken
+  images.
 - Motion only inside `@media (prefers-reduced-motion: no-preference)` — content
   is visible by default (never gate visibility on a reveal class).
 
