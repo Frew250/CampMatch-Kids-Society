@@ -36,12 +36,12 @@ document.querySelector('#app').innerHTML = `
     <section class="hero">
       <div class="hero-bg">
         <img
-          src="${img('1606092195730-5d7b9af1efc5', 1700)}"
-          srcset="${img('1606092195730-5d7b9af1efc5', 1100)} 1100w, ${img('1606092195730-5d7b9af1efc5', 2000)} 2000w"
+          src="${img('1472745942893-4b9f730c7668', 1700)}"
+          srcset="${img('1472745942893-4b9f730c7668', 1100)} 1100w, ${img('1472745942893-4b9f730c7668', 2000)} 2000w"
           sizes="100vw"
           width="1700"
-          height="1100"
-          alt="Children laughing as they lift a bright parachute together on a sunny field"
+          height="1133"
+          alt="A child paddleboarding across a calm lake on a sunny summer day"
           fetchpriority="high"
         />
       </div>
