@@ -224,7 +224,9 @@ p {
   grid-template-columns: 1.02fr 0.98fr;
   gap: clamp(24px, 4vw, 56px);
   align-items: center;
-  padding: clamp(8px, 2vw, 24px) 4px clamp(28px, 4vw, 52px);
+  padding: clamp(8px, 2vw, 24px) 4px clamp(20px, 3vw, 40px);
+  min-height: calc(100vh - 108px);
+  min-height: calc(100svh - 108px);
 }
 
 .badge {
@@ -291,7 +293,7 @@ p {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
-  max-height: 520px;
+  max-height: min(540px, calc(100svh - 180px));
   object-fit: cover;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
@@ -622,6 +624,14 @@ p {
   .mission,
   .why {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 0;
+  }
+
+  .hero-photo {
+    max-height: 60svh;
   }
 
   .hero-media,
