@@ -35,41 +35,33 @@ deploys to **GitHub Pages**.
   (`/CampMatch-Kids-Society/`) or assets 404 in production. If the repo is
   renamed or moved to a custom domain, update `base`.
 
-## Design status — RESET to blank slate (2026-06-13)
+## Design & brand — READ `docs/` FIRST (source of truth)
 
-The design was reset to a minimal holding page (`src/main.js` + `src/style.css`)
-after several directions were tried and rejected. A full rebuild is pending.
-The repo, auto-deploy, and verified assets were intentionally kept.
+Before writing copy or designing anything, read the committed guideline docs. They
+exist so we **stop guessing the tone/style each session**:
 
-**Persistent facts for the rebuild:**
+- **[docs/brand-guidelines.md](docs/brand-guidelines.md)** — who we are, the two
+  entities, audience, voice/register, dignity-first rules, legal guardrails.
+- **[docs/design-system.md](docs/design-system.md)** — palette tokens (teal/orange,
+  light warm base), typography (Hanken Grotesk + Caveat), spacing, components,
+  photography rules, motion, and the **anti-patterns to avoid**.
+- **[docs/content-guide.md](docs/content-guide.md)** — approved one-liners, headline
+  options, the honest "this is real" facts, CTA wording, the footer legal line.
 
-- **Design ownership**: hand-design with own judgment. The `impeccable` plugin is
-  installed but the user asked NOT to let it drive design here.
-- **Brand**: name stays "Camp Match Kids Society". Logo is the full lockup
-  ("CampMatch" wordmark + backpack/pin + "Kids Society"); colours teal `#2c8a80`
-  + orange `#e3793c`. **Logo now saved at `public/logo.png`** and shown on the
-  holding page. For the rebuild: wire it into the header/footer; a dedicated
-  square favicon is still TODO (the full lockup is too detailed at 16px — keep
-  `favicon.svg` for now).
-- **Brand register** (from discovery): warm but grown-up & credible — "a serious
-  org run by people who genuinely like kids", NOT a playful kids' brand. Feeling
-  words: trustworthy, warm, real. Visual sibling of CampMatch.ca (shared logo +
-  teal/orange) but warmer/quieter/more mission-led; copy must keep the entities
-  distinct. See the auto-memory project-brief for full discovery notes.
-- **Directions tried and rejected**: warm/cream "KIDS-style", deep-green GFC-style
-  with animated rings, clean teal+orange, and a playful Kiddoz-style (cream +
-  doodles + scalloped photo). Don't reflexively reach for these next time — ask.
-- **Verified Unsplash photos** (HTTP-checked, reusable): `1606092195730-5d7b9af1efc5`
-  (parachute), `1638202951770-2240942c7d1c` (hammock), `1517164850305-99a3e65bb47e`
-  (tug-of-war). Always HTTP-verify any new Unsplash ID before using it.
-- **Photography**: real Unsplash photos in `src/main.js` via the `img()` helper.
-  Currently used (all verified to resolve): `1606092195730-5d7b9af1efc5`
-  (hero parachute), `1638202951770-2240942c7d1c` (mission hammock),
-  `1517164850305-99a3e65bb47e` (tug-of-war). **Always HTTP-verify a new
-  Unsplash ID before referencing it** — guessed IDs 404 and ship as broken
-  images.
-- Motion only inside `@media (prefers-reduced-motion: no-preference)` — content
-  is visible by default (never gate visibility on a reveal class).
+Quick pointers (full detail in the docs):
+- Hand-design with own judgment; the `impeccable` plugin is installed but the user
+  asked NOT to let it drive design here.
+- Direction is LOCKED: light/warm, photo-led, teal + orange, one orange accent word,
+  joyful camp photography, honest facts (no invented stats), "Keep me posted" capture
+  (no donate ask yet). Don't re-litigate the style.
+- Rejected directions (don't reach for these): cream "KIDS-style", dark GFC-style with
+  animated rings, playful Kiddoz cartoon (doodles + scalloped photo).
+- Logo at `public/logo.png` (full lockup). Square favicon still TODO; keep `favicon.svg`.
+- Verified Unsplash photos (HTTP-checked): `1606092195730-5d7b9af1efc5` (parachute),
+  `1638202951770-2240942c7d1c` (hammock), `1517164850305-99a3e65bb47e` (tug-of-war).
+  Always HTTP-verify a new ID before use — guessed IDs 404.
+- Motion only inside `@media (prefers-reduced-motion: no-preference)`; content visible
+  by default (never gate visibility on a reveal class).
 
 ## Conventions / notes
 
