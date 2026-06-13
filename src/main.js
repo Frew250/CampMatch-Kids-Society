@@ -6,19 +6,22 @@ const img = (id, w) => `${PHOTO}${id}?auto=format&fit=crop&w=${w}&q=80`
 const mail = (subject) =>
   `mailto:hello@campmatchkidssociety.org?subject=${encodeURIComponent(subject)}`
 
-const svg = (paths) =>
-  `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`
+const svg = (paths, extra = '') =>
+  `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${extra}>${paths}</svg>`
 
-const ICON_CHECK = svg('<path d="M20 6 9 17l-5-5"/>')
 const ICON_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 const ICON_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 const ICON_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
+const ICON_PEOPLE = svg('<path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM22 21v-2a4 4 0 0 0-3-3.87M16 4.13A4 4 0 0 1 16 11.87"/>')
+const ICON_LEAF = svg('<path d="M11 20A7 7 0 0 1 4 13c0-6 8-9 16-9 0 8-3 16-9 16ZM4 21c2-6 6-9 11-10"/>')
+const ICON_SHIELD = svg('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10ZM9 12l2 2 4-4"/>', 'width="16" height="16"')
+const ICON_SPARK = svg('<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/>', 'width="16" height="16"')
 
 document.querySelector('#app').innerHTML = `
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
-        <img src="${base}logo.png" alt="Camp Match Kids Society" width="170" height="64" />
+        <img class="brand-logo" src="${base}logo.png" alt="Camp Match Kids Society" width="170" height="64" />
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#mission">What we do</a>
@@ -31,52 +34,40 @@ document.querySelector('#app').innerHTML = `
 
   <main id="top">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="script">Camp should be for every kid</p>
-        <h1>Helping more kids get a summer that <span class="accent">sticks with them.</span></h1>
-        <p class="lead">
-          Camp Match Kids Society helps kids whose families can't swing the cost get to
-          summer camp — we cover fees, and we work with camps to open up free and
-          discounted spots.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="${mail('Keep me posted')}">Keep me posted</a>
-          <a class="btn btn-secondary" href="#how">See how it works</a>
-        </div>
-        <p class="hero-note">
-          A BC nonprofit in the making — the charitable sibling of, and a separate
-          organisation from, <a href="https://campmatch.ca" target="_blank" rel="noopener">CampMatch.ca</a>.
-        </p>
-      </div>
-
-      <figure class="hero-figure">
+      <div class="hero-bg">
         <img
-          src="${img('1606092195730-5d7b9af1efc5', 1100)}"
-          srcset="${img('1606092195730-5d7b9af1efc5', 800)} 800w, ${img('1606092195730-5d7b9af1efc5', 1300)} 1300w"
-          sizes="(max-width: 900px) 92vw, 46vw"
-          width="1100"
-          height="1180"
+          src="${img('1606092195730-5d7b9af1efc5', 1700)}"
+          srcset="${img('1606092195730-5d7b9af1efc5', 1100)} 1100w, ${img('1606092195730-5d7b9af1efc5', 2000)} 2000w"
+          sizes="100vw"
+          width="1700"
+          height="1100"
           alt="Children laughing as they lift a bright parachute together on a sunny field"
           fetchpriority="high"
         />
-      </figure>
-    </section>
+      </div>
 
-    <section class="proof" aria-label="Where we are">
-      <ul class="proof-list">
-        <li>
-          <span class="proof-ic" aria-hidden="true">${ICON_CHECK}</span>
-          <span><strong>A board in place</strong> — ready to incorporate as a BC nonprofit.</span>
-        </li>
-        <li>
-          <span class="proof-ic" aria-hidden="true">${ICON_CHECK}</span>
-          <span><strong>Camps already offering spots</strong> for kids who need them.</span>
-        </li>
-        <li>
-          <span class="proof-ic" aria-hidden="true">${ICON_CHECK}</span>
-          <span><strong>Supporters already stepping up</strong> to help make it happen.</span>
-        </li>
-      </ul>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-kicker"><span class="hk-line"></span>${ICON_SPARK} Camp for every kid</p>
+          <h1>A summer at camp.<br /><span class="accent">For every kid.</span></h1>
+          <p class="hero-lead">
+            We help kids whose families can't swing the cost get to summer camp.
+            <span class="lead-accent">Cost shouldn't decide who gets a summer.</span>
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="${mail('Keep me posted')}">Keep me posted</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <p class="hero-trust">${ICON_SHIELD} A BC nonprofit in the making — separate from the for-profit CampMatch.ca.</p>
+        </div>
+
+        <ul class="hero-bar" aria-label="Where we are">
+          <li><span class="hb-ic">${ICON_PEOPLE}</span><div><strong>A board in place</strong><span>ready to incorporate</span></div></li>
+          <li><span class="hb-ic">${ICON_TENT}</span><div><strong>Camps on board</strong><span>already offering spots</span></div></li>
+          <li><span class="hb-ic">${ICON_HEART}</span><div><strong>Supporters</strong><span>already stepping up</span></div></li>
+          <li><span class="hb-ic">${ICON_LEAF}</span><div><strong>BC nonprofit</strong><span>incorporating now</span></div></li>
+        </ul>
+      </div>
     </section>
 
     <section class="section mission" id="mission">

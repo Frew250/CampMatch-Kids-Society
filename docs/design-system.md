@@ -11,14 +11,18 @@ implements these tokens via `:root` variables — this doc is the *why*, the CSS
 
 ## The agreed direction (locked)
 
-Light, warm, clean, **photo-led**. A confident headline with **one orange accent word**.
-A large, joyful **kids-at-camp** photo as the centrepiece. Teal + orange. A small
-**script** touch for warmth. An honest **"this is real" strip** (facts, not invented
-stats). Generous whitespace, zero clutter.
+**Bold, dark, full-bleed photo HERO + clean light body.** Modelled on the charity heroes
+the client repeatedly chose (Hope & Hands / Hope & Futures): a dark teal hero with a
+full-bleed joyful-camp photo, a confident UPPERCASE headline whose second line is in
+**orange**, dual CTAs, and a translucent **facts bar**. Below the hero the page is
+**light, warm, clean** (teal + orange, generous whitespace). A small **script** accent
+(Caveat) carries warmth.
 
-This came from dissecting references the client liked (bold, photo-led charity heroes
-with real joyful kids) and disliked (see anti-patterns). **Build to this; don't
-re-litigate the style each session.**
+Honest adaptations vs the references (do NOT copy these parts): capture ("Keep me posted")
+not DONATE; honest present-tense facts not invented stats; NO borrowed trust logos
+(GuideStar / charity: water); joyful camp photography, never poverty/savior imagery.
+
+**Build to this; don't re-litigate the style each session.**
 
 ## Colour
 
@@ -29,6 +33,7 @@ Teal is the anchor; orange is the accent, used **sparingly** (CTAs + one accent 
 | `--teal` | `#2c8a80` | brand anchor, headings accent, icons |
 | `--teal-deep` | `#1f6b63` | hovers, deep teal text |
 | `--teal-ink` | `#14322e` | headings / darkest text |
+| `--hero-dark` | `#103029` | dark teal hero background |
 | `--orange` | `#e3793c` | primary CTA, the one accent word |
 | `--orange-deep` | `#c8632b` | CTA hover |
 | `--ink` | `#1c2b29` | body text |
@@ -37,8 +42,9 @@ Teal is the anchor; orange is the accent, used **sparingly** (CTAs + one accent 
 | `--surface` | `#eef5f3` | soft teal-tint alt sections / strips |
 | `--line` | `#e6ece9` | hairline borders |
 
-Colours come straight from the logo (teal + orange). Light warm base — **not** a dark
-hero (client chose light), and **not** heavy cream/cartoon.
+Colours come straight from the logo (teal + orange). The HERO is dark teal
+(`--hero-dark`) with a full-bleed photo + gradient overlay; the body below is a light
+warm base. Not heavy cream/cartoon.
 
 ## Typography
 
@@ -88,5 +94,6 @@ hero (client chose light), and **not** heavy cream/cartoon.
 - ❌ Generic imagery (resort/landscape/handshake) instead of real kid faces.
 - ❌ Walls of body text; weak hierarchy; dated/DIY execution.
 - ❌ Cartoon/kindergarten styling (doodles, scalloped clouds) — wrong register.
-- ❌ Shouty ALL-CAPS disaster-appeal headlines; savior/poverty framing.
+- ❌ Savior/poverty framing and fake/borrowed trust badges. (A confident UPPERCASE hero
+  headline IS used — but with warm, specific, honest words, never disaster-appeal copy.)
 - ❌ Invented stats or fake trust badges.
