@@ -2,28 +2,32 @@ import './style.css'
 
 document.querySelector('#app').innerHTML = `
   <div class="page">
-    <header class="site-header reveal">
+    <header class="masthead">
       <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
-        <span class="brand-mark">CM</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32">
+            <path d="M16 4 4 27h24L16 4Z" fill="currentColor" />
+            <path d="M16 12 9.5 24h13L16 12Z" fill="rgba(255,255,255,0.35)" />
+          </svg>
+        </span>
         <span class="brand-text">
           <strong>Camp Match</strong>
           <span>Kids Society</span>
         </span>
       </a>
 
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="masthead-nav" aria-label="Primary">
         <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#join">Get involved</a>
+        <a href="#journey">How it works</a>
+        <a href="#involve">Get involved</a>
       </nav>
 
-      <a class="button button-small button-ghost" href="#join">Support now</a>
+      <a class="btn btn-ghost btn-sm" href="#involve">Support now</a>
     </header>
 
     <main>
-      <section class="section hero" id="top">
-        <div class="hero-copy reveal delay-1">
-          <p class="eyebrow">Camp access for every child</p>
+      <section class="hero" id="top">
+        <div class="hero-text">
           <h1>Helping kids find the kind of summer that changes everything.</h1>
           <p class="lead">
             Camp Match Kids Society connects families, camp partners, and community
@@ -31,141 +35,134 @@ document.querySelector('#app').innerHTML = `
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#join">Get involved</a>
-            <a class="button button-secondary" href="#mission">See how we help</a>
+            <a class="btn btn-solid" href="#involve">Get involved</a>
+            <a class="btn btn-line" href="#mission">See how we help</a>
           </div>
 
-          <ul class="hero-list" aria-label="Key priorities">
+          <ul class="trust-row" aria-label="Key priorities">
             <li>Family-first camp matching</li>
             <li>Needs-based bursary support</li>
             <li>Inclusive partner camp network</li>
           </ul>
         </div>
 
-        <div class="hero-panel reveal delay-2" aria-hidden="true">
-          <div class="hero-glow hero-glow-one"></div>
-          <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-scene" role="img" aria-label="A warm sunset over forested hills with pine trees and a campfire glow.">
+          <svg viewBox="0 0 520 520" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffd9a0" />
+                <stop offset="0.45" stop-color="#f4a14e" />
+                <stop offset="1" stop-color="#c1492b" />
+              </linearGradient>
+              <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#fff3dc" />
+                <stop offset="0.6" stop-color="#ffd58f" />
+                <stop offset="1" stop-color="#ffd58f" stop-opacity="0" />
+              </radialGradient>
+            </defs>
 
-          <article class="feature-panel card-main">
-            <span class="chip">What we make possible</span>
-            <h2>One well-matched camp can shift a whole year.</h2>
-            <p>
-              When a child lands in the right place, confidence grows fast. New
-              friendships, trusted adults, and joyful routines can ripple far beyond
-              summer.
-            </p>
-          </article>
+            <rect width="520" height="520" fill="url(#sky)" />
+            <circle cx="260" cy="240" r="170" fill="url(#sun)" />
+            <circle cx="260" cy="248" r="78" fill="#fff1d4" opacity="0.92" />
 
-          <article class="feature-panel card-note">
-            <span class="mini-label">Built around families</span>
-            <strong>Less searching. More clarity.</strong>
-            <p>
-              We help families navigate options, support needs, and next steps with a
-              practical, welcoming process.
-            </p>
-          </article>
+            <path d="M0 360 Q130 300 260 338 T520 332 V520 H0 Z" fill="#b8431f" />
+            <path d="M0 408 Q160 356 300 392 T520 388 V520 H0 Z" fill="#8f3018" opacity="0.96" />
+            <path d="M0 458 Q150 432 300 452 T520 446 V520 H0 Z" fill="#5c1e10" />
 
-          <article class="feature-panel card-stats">
-            <span class="mini-label">Our focus</span>
-            <strong>Access, belonging, and strong camp partners.</strong>
-            <p>
-              The goal is simple: remove cost and coordination barriers so more kids
-              can say yes to camp.
-            </p>
-          </article>
+            <g fill="#3c160b">
+              <path d="M86 430 l16 -54 16 54 Z" />
+              <path d="M96 412 l6 -44 6 44 Z" />
+              <path d="M404 438 l20 -64 20 64 Z" />
+              <path d="M416 416 l8 -52 8 52 Z" />
+            </g>
+
+            <g>
+              <path d="M250 506 l20 -34 M270 506 l-20 -34" stroke="#3c160b" stroke-width="6" stroke-linecap="round" />
+              <path d="M236 506 q24 -40 48 0 Z" fill="#f4a14e" />
+              <path d="M246 506 q14 -26 28 0 Z" fill="#ffd58f" />
+            </g>
+          </svg>
         </div>
       </section>
 
-      <section class="promise-band reveal delay-2">
+      <section class="promise">
         <p>
           We work so a family&apos;s first question is not &quot;Can we make camp happen?&quot;
           but &quot;Which camp is the right fit for our child?&quot;
         </p>
       </section>
 
-      <section class="section split-section" id="mission">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Our mission</p>
+      <section class="section mission" id="mission">
+        <div class="mission-intro">
           <h2>We remove the friction that keeps children from camp.</h2>
           <p>
             Through practical matching, funding support, and strong partner
             relationships, we help families move from uncertainty to a clear plan.
           </p>
+          <a class="btn btn-line" href="#involve">Help a child get there</a>
         </div>
 
-        <div class="mission-grid">
-          <article class="info-card reveal delay-1">
-            <span class="card-index">01</span>
+        <ul class="mission-list">
+          <li>
             <h3>Match families to the right experience</h3>
             <p>
               We help parents compare options, understand camp environments, and find
               programs that fit their child&apos;s needs and interests.
             </p>
-          </article>
-
-          <article class="info-card reveal delay-2">
-            <span class="card-index">02</span>
+          </li>
+          <li>
             <h3>Open the door through funding support</h3>
             <p>
               We connect donors and sponsors to bursaries, reducing cost barriers that
-              stop children from participating.
+              stop children from taking part.
             </p>
-          </article>
-
-          <article class="info-card reveal delay-3">
-            <span class="card-index">03</span>
-            <h3>Strengthen a welcoming camp network</h3>
+          </li>
+          <li>
+            <h3>Grow a welcoming partner network</h3>
             <p>
-              We work with camp partners who care about access, inclusion, and a safe
-              environment where children can thrive.
+              We build relationships with camps committed to inclusion, so every child
+              we match arrives somewhere ready to welcome them.
             </p>
-          </article>
-        </div>
+          </li>
+        </ul>
       </section>
 
-      <section class="section pathway" id="programs">
-        <div class="section-intro narrow reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>A simple pathway from interest to camp day.</h2>
-          <p>
-            The process stays human and practical at every step so families know what
-            comes next and supporters can see where they make a difference.
-          </p>
+      <section class="section journey" id="journey">
+        <div class="journey-head">
+          <h2>How a match comes together</h2>
+          <p>Three steps, built around the family from the very first conversation.</p>
         </div>
 
-        <div class="pathway-steps">
-          <article class="step-card reveal delay-1">
-            <span class="step-index">Step 1</span>
+        <ol class="journey-steps">
+          <li>
+            <span class="step-num">1</span>
             <h3>Listen first</h3>
             <p>
               Start with a child&apos;s interests, support needs, schedule, and what would
               help the family feel confident saying yes.
             </p>
-          </article>
-
-          <article class="step-card reveal delay-2">
-            <span class="step-index">Step 2</span>
+          </li>
+          <li>
+            <span class="step-num">2</span>
             <h3>Match the opportunity</h3>
             <p>
               Compare programs, align practical details, and identify where financial
               assistance or partner coordination is needed.
             </p>
-          </article>
-
-          <article class="step-card reveal delay-3">
-            <span class="step-index">Step 3</span>
+          </li>
+          <li>
+            <span class="step-num">3</span>
             <h3>Champion the experience</h3>
             <p>
               Bring together donors, volunteers, and camps to help the child arrive
               supported, prepared, and welcomed.
             </p>
-          </article>
-        </div>
+          </li>
+        </ol>
       </section>
 
-      <section class="section spotlight">
-        <div class="spotlight-copy reveal">
-          <p class="eyebrow">Why camp matters</p>
+      <section class="section why">
+        <div class="why-copy">
           <h2>Camp is more than time away. It is practice for belonging.</h2>
           <p>
             In the right camp environment, children build confidence, try new things,
@@ -173,34 +170,24 @@ document.querySelector('#app').innerHTML = `
           </p>
         </div>
 
-        <div class="values-panel reveal delay-1">
-          <div class="value-row">
-            <span class="value-dot"></span>
-            <p>
-              Belonging grows when children feel safe, seen, and encouraged by trusted
-              adults.
-            </p>
-          </div>
-          <div class="value-row">
-            <span class="value-dot"></span>
-            <p>
-              New routines and outdoor experiences can build resilience that carries
-              into school and everyday life.
-            </p>
-          </div>
-          <div class="value-row">
-            <span class="value-dot"></span>
-            <p>
-              Community support works best when families, camps, and donors move in the
-              same direction.
-            </p>
-          </div>
+        <div class="why-points">
+          <p>
+            Belonging grows when children feel safe, seen, and encouraged by trusted
+            adults.
+          </p>
+          <p>
+            New routines and outdoor experiences can build resilience that carries into
+            school and everyday life.
+          </p>
+          <p>
+            Community support works best when families, camps, and donors move in the
+            same direction.
+          </p>
         </div>
       </section>
 
-      <section class="section action-section" id="join">
-        <div class="action-panel reveal">
-          <p class="eyebrow">Get involved</p>
+      <section class="section involve" id="involve">
+        <div class="involve-head">
           <h2>Back the next child&apos;s camp story.</h2>
           <p>
             Whether you give, volunteer, or open your camp to more families, you help
@@ -208,48 +195,58 @@ document.querySelector('#app').innerHTML = `
           </p>
         </div>
 
-        <div class="action-grid">
+        <div class="involve-grid">
           <a
-            class="action-card reveal delay-1"
+            class="involve-card card-give"
             href="mailto:hello@campmatchkidssociety.org?subject=Support%20Camp%20Match%20Kids%20Society"
           >
-            <span>Give</span>
+            <span class="involve-role">Give</span>
             <strong>Help fund camp spaces</strong>
             <p>
               Direct support can reduce cost barriers and help more children reach a
               camp that fits.
             </p>
+            <span class="involve-go" aria-hidden="true">Start giving &rarr;</span>
           </a>
 
           <a
-            class="action-card reveal delay-2"
+            class="involve-card card-volunteer"
             href="mailto:hello@campmatchkidssociety.org?subject=Volunteer%20With%20Camp%20Match%20Kids%20Society"
           >
-            <span>Volunteer</span>
+            <span class="involve-role">Volunteer</span>
             <strong>Offer time and practical help</strong>
             <p>
               Bring coordination, mentorship, or community outreach skills to the
               families and programs that need them.
             </p>
+            <span class="involve-go" aria-hidden="true">Lend a hand &rarr;</span>
           </a>
 
           <a
-            class="action-card reveal delay-3"
+            class="involve-card card-partner"
             href="mailto:hello@campmatchkidssociety.org?subject=Partner%20With%20Camp%20Match%20Kids%20Society"
           >
-            <span>Partner</span>
+            <span class="involve-role">Partner</span>
             <strong>Grow an inclusive camp network</strong>
             <p>
               Connect as a camp, sponsor, or community organization ready to widen the
               path to participation.
             </p>
+            <span class="involve-go" aria-hidden="true">Partner with us &rarr;</span>
           </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Camp Match Kids Society</p>
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-sm" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <path d="M16 4 4 27h24L16 4Z" fill="currentColor" />
+          </svg>
+        </span>
+        <strong>Camp Match Kids Society</strong>
+      </div>
       <p>
         Replace the placeholder email links with your live contact and donation pages
         when you are ready.
