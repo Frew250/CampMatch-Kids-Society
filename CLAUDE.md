@@ -45,10 +45,17 @@ The repo, auto-deploy, and verified assets were intentionally kept.
 
 - **Design ownership**: hand-design with own judgment. The `impeccable` plugin is
   installed but the user asked NOT to let it drive design here.
-- **Brand**: name stays "Camp Match Kids Society". Logo = teal backpack + orange
-  map-pin (related to campmatch.ca); logo colours are teal `#2c8a80` + orange
-  `#e3793c`. **Logo file pending**: when `public/logo.png` exists, wire it into
-  the header/footer brand mark and the favicon in `index.html`.
+- **Brand**: name stays "Camp Match Kids Society". Logo is the full lockup
+  ("CampMatch" wordmark + backpack/pin + "Kids Society"); colours teal `#2c8a80`
+  + orange `#e3793c`. **Logo now saved at `public/logo.png`** and shown on the
+  holding page. For the rebuild: wire it into the header/footer; a dedicated
+  square favicon is still TODO (the full lockup is too detailed at 16px — keep
+  `favicon.svg` for now).
+- **Brand register** (from discovery): warm but grown-up & credible — "a serious
+  org run by people who genuinely like kids", NOT a playful kids' brand. Feeling
+  words: trustworthy, warm, real. Visual sibling of CampMatch.ca (shared logo +
+  teal/orange) but warmer/quieter/more mission-led; copy must keep the entities
+  distinct. See the auto-memory project-brief for full discovery notes.
 - **Directions tried and rejected**: warm/cream "KIDS-style", deep-green GFC-style
   with animated rings, clean teal+orange, and a playful Kiddoz-style (cream +
   doodles + scalloped photo). Don't reflexively reach for these next time — ask.
