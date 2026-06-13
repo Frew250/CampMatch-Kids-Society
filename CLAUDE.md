@@ -35,31 +35,26 @@ deploys to **GitHub Pages**.
   (`/CampMatch-Kids-Society/`) or assets 404 in production. If the repo is
   renamed or moved to a custom domain, update `base`.
 
-## Design system — playful kindergarten style (Kiddoz-inspired)
+## Design status — RESET to blank slate (2026-06-13)
 
-Hand-designed (the `impeccable` plugin is installed but intentionally NOT used to
-drive design — the user asked to override it). Warm, joyful, kid-focused: cream
-canvas inside a rounded `.frame`, floating pill nav, hand-drawn doodle stickers,
-a scalloped hero photo, multicolour soft cards.
+The design was reset to a minimal holding page (`src/main.js` + `src/style.css`)
+after several directions were tried and rejected. A full rebuild is pending.
+The repo, auto-deploy, and verified assets were intentionally kept.
 
-- **Brand**: name stays "Camp Match Kids Society". Logo is a teal backpack +
-  orange map-pin (related to campmatch.ca). Logo file pending — see below.
-- **Palette** (CSS vars in `:root`): `--cream #fdf6ec` (canvas), `--frame #e7dcc9`
-  (outer matte), `--ink #2c2747` (text), `--pink #f43f8e` (primary CTA), plus
-  multicolour accents `--green #2fae7a`, `--purple #8b5cf6`, `--blue #38b0e3`,
-  `--yellow #f6b73c`, `--orange #e3793c`.
-- **Type**: Fredoka (display) + Hanken Grotesk (body) + Caveat (script eyebrows/
-  kickers), loaded via `<link>` in `index.html`.
-- **Scalloped photo**: `.hero-photo img` uses a CSS `mask` recipe (linear body +
-  two repeating radial-gradients) for the convex cloud-bump top/bottom edges.
-  Tune bump size via the `--r` variable.
-- **Doodles**: inline SVG stickers in `src/main.js` (`.doodle` elements),
-  absolutely positioned, gentle `bob` float; hidden under 620px.
-- **Placeholder data**: the `.stats` numbers (120+, 40+, 12, 100%) are
-  placeholders — replace with real figures.
-- **Logo TODO**: when `public/logo.png` exists, swap the inline `.brand-mark`
-  SVG (in `src/main.js`, header + footer) for `<img class="brand-logo">` and set
-  it as favicon in `index.html`.
+**Persistent facts for the rebuild:**
+
+- **Design ownership**: hand-design with own judgment. The `impeccable` plugin is
+  installed but the user asked NOT to let it drive design here.
+- **Brand**: name stays "Camp Match Kids Society". Logo = teal backpack + orange
+  map-pin (related to campmatch.ca); logo colours are teal `#2c8a80` + orange
+  `#e3793c`. **Logo file pending**: when `public/logo.png` exists, wire it into
+  the header/footer brand mark and the favicon in `index.html`.
+- **Directions tried and rejected**: warm/cream "KIDS-style", deep-green GFC-style
+  with animated rings, clean teal+orange, and a playful Kiddoz-style (cream +
+  doodles + scalloped photo). Don't reflexively reach for these next time — ask.
+- **Verified Unsplash photos** (HTTP-checked, reusable): `1606092195730-5d7b9af1efc5`
+  (parachute), `1638202951770-2240942c7d1c` (hammock), `1517164850305-99a3e65bb47e`
+  (tug-of-war). Always HTTP-verify any new Unsplash ID before using it.
 - **Photography**: real Unsplash photos in `src/main.js` via the `img()` helper.
   Currently used (all verified to resolve): `1606092195730-5d7b9af1efc5`
   (hero parachute), `1638202951770-2240942c7d1c` (mission hammock),
