@@ -33,7 +33,7 @@ document.querySelector('#app').innerHTML = `
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-copy">
-          <h1>Helping kids find the kind of summer that <span class="hl">changes everything.</span></h1>
+          <h1>Helping kids find the kind of summer that <span class="hl-underline">changes everything.</span></h1>
           <p class="lead">
             Camp Match Kids Society connects families, camp partners, and community
             supporters so more children can experience safety, belonging, and joy.
@@ -41,23 +41,28 @@ document.querySelector('#app').innerHTML = `
 
           <div class="hero-cta">
             <a class="btn btn-primary" href="#involve">Get involved</a>
-            <a class="btn btn-secondary" href="#mission">See how we help</a>
+            <a class="btn btn-ghost" href="#mission">See how we help</a>
           </div>
 
-          <ul class="hero-points" aria-label="What we do">
-            <li>Family-first matching</li>
-            <li>Needs-based bursaries</li>
-            <li>Inclusive camp network</li>
-          </ul>
+          <a class="scroll-cue" href="#mission" aria-label="Scroll to see how we help">
+            <svg viewBox="0 0 24 38" width="22" height="34" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="21" height="35" rx="10.5" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6" />
+              <circle class="scroll-dot" cx="12" cy="11" r="3" fill="currentColor" />
+            </svg>
+          </a>
         </div>
 
         <div class="hero-figure">
+          <span class="deco deco-ring" aria-hidden="true"></span>
+          <span class="deco deco-blob" aria-hidden="true"></span>
+          <span class="deco deco-dot" aria-hidden="true"></span>
           <img
+            class="hero-photo"
             src="${img('1606092195730-5d7b9af1efc5', 1100)}"
             srcset="${img('1606092195730-5d7b9af1efc5', 800)} 800w, ${img('1606092195730-5d7b9af1efc5', 1300)} 1300w"
-            sizes="(max-width: 900px) 92vw, 46vw"
+            sizes="(max-width: 900px) 86vw, 44vw"
             width="1100"
-            height="1280"
+            height="1100"
             alt="Children laughing as they lift a bright parachute together on a sunny field"
             fetchpriority="high"
           />
