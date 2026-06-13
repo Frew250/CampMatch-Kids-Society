@@ -4,43 +4,42 @@ const PHOTO = 'https://images.unsplash.com/photo-'
 const img = (id, w) => `${PHOTO}${id}?auto=format&fit=crop&w=${w}&q=80`
 
 document.querySelector('#app').innerHTML = `
-  <div class="page">
-    <div class="first-screen">
-    <header class="masthead">
-      <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30">
-            <path d="M16 4 4 27h24L16 4Z" fill="currentColor" />
-            <path d="M16 12 9.5 24h13L16 12Z" fill="rgba(255,255,255,0.4)" />
-          </svg>
-        </span>
-        <span class="brand-text">
-          <strong>Camp Match</strong>
-          <span>Kids Society</span>
-        </span>
-      </a>
+  <div class="first-screen">
+    <div class="shell">
+      <header class="masthead">
+        <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="30" height="30">
+              <path d="M16 4 4 27h24L16 4Z" fill="currentColor" />
+              <path d="M16 12 9.5 24h13L16 12Z" fill="rgba(16,63,57,0.45)" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>Camp Match</strong>
+            <span>Kids Society</span>
+          </span>
+        </a>
 
-      <nav class="masthead-nav" aria-label="Primary">
-        <a href="#mission">Mission</a>
-        <a href="#journey">How it works</a>
-        <a href="#involve">Get involved</a>
-      </nav>
+        <nav class="masthead-nav" aria-label="Primary">
+          <a href="#mission">Mission</a>
+          <a href="#journey">How it works</a>
+          <a href="#involve">Get involved</a>
+        </nav>
 
-      <a class="btn btn-solid btn-sm" href="#involve">Support now</a>
-    </header>
+        <a class="btn btn-gold btn-sm" href="#involve">Support now</a>
+      </header>
 
       <section class="hero" id="top">
         <div class="hero-text">
-          <span class="badge">Camp access for every kid</span>
-          <h1>Helping kids find the kind of summer that changes everything.</h1>
+          <h1>Helping kids find the kind of summer that <span class="ul">changes everything.</span></h1>
           <p class="lead">
             Camp Match Kids Society connects families, camp partners, and community
             supporters so more children can experience safety, belonging, and joy.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-solid" href="#involve">Get involved</a>
-            <a class="btn btn-line" href="#mission">See how we help</a>
+            <a class="btn btn-gold" href="#involve">Get involved</a>
+            <a class="btn btn-outline" href="#mission">See how we help</a>
           </div>
 
           <ul class="trust-row" aria-label="Key priorities">
@@ -48,24 +47,35 @@ document.querySelector('#app').innerHTML = `
             <li>Needs-based bursaries</li>
             <li>Inclusive camp network</li>
           </ul>
+
+          <a class="scroll-cue" href="#mission" aria-label="Scroll to see how we help">
+            <svg viewBox="0 0 24 40" width="22" height="36" aria-hidden="true">
+              <rect x="1" y="1" width="22" height="38" rx="11" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5" />
+              <circle class="scroll-dot" cx="12" cy="11" r="3" fill="currentColor" />
+            </svg>
+          </a>
         </div>
 
         <div class="hero-media">
+          <span class="orbit orbit-1" aria-hidden="true"><span class="orbit-dot"></span></span>
+          <span class="orbit orbit-2" aria-hidden="true"><span class="orbit-dot"></span></span>
+          <span class="ring" aria-hidden="true"></span>
           <img
             class="hero-photo"
-            src="${img('1606092195730-5d7b9af1efc5', 1200)}"
-            srcset="${img('1606092195730-5d7b9af1efc5', 800)} 800w, ${img('1606092195730-5d7b9af1efc5', 1400)} 1400w"
-            sizes="(max-width: 940px) 92vw, 46vw"
-            width="1200"
-            height="1100"
+            src="${img('1606092195730-5d7b9af1efc5', 1000)}"
+            srcset="${img('1606092195730-5d7b9af1efc5', 800)} 800w, ${img('1606092195730-5d7b9af1efc5', 1200)} 1200w"
+            sizes="(max-width: 940px) 80vw, 42vw"
+            width="1000"
+            height="1000"
             alt="Children laughing as they lift a bright parachute together on a sunny field"
             fetchpriority="high"
           />
-          <span class="media-sticker" aria-hidden="true">Summer, sorted ☀️</span>
         </div>
       </section>
     </div>
+  </div>
 
+  <div class="page">
     <main>
       <section class="promise">
         <p>
