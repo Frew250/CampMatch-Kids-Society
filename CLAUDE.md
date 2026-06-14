@@ -49,8 +49,8 @@ exist so we **stop guessing the tone/style each session**:
   options, the honest "this is real" facts, CTA wording, the footer legal line.
 
 Quick pointers (full detail in the docs):
-- Hand-design with own judgment; the `impeccable` plugin is installed but the user
-  asked NOT to let it drive design here.
+- Hand-design with own judgment. (The `impeccable` plugin was REMOVED at the user's
+  request on 2026-06-13 — don't reinstall or reference it.)
 - Direction is LOCKED: light/warm, photo-led, teal + orange, one orange accent word,
   joyful camp photography, honest facts (no invented stats), "Keep me posted" capture
   (no donate ask yet). Don't re-litigate the style.
