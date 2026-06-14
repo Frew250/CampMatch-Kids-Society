@@ -19,7 +19,7 @@
 }
 #mainNav .navbar-brand img {
   display: block;
-  height: 40px;
+  height: 48px;
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -54,11 +54,27 @@
 /* ---- Masthead: brand photo + dark teal gradient ---- */
 .masthead {
   background:
-    linear-gradient(to bottom, rgba(16, 48, 41, 0.5) 0%, rgba(16, 48, 41, 0.72) 65%, var(--cm-hero) 100%),
-    url("https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?auto=format&fit=crop&w=1950&q=80") !important;
+    linear-gradient(to bottom, rgba(8, 26, 22, 0.62) 0%, rgba(8, 26, 22, 0.82) 70%, var(--cm-hero) 100%),
+    url("https://images.unsplash.com/photo-1472745942893-4b9f730c7668?auto=format&fit=crop&w=1950&q=80") !important;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+}
+
+/* Bold, high-contrast headline (template default was thin + washed out) */
+.masthead h1,
+.masthead .h1 {
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.45);
+}
+.masthead h2,
+.masthead .h2 {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 600 !important;
 }
 
 /* ---- Section backgrounds in brand colours ---- */
