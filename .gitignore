@@ -29,3 +29,4 @@ dist-ssr
 
 # Local scratch (photo selection)
 .tmp-photos/
+.tmp-grayscale/
