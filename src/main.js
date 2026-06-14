@@ -1,224 +1,119 @@
-import './vendor/grayscale.css'
-import './brand.css'
+import './style.css'
 
 const base = import.meta.env.BASE_URL
-const img = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
+const PHOTO = 'https://images.unsplash.com/photo-'
+const img = (id, w) => `${PHOTO}${id}?auto=format&fit=crop&w=${w}&q=80`
 const mail = (s) => `mailto:hello@campmatchkidssociety.org?subject=${encodeURIComponent(s)}`
 
-document.querySelector('#app').innerHTML = `
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#page-top"><img src="${base}logo.png" alt="Camp Match Kids Society" /></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">What we do</a></li>
-          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
-          <li class="nav-item"><a class="nav-link" href="#signup">Get involved</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+const svg = (p) =>
+  `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
+const I_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
+const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
+const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
 
-  <header class="masthead">
-    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-      <div class="d-flex justify-content-center">
-        <div class="text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Camp for every kid</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">
-            We help kids whose families can't swing the cost get to summer camp —
-            covering fees and opening up free and discounted spots.
-          </h2>
-          <a class="btn btn-primary" href="${mail('Keep me posted')}">Keep me posted</a>
-        </div>
-      </div>
-    </div>
+document.querySelector('#app').innerHTML = `
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Camp Match Kids Society home">
+      <img src="${base}logo.png" alt="Camp Match Kids Society" />
+    </a>
+    <nav class="nav-actions" aria-label="Primary">
+      <a class="navbtn" href="#about">What we do</a>
+      <a class="navbtn" href="#how">How it works</a>
+      <a class="navbtn navbtn-fill" href="#involved">Get involved</a>
+    </nav>
   </header>
 
-  <section class="about-section text-center" id="about">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="text-white mb-4">We make camp reachable</h2>
-          <p class="text-white-50">
-            Cost is the wall between a lot of kids and a summer that matters. We take it
-            down — raising funds to cover camp fees, working with camps to open up free
-            and discounted spots, and keeping it kind: families come to us about their
-            kid's summer, never to prove they're in need.
-          </p>
-        </div>
-      </div>
-      <div class="row gx-4 gx-lg-5 justify-content-center cm-facts">
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-people-group text-primary"></i>
-          <div class="fw-bold text-white mt-2">A board in place</div>
-          <div class="text-white-50 small">ready to incorporate as a BC nonprofit</div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-campground text-primary"></i>
-          <div class="fw-bold text-white mt-2">Camps on board</div>
-          <div class="text-white-50 small">already offering spots</div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <i class="fas fa-heart text-primary"></i>
-          <div class="fw-bold text-white mt-2">Supporters stepping up</div>
-          <div class="text-white-50 small">already offering to help</div>
-        </div>
-      </div>
-    </div>
+  <section class="hero">
+    <h1>Camp for every kid</h1>
+    <p class="tagline">Helping more kids get the summer they deserve.</p>
   </section>
 
-  <section class="projects-section bg-light" id="how">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-        <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="${img('1517164850305-99a3e65bb47e', 1100)}" alt="Children playing together outdoors at camp" />
-        </div>
-        <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
-            <h4>Tell us about your kid</h4>
-            <p class="text-black-50 mb-0">
-              A parent reaches out about their child's summer — their interests, their
-              needs, and what would help the family feel confident saying yes.
-            </p>
-          </div>
-        </div>
+  <div class="arch">
+    <img
+      src="${img('1533222481259-ce20eda1e20b', 1700)}"
+      srcset="${img('1533222481259-ce20eda1e20b', 1100)} 1100w, ${img('1533222481259-ce20eda1e20b', 2000)} 2000w"
+      sizes="100vw"
+      width="1700"
+      height="1000"
+      alt="Kids laughing and playing together outside on a bright summer day"
+      fetchpriority="high"
+    />
+  </div>
+
+  <main>
+    <section class="section" id="about">
+      <div class="section-head">
+        <h2>We make camp reachable</h2>
+        <p class="lead">
+          Cost is the wall between a lot of kids and a summer that matters. We take it
+          down — and we keep it kind.
+        </p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="card-ic">${I_HEART}</span>
+          <h3>Cover the fees</h3>
+          <p>We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home.</p>
+        </article>
+        <article class="card">
+          <span class="card-ic">${I_TENT}</span>
+          <h3>Open up spots</h3>
+          <p>We work with camps to create free and discounted places — more room for more kids, every summer.</p>
+        </article>
+        <article class="card">
+          <span class="card-ic">${I_DOOR}</span>
+          <h3>Keep it kind</h3>
+          <p>Families come to us about their kid's summer — never to prove they're in need. An open door, not an application.</p>
+        </article>
       </div>
 
-      <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="${img('1638202951770-2240942c7d1c', 900)}" alt="Kids relaxing in a hammock among the trees at camp" />
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">We find a fit and fund it</h4>
-                <p class="mb-0 text-white-50">
-                  We match the child to a partner camp and cover the cost, sorting the
-                  practical details along the way.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ul class="facts">
+        <li><strong>A board in place</strong><span>ready to incorporate as a BC nonprofit</span></li>
+        <li><strong>Camps on board</strong><span>already offering spots</span></li>
+        <li><strong>Supporters stepping up</strong><span>already offering to help</span></li>
+      </ul>
+    </section>
 
-      <div class="row gx-0 justify-content-center">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="${img('1472745942893-4b9f730c7668', 900)}" alt="A child paddleboarding across a calm lake at camp" />
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Off to camp</h4>
-                <p class="mb-0 text-white-50">
-                  The kid gets the summer — friendships, confidence, time outside — and
-                  the family doesn't carry the cost.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="section alt" id="how">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="lead">Three steps, built around the kid.</p>
       </div>
-    </div>
-  </section>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Tell us about your kid</h3><p>A parent reaches out about their child's summer — interests, needs, and what would help.</p></li>
+        <li><span class="num">2</span><h3>We find a fit and fund it</h3><p>We match the child to a partner camp and cover the cost, sorting the details along the way.</p></li>
+        <li><span class="num">3</span><h3>Off to camp</h3><p>The kid gets the summer — friendships, confidence, time outside — and the family doesn't carry the cost.</p></li>
+      </ol>
+    </section>
 
-  <section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-2">Want to help — or need help?</h2>
-          <p class="text-white-50 mb-5">
-            We're just getting started, and we'd love to know you. Leave your email and
-            we'll keep you posted.
-          </p>
-          <form class="form-signup" id="cmSignup" novalidate>
-            <div class="row input-group-newsletter">
-              <div class="col">
-                <input class="form-control" id="cmEmail" type="email" placeholder="Enter email address..." aria-label="Enter email address..." required />
-              </div>
-              <div class="col-auto"><button class="btn btn-primary" type="submit">Keep me posted</button></div>
-            </div>
-          </form>
-          <p class="text-white-50 small mt-4 mb-0">
-            Tell us who you are:
-            <a class="cm-seg" href="${mail("I'm a parent — Camp Match Kids Society")}">I'm a parent</a> ·
-            <a class="cm-seg" href="${mail('I run a camp — Camp Match Kids Society')}">I run a camp</a> ·
-            <a class="cm-seg" href="${mail('I want to help — Camp Match Kids Society')}">I want to help</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="cta" id="involved">
+      <h2>Want to help — or need help?</h2>
+      <p>We're just getting started, and we'd love to know you. Leave your email and we'll keep you posted.</p>
+      <form id="cmSignup" novalidate>
+        <input id="cmEmail" type="email" placeholder="Enter your email address" aria-label="Enter your email address" required />
+        <button type="submit">Keep me posted</button>
+      </form>
+      <p class="seg">
+        Tell us who you are:
+        <a href="${mail("I'm a parent — Camp Match Kids Society")}">I'm a parent</a> ·
+        <a href="${mail('I run a camp — Camp Match Kids Society')}">I run a camp</a> ·
+        <a href="${mail('I want to help — Camp Match Kids Society')}">I want to help</a>
+      </p>
+    </section>
+  </main>
 
-  <section class="contact-section bg-black">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5">
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Email</h4>
-              <hr class="my-4 mx-auto" />
-              <div class="small text-black-50"><a href="${mail('Hello from your website')}">hello@campmatchkidssociety.org</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-shield-heart text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Who we are</h4>
-              <hr class="my-4 mx-auto" />
-              <div class="small text-black-50">A BC nonprofit, incorporating now</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
-            <div class="card-body text-center">
-              <i class="fas fa-link text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Our sibling</h4>
-              <hr class="my-4 mx-auto" />
-              <div class="small text-black-50">Separate from the for-profit <a href="https://campmatch.ca" target="_blank" rel="noopener">CampMatch.ca</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer bg-black small text-center text-white-50">
-    <div class="container px-4 px-lg-5">
+  <footer class="footer">
+    <img class="footer-logo" src="${base}logo.png" alt="Camp Match Kids Society" />
+    <p>
       Camp Match Kids Society is a BC nonprofit (incorporating) — the charitable sibling
-      of, but separate from, the for-profit CampMatch.ca. Donations and tax receipts will
-      open once our charitable registration is complete.
-    </div>
+      of, but separate from, the for-profit
+      <a href="https://campmatch.ca" target="_blank" rel="noopener">CampMatch.ca</a>.
+      Donations and tax receipts will open once our charitable registration is complete.
+    </p>
+    <p class="footer-contact"><a href="${mail('Hello from your website')}">hello@campmatchkidssociety.org</a></p>
   </footer>
 `
 
-// ---- Navbar behaviour (vanilla; no Bootstrap JS needed) ----
-const nav = document.querySelector('#mainNav')
-const shrink = () => {
-  if (!nav) return
-  nav.classList.toggle('navbar-shrink', window.scrollY !== 0)
-}
-shrink()
-document.addEventListener('scroll', shrink)
-
-const toggler = document.querySelector('.navbar-toggler')
-const collapse = document.querySelector('#navbarResponsive')
-toggler?.addEventListener('click', () => collapse?.classList.toggle('show'))
-document.querySelectorAll('#navbarResponsive .nav-link').forEach((a) =>
-  a.addEventListener('click', () => collapse?.classList.remove('show'))
-)
-
-// ---- Email capture → opens the visitor's mail client (no backend yet) ----
 document.querySelector('#cmSignup')?.addEventListener('submit', (e) => {
   e.preventDefault()
   const email = document.querySelector('#cmEmail')?.value || ''
