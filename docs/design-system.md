@@ -34,8 +34,8 @@ Teal is the anchor; orange is the accent, used **sparingly** (CTAs + one accent 
 | `--teal-deep` | `#1f6b63` | hovers, deep teal text |
 | `--teal-ink` | `#14322e` | headings / darkest text |
 | `--hero-dark` | `#103029` | dark teal hero background |
-| `--orange` | `#e3793c` | primary CTA, the one accent word |
-| `--orange-deep` | `#c8632b` | CTA hover |
+| `--orange` | `#ed6f33` | primary CTA + one accent word (CampMatch.ca's brand orange — sibling cue) |
+| `--orange-deep` | `#d65f28` | CTA hover / small-button fill (better contrast than base orange) |
 | `--ink` | `#1c2b29` | body text |
 | `--muted` | `#5b6b68` | secondary text (keep ≥4.5:1 on bg) |
 | `--bg` | `#fcfaf6` | warm off-white canvas (LIGHT, not dark) |
@@ -48,13 +48,12 @@ warm base. Not heavy cream/cartoon.
 
 ## Typography
 
-- **Headings/UI:** `Hanken Grotesk` — use heavy weights (700–800) for confident,
-  grown-up display. Clean and modern; restraint here = credibility.
-- **Body:** `Hanken Grotesk` 400–500.
-- **Script accent only:** `Caveat` 600–700 — small warm eyebrows/kickers ONLY, never
-  body or headlines.
-- Loaded via `<link>` in `index.html`. Scale uses fluid `clamp()`; h1 ≈
-  `clamp(2.4rem, 5vw, 3.8rem)`.
+- **One family: `Nunito`** (headings + body), weights 400–900. Loaded via `<link>` in
+  `index.html`; `--font-sans` token → `font-sans`.
+- **Why Nunito (deliberate, do not revert):** CampMatch.ca uses Nunito, so sharing it is
+  the strongest at-a-glance **sibling cue**. Yes it reads slightly rounded/friendly — that
+  tradeoff is accepted; the family resemblance is worth more here.
+- Headings use weight 800–900 for confident, grown-up display; restraint = credibility.
 
 ## Spacing, radius, shadow
 

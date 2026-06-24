@@ -12,52 +12,46 @@ const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/
 const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
 
 document.querySelector('#app').innerHTML = `
-  <header id="top" class="sticky top-0 z-30 border-b border-black/5 bg-cream/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-      <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
-        <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-12 w-auto" />
-      </a>
-      <nav class="hidden items-center gap-7 text-sm font-bold text-ink/75 sm:flex" aria-label="Primary">
-        <a href="#what" class="transition hover:text-teal">What we do</a>
-        <a href="#how" class="transition hover:text-teal">How it works</a>
-        <a href="#involved" class="transition hover:text-teal">Get involved</a>
-      </nav>
-      <a href="${mail('Keep me posted')}" class="rounded-full bg-orange px-5 py-2.5 text-sm font-extrabold text-white transition hover:bg-orange-deep">Keep me posted</a>
-    </div>
-  </header>
+  <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
+    <img
+      src="${img('1533222481259-ce20eda1e20b', 1800)}"
+      alt="Kids laughing and playing together outside on a bright summer day"
+      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-hero-dark/90 via-hero-dark/72 to-hero-dark/90"></div>
 
-  <main>
-    <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:py-24">
-      <div>
-        <p class="mb-3 text-sm font-extrabold uppercase tracking-widest text-orange">Camp for every kid</p>
-        <h1 class="text-4xl leading-tight text-ink md:text-5xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
-        <p class="mt-5 max-w-prose text-lg text-muted">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="flex items-center justify-between gap-4 py-4">
+        <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
+          <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-12 w-auto brightness-0 invert" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-semibold text-white/85 sm:flex" aria-label="Primary">
+          <a href="#what" class="transition hover:text-white">What we do</a>
+          <a href="#how" class="transition hover:text-white">How it works</a>
+          <a href="#involved" class="transition hover:text-white">Get involved</a>
+        </nav>
+        <a href="${mail('Keep me posted')}" class="rounded-full border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10">Keep me posted</a>
+      </div>
+
+      <div class="max-w-2xl pt-10 pb-12 md:pt-16 md:pb-20">
+        <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp for every kid</p>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-6xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
+        <p class="mt-5 max-w-prose text-lg text-white/85">
           We help kids whose families can't swing the cost get to summer camp — covering
           fees, and working with camps to open up free and discounted spots.
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="${mail('Keep me posted')}" class="rounded-full bg-orange px-6 py-3 font-extrabold text-white transition hover:bg-orange-deep">Keep me posted</a>
-          <a href="#how" class="rounded-full border-2 border-teal/30 px-6 py-3 font-extrabold text-teal-deep transition hover:border-teal">See how it works</a>
+          <a href="${mail('Keep me posted')}" class="rounded-full bg-orange px-6 py-3 font-extrabold text-white shadow-lg shadow-black/20 transition hover:bg-orange-deep">Keep me posted</a>
+          <a href="#how" class="rounded-full border-2 border-white/40 px-6 py-3 font-extrabold text-white transition hover:bg-white/10">See how it works</a>
         </div>
-        <p class="mt-6 text-sm text-muted">
+        <p class="mt-6 text-sm text-white/65">
           A BC nonprofit in the making — the charitable sibling of, and separate from,
-          <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-teal-deep underline">CampMatch.ca</a>.
+          <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>.
         </p>
       </div>
-      <div>
-        <img
-          src="${img('1533222481259-ce20eda1e20b', 1100)}"
-          srcset="${img('1533222481259-ce20eda1e20b', 800)} 800w, ${img('1533222481259-ce20eda1e20b', 1300)} 1300w"
-          sizes="(max-width: 768px) 92vw, 46vw"
-          alt="Kids laughing and playing together outside on a bright summer day"
-          class="aspect-[5/4] w-full rounded-3xl object-cover shadow-xl"
-          fetchpriority="high"
-        />
-      </div>
-    </section>
 
-    <section class="border-y border-black/5 bg-white">
-      <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 sm:grid-cols-3">
+      <ul class="mb-10 grid gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur sm:grid-cols-3 md:mb-14">
         ${[
           ['A board in place', 'ready to incorporate as a BC nonprofit'],
           ['Camps on board', 'already offering spots'],
@@ -65,19 +59,21 @@ document.querySelector('#app').innerHTML = `
         ]
           .map(
             ([t, s]) => `
-          <div class="flex items-start gap-3">
-            <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-teal/10 text-teal">${I_CHECK}</span>
-            <p><span class="font-extrabold text-ink">${t}</span> <span class="text-muted">— ${s}.</span></p>
-          </div>`
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-orange text-white">${I_CHECK}</span>
+            <p><span class="font-extrabold text-white">${t}</span> <span class="text-white/70">— ${s}.</span></p>
+          </li>`
           )
           .join('')}
-      </div>
-    </section>
+      </ul>
+    </div>
+  </header>
 
+  <main>
     <section id="what" class="mx-auto max-w-6xl px-5 py-16 md:py-24">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl text-ink md:text-4xl">We make camp reachable</h2>
-        <p class="mt-4 text-lg text-muted">Cost is the wall between a lot of kids and a summer that matters. We take it down — and we keep it kind.</p>
+        <p class="mt-4 text-lg text-muted">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
       </div>
       <div class="mt-12 grid gap-6 md:grid-cols-3">
         ${[
@@ -87,7 +83,7 @@ document.querySelector('#app').innerHTML = `
         ]
           .map(
             ([ic, t, p]) => `
-          <article class="rounded-3xl border border-black/5 bg-white p-7 shadow-sm">
+          <article class="rounded-2xl border border-line bg-white p-7 shadow-sm">
             <span class="grid h-14 w-14 place-items-center rounded-2xl bg-teal/10 text-teal-deep">${ic}</span>
             <h3 class="mt-4 text-xl text-ink">${t}</h3>
             <p class="mt-2 text-muted">${p}</p>
@@ -97,7 +93,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
-    <section id="how" class="border-y border-black/5 bg-white">
+    <section id="how" class="border-y border-line bg-surface">
       <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <div class="mx-auto max-w-2xl text-center">
           <h2 class="text-3xl text-ink md:text-4xl">How it works</h2>
@@ -110,9 +106,9 @@ document.querySelector('#app').innerHTML = `
             ['3', 'Off to camp', "The kid gets the summer — friendships, confidence, time outside — and the family doesn't carry the cost."],
           ]
             .map(
-              ([n, t, p], i) => `
+              ([n, t, p]) => `
             <li>
-              <span class="grid h-12 w-12 place-items-center rounded-full border-2 ${i === 1 ? 'border-orange text-orange-deep' : 'border-teal text-teal-deep'} text-xl font-extrabold">${n}</span>
+              <span class="grid h-12 w-12 place-items-center rounded-full border-2 border-teal text-xl font-extrabold text-teal-deep">${n}</span>
               <h3 class="mt-4 text-xl text-ink">${t}</h3>
               <p class="mt-2 text-muted">${p}</p>
             </li>`
@@ -135,23 +131,22 @@ document.querySelector('#app').innerHTML = `
         <h2 class="text-3xl text-ink md:text-4xl">A summer at camp can change a kid's whole year</h2>
         <p class="mt-4 text-lg text-muted">
           Friendships, confidence, time outside, a place to belong — and somewhere safe
-          and joyful while parents work. Every kid deserves that, whatever their family
-          can afford.
+          and joyful while parents work. Every kid deserves a summer like that.
         </p>
       </div>
     </section>
 
     <section id="involved" class="mx-auto max-w-6xl px-5 pb-16 md:pb-24">
-      <div class="rounded-[2rem] bg-gradient-to-br from-teal to-teal-deep px-6 py-14 text-center text-white md:px-12">
-        <h2 class="text-3xl md:text-4xl">Want to help — or need help?</h2>
-        <p class="mx-auto mt-4 max-w-xl text-white/90">We're just getting started, and we'd love to know you. Leave your email and we'll keep you posted.</p>
+      <div class="rounded-3xl bg-gradient-to-br from-teal to-teal-deep px-6 py-14 text-center text-white md:px-12">
+        <h2 class="text-3xl md:text-4xl">Tell us where you fit</h2>
+        <p class="mx-auto mt-4 max-w-xl text-white/90">Parents, camps, and early supporters can all help shape the first summer. Leave your email and we'll keep you posted.</p>
         <form id="cmSignup" class="mx-auto mt-8 flex max-w-lg flex-wrap justify-center gap-3" novalidate>
           <input id="cmEmail" type="email" required placeholder="Enter your email address" aria-label="Enter your email address" class="min-w-0 flex-1 rounded-full px-5 py-3 text-ink outline-none" />
           <button type="submit" class="rounded-full bg-orange px-7 py-3 font-extrabold text-white transition hover:bg-orange-deep">Keep me posted</button>
         </form>
         <p class="mt-6 text-sm text-white/85">
           Tell us who you are:
-          <a href="${mail("I'm a parent — Camp Match Kids Society")}" class="font-bold underline">I'm a parent</a> ·
+          <a href="${mail('Tell us about my kid — Camp Match Kids Society')}" class="font-bold underline">Tell us about your kid</a> ·
           <a href="${mail('I run a camp — Camp Match Kids Society')}" class="font-bold underline">I run a camp</a> ·
           <a href="${mail('I want to help — Camp Match Kids Society')}" class="font-bold underline">I want to help</a>
         </p>
@@ -159,7 +154,7 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 
-  <footer class="border-t border-black/5">
+  <footer class="border-t border-line">
     <div class="mx-auto max-w-6xl px-5 py-10 text-center">
       <img src="${base}logo.png" alt="Camp Match Kids Society" class="mx-auto h-14 w-auto" />
       <p class="mx-auto mt-4 max-w-2xl text-sm text-muted">
