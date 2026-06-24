@@ -25,7 +25,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      # npm install (not `npm ci`): Tailwind v4 ships per-OS native binaries, and a
+      # Windows-generated lockfile omits the Linux ones, which breaks `npm ci` here.
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
