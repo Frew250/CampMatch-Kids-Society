@@ -1,35 +1,15 @@
-:root {
-  color-scheme: light;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
+@import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-}
+/* Brand design tokens — generate utilities like bg-cream, text-teal, font-sans.
+   Colours: Camp Match Kids Society (teal) + CampMatch.ca orange. */
+@theme {
+  --color-cream: #fcf7ea;
+  --color-teal: #2c8a80;
+  --color-teal-deep: #1f6b63;
+  --color-ink: #14322e;
+  --color-orange: #ed6f33;
+  --color-orange-deep: #d65f28;
+  --color-muted: #66756f;
 
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #1f2937;
-}
-
-.holding {
-  min-height: 100vh;
-  min-height: 100svh;
-  display: grid;
-  place-content: center;
-  gap: 0.5rem;
-  padding: 24px;
-  text-align: center;
-}
-
-.holding h1 {
-  margin: 0;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-}
-
-.holding p {
-  margin: 0;
-  color: #6b7280;
+  --font-sans: "Nunito", system-ui, sans-serif;
 }
