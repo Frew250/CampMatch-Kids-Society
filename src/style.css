@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Brand design tokens — generate utilities like bg-cream, text-teal, font-sans.
-   Colours: Camp Match Kids Society (teal) + CampMatch.ca orange. */
+   Colours: Camp Match Kids Society (teal) + CampMatch.ca orange (#ed6f33). */
 @theme {
   --color-cream: #fcf7ea;
   --color-teal: #2c8a80;
@@ -9,7 +9,22 @@
   --color-ink: #14322e;
   --color-orange: #ed6f33;
   --color-orange-deep: #d65f28;
-  --color-muted: #66756f;
+  --color-muted: #5d6c66;
 
   --font-sans: "Nunito", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
 }
