@@ -2,7 +2,7 @@ import './style.css'
 
 const base = import.meta.env.BASE_URL
 const img = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
-const mail = (s) => `mailto:hello@campmatchkidssociety.org?subject=${encodeURIComponent(s)}`
+const mail = (s) => `mailto:hello@campmatchkidssociety.ca?subject=${encodeURIComponent(s)}`
 
 const svg = (p) =>
   `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
@@ -163,7 +163,7 @@ document.querySelector('#app').innerHTML = `
         <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-teal-deep">CampMatch.ca</a>.
         Donations and tax receipts will open once our charitable registration is complete.
       </p>
-      <p class="mt-3"><a href="${mail('Hello from your website')}" class="font-bold text-teal-deep">hello@campmatchkidssociety.org</a></p>
+      <p class="mt-3"><a href="${mail('Hello from your website')}" class="font-bold text-teal-deep">hello@campmatchkidssociety.ca</a></p>
     </div>
   </footer>
 `
@@ -172,5 +172,5 @@ document.querySelector('#cmSignup')?.addEventListener('submit', (e) => {
   e.preventDefault()
   const email = document.querySelector('#cmEmail')?.value || ''
   const body = `Please keep me posted about Camp Match Kids Society.%0D%0AMy email: ${encodeURIComponent(email)}`
-  window.location.href = `mailto:hello@campmatchkidssociety.org?subject=${encodeURIComponent('Keep me posted')}&body=${body}`
+  window.location.href = `mailto:hello@campmatchkidssociety.ca?subject=${encodeURIComponent('Keep me posted')}&body=${body}`
 })

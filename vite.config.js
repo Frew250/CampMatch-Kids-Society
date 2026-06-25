@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 
-// Repo is served from https://frew250.github.io/CampMatch-Kids-Society/
-// so assets must be referenced from that sub-path in production.
+// Served from the custom domain root (campmatchkidssociety.ca via GitHub Pages),
+// so assets are referenced from "/". (Was "/CampMatch-Kids-Society/" before the
+// custom domain — revert to that only if the custom domain is ever removed.)
 export default defineConfig({
-  base: '/CampMatch-Kids-Society/',
+  base: '/',
   plugins: [tailwindcss()],
 })
