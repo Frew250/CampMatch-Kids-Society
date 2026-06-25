@@ -34,9 +34,9 @@ document.querySelector('#app').innerHTML = `
         <a href="${mail('Keep me posted')}" class="rounded-full border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10">Keep me posted</a>
       </div>
 
-      <div class="flex max-w-2xl flex-1 flex-col justify-center py-10 md:py-16">
+      <div class="flex max-w-xl flex-1 flex-col justify-center py-10 md:py-16">
         <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp for every kid</p>
-        <h1 class="text-4xl leading-[1.05] text-white md:text-6xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
         <p class="mt-5 max-w-prose text-lg text-white/85">
           We help kids whose families can't swing the cost get to summer camp — covering
           fees, and working with camps to open up free and discounted spots.
