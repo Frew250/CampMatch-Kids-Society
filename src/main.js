@@ -21,10 +21,10 @@ document.querySelector('#app').innerHTML = `
     />
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-hero-dark/90 via-hero-dark/72 to-hero-dark/90"></div>
 
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="mx-auto flex min-h-screen max-w-6xl flex-col px-5">
       <div class="flex items-center justify-between gap-4 py-4">
         <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
-          <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-12 w-auto brightness-0 invert" />
+          <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-14 w-auto rounded-xl bg-white/95 p-1.5 shadow-sm" />
         </a>
         <nav class="hidden items-center gap-7 text-sm font-semibold text-white/85 sm:flex" aria-label="Primary">
           <a href="#what" class="transition hover:text-white">What we do</a>
@@ -34,7 +34,7 @@ document.querySelector('#app').innerHTML = `
         <a href="${mail('Keep me posted')}" class="rounded-full border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10">Keep me posted</a>
       </div>
 
-      <div class="max-w-2xl pt-10 pb-12 md:pt-16 md:pb-20">
+      <div class="flex max-w-2xl flex-1 flex-col justify-center py-10 md:py-16">
         <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp for every kid</p>
         <h1 class="text-4xl leading-[1.05] text-white md:text-6xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
         <p class="mt-5 max-w-prose text-lg text-white/85">
