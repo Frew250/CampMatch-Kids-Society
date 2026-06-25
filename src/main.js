@@ -14,9 +14,9 @@ const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12
 document.querySelector('#app').innerHTML = `
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img
-      src="${img('1533222481259-ce20eda1e20b', 1800)}"
-      alt="Kids laughing and playing together outside on a bright summer day"
-      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
+      src="${base}charlein-gracia--Ux5mdMJNEA-unsplash.jpg"
+      alt="Three children sitting close together on the grass by the water"
+      class="absolute inset-0 -z-10 h-full w-full -scale-x-100 object-cover opacity-45"
       fetchpriority="high"
     />
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-hero-dark/90 via-hero-dark/72 to-hero-dark/90"></div>
@@ -24,7 +24,7 @@ document.querySelector('#app').innerHTML = `
     <div class="mx-auto flex min-h-screen max-w-6xl flex-col px-5">
       <div class="flex items-center justify-between gap-4 py-4">
         <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
-          <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-14 w-auto rounded-xl bg-white/95 p-1.5 shadow-sm" />
+          <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
         </a>
         <nav class="hidden items-center gap-7 text-sm font-semibold text-white/85 sm:flex" aria-label="Primary">
           <a href="#what" class="transition hover:text-white">What we do</a>
