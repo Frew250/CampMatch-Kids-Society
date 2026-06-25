@@ -14,9 +14,9 @@ const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12
 document.querySelector('#app').innerHTML = `
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img
-      src="${base}charlein-gracia--Ux5mdMJNEA-unsplash.jpg"
-      alt="Three children sitting close together on the grass by the water"
-      class="absolute inset-0 -z-10 h-full w-full -scale-x-100 object-cover opacity-45"
+      src="${base}vitolda-klein-tyV_ftXkEZc-unsplash.jpg"
+      alt="A child leaping joyfully off a dock into the sea on a sunny summer day"
+      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
       fetchpriority="high"
     />
     <div class="absolute inset-0 -z-10 bg-gradient-to-br from-hero-dark/90 via-hero-dark/72 to-hero-dark/90"></div>
