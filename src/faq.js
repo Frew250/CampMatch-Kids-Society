@@ -9,7 +9,7 @@ document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
 
   <header class="bg-ink text-white">
-    <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-6 py-5 md:px-12">
+    <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-5 py-5 md:px-12">
       <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
         <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
       </a>
@@ -38,7 +38,7 @@ document.querySelector('#app').innerHTML = `
 
   <main id="main">
     <section class="bg-sage">
-      <div class="mx-auto max-w-[1180px] px-6 py-16 md:px-12 md:py-[104px]">
+      <div class="mx-auto max-w-[1180px] px-5 py-12 md:px-12 md:py-[104px]">
         <div class="mx-auto max-w-[760px] text-center">
           <p class="font-display text-[14px] font-extrabold uppercase tracking-[0.18em] text-eyebrow">FAQ</p>
           <h1 class="mt-3 text-4xl leading-[1.08] text-ink md:text-[46px]">Questions, answered</h1>
@@ -47,7 +47,7 @@ document.querySelector('#app').innerHTML = `
 
         <div class="mt-12">${faqAccordion()}</div>
 
-        <div class="mx-auto mt-12 max-w-[820px] rounded-[22px] bg-white p-7 text-center shadow-sm md:p-9">
+        <div class="mx-auto mt-12 max-w-[820px] rounded-[22px] bg-white p-6 text-center shadow-sm md:p-9">
           <h2 class="text-2xl text-ink">Still have a question?</h2>
           <p class="mx-auto mt-2 max-w-md text-muted">We'd love to hear from you — whether you run a camp, want to help, or just want to learn more.</p>
           <div class="mt-6 flex flex-wrap justify-center gap-3">

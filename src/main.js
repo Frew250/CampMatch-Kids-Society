@@ -18,8 +18,8 @@ const I_TENT_W = svg30('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 
 const I_HEART_W = svg30('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 
 // Shared atoms
-const wrap = 'mx-auto max-w-[1180px] px-6 md:px-12'
-const sectionY = 'py-16 md:py-[104px]'
+const wrap = 'mx-auto max-w-[1180px] px-5 md:px-12'
+const sectionY = 'py-12 md:py-[104px]'
 const eyebrow = 'font-display text-[14px] font-extrabold uppercase tracking-[0.18em]'
 const h2cls = 'text-4xl leading-[1.08] md:text-[46px]'
 const btnPrimary =
@@ -47,7 +47,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Gentle, warm top & bottom tint so the nav and lower copy stay legible. -->
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
 
-    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-6 md:px-12">
+    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
         <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
@@ -74,7 +74,7 @@ document.querySelector('#app').innerHTML = `
         </details>
       </div>
 
-      <div class="flex max-w-2xl flex-1 flex-col justify-center py-12 md:py-16">
+      <div class="flex max-w-2xl flex-1 flex-col justify-center py-10 md:py-16">
         <p class="mb-4 ${eyebrow} text-flame">When cost is the only thing in the way</p>
         <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Cost shouldn't keep a kid from <span class="text-orange">summer camp.</span></h1>
         <p class="mt-6 max-w-prose text-lg text-white/85">
@@ -98,14 +98,14 @@ document.querySelector('#app').innerHTML = `
 
   <main id="main">
     <section id="status" class="bg-sage">
-      <div class="mx-auto max-w-[1180px] px-6 pb-[84px] pt-[76px] md:px-12">
+      <div class="mx-auto max-w-[1180px] px-5 pb-14 pt-12 md:px-12 md:pb-[84px] md:pt-[76px]">
         <div class="mx-auto max-w-[760px] text-center">
           <p class="${eyebrow} text-eyebrow">Where we are now</p>
           <h2 class="mt-4 ${h2cls} text-ink">New — but not starting from zero</h2>
           <p class="mt-4 text-[19px] text-muted">The foundation of a real organization is already in place.</p>
         </div>
-        <div class="relative isolate mt-[58px]">
-          <div class="grid gap-[30px] md:grid-cols-3">
+        <div class="relative isolate mt-12 md:mt-[58px]">
+          <div class="grid gap-7 md:grid-cols-3 md:gap-[30px]">
             ${[
               [I_BUILDING, '01', 'Board established', 'Our founding directors are in place, and BC nonprofit incorporation is underway.'],
               [I_TENT_W, '02', 'Camp partners', 'We are building a network of camps ready to offer free and subsidized spaces.'],
@@ -133,8 +133,8 @@ document.querySelector('#app').innerHTML = `
           <h2 class="mt-3 ${h2cls} text-ink">We make camp reachable</h2>
           <p class="mt-4 text-lg text-sand">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
         </div>
-        <div class="mt-12 rounded-[28px] bg-white p-[30px] shadow-[0_40px_80px_-40px_rgba(15,46,39,0.28)]">
-          <div class="grid gap-6 md:grid-cols-3">
+        <div class="mt-10 rounded-[28px] bg-white p-4 shadow-[0_40px_80px_-40px_rgba(15,46,39,0.28)] sm:p-6 md:mt-12 md:p-[30px]">
+          <div class="grid gap-5 md:grid-cols-3 md:gap-6">
             ${[
               [I_HEART, '01', 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
               [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every summer.'],
@@ -142,7 +142,7 @@ document.querySelector('#app').innerHTML = `
             ]
               .map(
                 ([ic, n, t, p]) => `
-            <article class="group relative overflow-hidden rounded-2xl bg-[#faf6ec] p-7 transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:shadow-[0_22px_46px_-22px_rgba(15,46,39,0.3)]">
+            <article class="group relative overflow-hidden rounded-2xl bg-[#faf6ec] p-6 transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:shadow-[0_22px_46px_-22px_rgba(15,46,39,0.3)] md:p-7">
               <span class="pointer-events-none absolute right-4 top-1 font-display text-6xl font-extrabold text-ink/[0.06]">${n}</span>
               <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[#dde8e1] text-teal-deep">${ic}</span>
               <h3 class="mt-5 text-xl text-ink">${t}</h3>
@@ -185,8 +185,8 @@ document.querySelector('#app').innerHTML = `
           <h2 class="mt-3 ${h2cls} text-ink">A simple path to camp</h2>
           <p class="mt-4 text-lg text-muted">Three steps, built around the kid.</p>
         </div>
-        <div class="relative isolate mt-[60px]">
-          <ol class="grid gap-[30px] md:grid-cols-3">
+        <div class="relative isolate mt-12 md:mt-[60px]">
+          <ol class="grid gap-7 md:grid-cols-3 md:gap-[30px]">
             ${[
               ['Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
               ['We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
@@ -208,7 +208,7 @@ document.querySelector('#app').innerHTML = `
 
     <section id="stories" class="bg-cream">
       <div class="${wrap} ${sectionY}">
-        <div class="grid items-center gap-12 md:grid-cols-2">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-12">
           <div class="relative">
             <img
               src="${img('1638202951770-2240942c7d1c', 900)}"
@@ -216,7 +216,7 @@ document.querySelector('#app').innerHTML = `
               sizes="(max-width: 768px) 92vw, 46vw"
               alt="Kids relaxing together in a hammock among the trees at camp"
               loading="lazy"
-              class="h-[470px] w-full rounded-[22px] object-cover shadow-xl"
+              class="h-64 w-full rounded-[22px] object-cover shadow-xl sm:h-80 md:h-[470px]"
             />
             <div class="absolute -bottom-5 right-5 max-w-[220px] rounded-2xl bg-orange px-5 py-4 font-display font-extrabold leading-tight text-white shadow-lg shadow-orange/30">A summer they'll carry for years.</div>
           </div>
@@ -253,7 +253,7 @@ document.querySelector('#app').innerHTML = `
 
     <section id="involved" class="bg-cream">
       <div class="${wrap} ${sectionY}">
-        <div class="relative isolate overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#11463a,#1c7a63)] px-6 py-16 text-center text-white md:px-14 md:py-20">
+        <div class="relative isolate overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#11463a,#1c7a63)] px-6 py-12 text-center text-white md:px-14 md:py-20">
           <div class="pointer-events-none absolute -left-16 -top-16 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(226,98,42,0.28),transparent_70%)]"></div>
           <div class="pointer-events-none absolute -bottom-16 -right-10 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)]"></div>
           <!-- faint camp-motif line art for warmth without clutter -->
