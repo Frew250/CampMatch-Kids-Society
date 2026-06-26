@@ -14,6 +14,11 @@ const I_USERS = svg('<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circl
 const I_SUN = svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>')
 const I_GIFT = svg('<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8M16.5 8a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8"/>')
 const I_CHEV = `<svg class="chev shrink-0" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`
+const svg30 = (p) =>
+  `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
+const I_BUILDING = svg30('<path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 8h.01M14 8h.01M10 12h.01M14 12h.01M10 16h3"/>')
+const I_TENT_W = svg30('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
+const I_HEART_W = svg30('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 
 document.querySelector('#app').innerHTML = `
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
@@ -66,28 +71,32 @@ document.querySelector('#app').innerHTML = `
   </header>
 
   <main>
-    <section id="status" class="border-b border-line bg-surface">
-      <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
-        <div class="mx-auto max-w-2xl text-center">
-          <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">Where we are now</p>
-          <h2 class="text-3xl text-ink md:text-4xl">New — but not starting from zero</h2>
-          <p class="mt-4 text-lg text-muted">The foundation of a real organization is already in place.</p>
+    <section id="status" class="bg-[#eaf0ec]">
+      <div class="mx-auto max-w-[1180px] px-5 pb-[84px] pt-[76px]">
+        <div class="mx-auto max-w-[760px] text-center">
+          <p class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-[#2c7a64]">Where we are now</p>
+          <h2 class="mt-4 text-4xl leading-[1.08] text-[#103029] md:text-5xl">New — but not starting from zero</h2>
+          <p class="mt-4 text-[19px] text-[#5c6b64]">The foundation of a real organization is already in place.</p>
         </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
-          ${[
-            ['Board established', 'Our founding directors are in place, and BC nonprofit incorporation is underway.'],
-            ['Camp partners', 'We are building a network of camps ready to offer free and subsidized spaces.'],
-            ['Community behind us', 'Businesses, families, and supporters are already stepping up to help.'],
-          ]
-            .map(
-              ([t, p]) => `
-          <div class="rounded-2xl border border-line bg-white p-7 shadow-sm">
-            <span class="grid h-12 w-12 place-items-center rounded-full bg-orange-deep text-white">${I_CHECK}</span>
-            <h3 class="mt-4 text-xl text-ink">${t}</h3>
-            <p class="mt-2 text-muted">${p}</p>
-          </div>`
-            )
-            .join('')}
+        <div class="relative isolate mt-[58px]">
+          <div class="pointer-events-none absolute left-[16.66%] right-[16.66%] top-[33px] z-0 hidden border-t-2 border-dashed border-[#c9d4ce] md:block"></div>
+          <div class="grid gap-[30px] md:grid-cols-3">
+            ${[
+              [I_BUILDING, '01', 'Board established', 'Our founding directors are in place, and BC nonprofit incorporation is underway.'],
+              [I_TENT_W, '02', 'Camp partners', 'We are building a network of camps ready to offer free and subsidized spaces.'],
+              [I_HEART_W, '03', 'Community behind us', 'Businesses, families, and supporters are already stepping up to help.'],
+            ]
+              .map(
+                ([ic, n, t, p]) => `
+            <div class="group relative z-10 mt-[34px] flex flex-col items-center rounded-[18px] border border-[#e2e9e4] bg-white px-6 pb-[38px] pt-[54px] text-center transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:border-[rgba(206,93,31,0.4)] hover:shadow-[0_22px_46px_-22px_rgba(16,48,41,0.34)]">
+              <span class="absolute left-1/2 top-0 grid h-[68px] w-[68px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[5px] border-[#eaf0ec] bg-[#ce5d1f] text-white shadow-[0_10px_24px_-6px_rgba(206,93,31,0.55)]">${ic}</span>
+              <span class="text-sm font-extrabold tracking-wider text-[#ce5d1f]">${n}</span>
+              <h3 class="mt-2 text-[23px] font-bold leading-tight text-[#103029]">${t}</h3>
+              <p class="mx-auto mt-3 max-w-[230px] text-[16px] leading-[1.6] text-[#5c6b64]">${p}</p>
+            </div>`
+              )
+              .join('')}
+          </div>
         </div>
       </div>
     </section>
