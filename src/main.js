@@ -276,7 +276,6 @@ document.querySelector('#app').innerHTML = `
         </div>
         <p class="mx-auto mt-8 max-w-xl border-t border-white/20 pt-6 text-sm text-white/85">
           Tell us who you are:
-          <a href="${mail('Tell us about my kid — Camp Match Kids Society')}" class="font-bold underline">Tell us about your kid</a> ·
           <a href="${mail('I run a camp — Camp Match Kids Society')}" class="font-bold underline">I run a camp</a> ·
           <a href="${mail('I want to help — Camp Match Kids Society')}" class="font-bold underline">I want to help</a>
         </p>
