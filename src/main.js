@@ -79,7 +79,6 @@ document.querySelector('#app').innerHTML = `
           <p class="mt-4 text-[19px] text-[#5c6b64]">The foundation of a real organization is already in place.</p>
         </div>
         <div class="relative isolate mt-[58px]">
-          <div class="pointer-events-none absolute left-[16.66%] right-[16.66%] top-[33px] z-0 hidden border-t-2 border-dashed border-[#c9d4ce] md:block"></div>
           <div class="grid gap-[30px] md:grid-cols-3">
             ${[
               [I_BUILDING, '01', 'Board established', 'Our founding directors are in place, and BC nonprofit incorporation is underway.'],
