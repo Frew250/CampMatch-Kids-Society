@@ -256,6 +256,9 @@ document.querySelector('#app').innerHTML = `
         <div class="relative isolate overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#11463a,#1c7a63)] px-6 py-16 text-center text-white md:px-14 md:py-20">
           <div class="pointer-events-none absolute -left-16 -top-16 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(226,98,42,0.28),transparent_70%)]"></div>
           <div class="pointer-events-none absolute -bottom-16 -right-10 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)]"></div>
+          <!-- faint camp-motif line art for warmth without clutter -->
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="pointer-events-none absolute -bottom-12 -left-10 -z-10 h-60 w-60 text-white/[0.07]"><path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="pointer-events-none absolute -right-8 -top-12 -z-10 h-48 w-48 text-white/[0.07]"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <h2 class="text-3xl text-white md:text-[46px]">Be part of the first summer</h2>
           <p class="mx-auto mt-4 max-w-xl text-lg text-white/85">Parents, camps, and early supporters can all help shape it. Join the movement and we'll keep you posted.</p>
           <div class="mt-8 flex flex-wrap justify-center gap-3">
