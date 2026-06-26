@@ -28,7 +28,7 @@ const btnGhostDark =
   'inline-flex items-center justify-center rounded-full border-[1.5px] border-white/45 px-[34px] py-[17px] font-display font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10'
 const needFigure = (extra) =>
   `<figure class="relative ${extra}">
-    <img src="${base}society-hero.png" alt="Kids canoeing together on a lake at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
+    <img src="${base}kids-playing.jpg" alt="Kids laughing and playing together outdoors at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
     <span class="pointer-events-none absolute inset-0 rounded-[24px] bg-gradient-to-t from-ink/25 via-transparent to-orange/10"></span>
   </figure>`
 
