@@ -1,20 +1,27 @@
 @import "tailwindcss";
 
-/* Brand design tokens — generate utilities like bg-cream, text-teal, font-sans.
-   Colours: Camp Match Kids Society (teal) + CampMatch.ca orange (#ed6f33). */
+/* Brand design tokens — generate utilities like bg-cream, text-teal, font-display.
+   Headings/labels/buttons: Nunito. Body: Nunito Sans. */
 @theme {
-  --color-cream: #fcf7ea;
+  --color-cream: #faf3e5;
+  --color-sage: #eaf0ec;
+  --color-ink: #0f2e27;
   --color-teal: #2c8a80;
   --color-teal-deep: #1f6b63;
-  --color-ink: #14322e;
-  --color-orange: #ed6f33;
-  --color-orange-deep: #d65f28;
-  --color-muted: #5d6c66;
-  --color-hero-dark: #103029;
+  --color-step: #15584a;
+  --color-eyebrow: #2c7a64;
+  --color-flame: #ef8a5c;
+  --color-orange: #e2622a;
+  --color-orange-deep: #cf5a23;
+  --color-muted: #5c6b64;
+  --color-sand: #6f6655;
+  --color-mist: #bcccc4;
+  --color-hero-dark: #0f2e27;
   --color-surface: #eef5f3;
   --color-line: #e6ece9;
 
-  --font-sans: "Nunito", system-ui, sans-serif;
+  --font-sans: "Nunito Sans", system-ui, sans-serif;
+  --font-display: "Nunito", system-ui, sans-serif;
 }
 
 @layer base {
@@ -26,6 +33,7 @@
   h1,
   h2,
   h3 {
+    font-family: var(--font-display);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.01em;

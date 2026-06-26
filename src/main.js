@@ -5,22 +5,32 @@ const img = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=
 const mail = (s) => `mailto:hello@campmatchkidssociety.ca?subject=${encodeURIComponent(s)}`
 
 const svg = (p) =>
-  `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
+  `<svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
 const I_CHECK = svg('<path d="M20 6 9 17l-5-5"/>')
+const I_MENU = svg('<path d="M4 6h16M4 12h16M4 18h16"/>')
 const I_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
-const I_USERS = svg('<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>')
-const I_SUN = svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>')
-const I_GIFT = svg('<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8M16.5 8a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8"/>')
-const I_CHEV = `<svg class="chev shrink-0" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`
+const I_CHEV = `<svg aria-hidden="true" class="chev shrink-0" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`
+const I_QUOTE = `<svg aria-hidden="true" viewBox="0 0 24 24" width="36" height="36" fill="currentColor" stroke="none"><path d="M9.6 6C6.6 6 4.5 8.3 4.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3C9.9 19.3 12 16.4 12 12.5 12 8.7 11.1 6 9.6 6Zm9 0C15.6 6 13.5 8.3 13.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3c3.1-1.1 5.2-4 5.2-7.9C21 8.7 20.1 6 18.6 6Z"/></svg>`
 const svg30 = (p) =>
-  `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
+  `<svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
 const I_BUILDING = svg30('<path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 8h.01M14 8h.01M10 12h.01M14 12h.01M10 16h3"/>')
 const I_TENT_W = svg30('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 const I_HEART_W = svg30('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 
+// Shared atoms
+const wrap = 'mx-auto max-w-[1180px] px-6 md:px-12'
+const sectionY = 'py-16 md:py-[104px]'
+const eyebrow = 'font-display text-[14px] font-extrabold uppercase tracking-[0.18em]'
+const h2cls = 'text-4xl leading-[1.08] md:text-[46px]'
+const btnPrimary =
+  'inline-flex items-center justify-center rounded-full bg-orange px-[34px] py-[17px] font-display font-extrabold text-white shadow-lg shadow-orange/30 transition hover:-translate-y-0.5 hover:bg-orange-deep'
+const btnGhostDark =
+  'inline-flex items-center justify-center rounded-full border-[1.5px] border-white/45 px-[34px] py-[17px] font-display font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10'
+
 document.querySelector('#app').innerHTML = `
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img
       src="${base}society-hero-2.png"
@@ -34,24 +44,36 @@ document.querySelector('#app').innerHTML = `
     <!-- Gentle, warm top & bottom tint so the nav and lower copy stay legible. -->
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
 
-    <div class="mx-auto flex min-h-screen max-w-6xl flex-col px-5">
-      <div class="flex items-center justify-between gap-4 py-4">
+    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-6 md:px-12">
+      <div class="flex items-center justify-between gap-4 py-5">
         <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
         </a>
-        <nav class="hidden items-center gap-7 text-sm font-semibold text-white/85 md:flex" aria-label="Primary">
+        <nav class="hidden items-center gap-7 font-display text-sm font-bold text-white/85 md:flex" aria-label="Primary">
           <a href="#what" class="transition hover:text-white">What we do</a>
           <a href="#need" class="transition hover:text-white">The need</a>
           <a href="#how" class="transition hover:text-white">How it works</a>
           <a href="#stories" class="transition hover:text-white">Stories</a>
           <a href="#faq" class="transition hover:text-white">FAQ</a>
+          <a href="#involved" class="rounded-full border-[1.5px] border-white/45 px-5 py-2.5 font-extrabold text-white transition hover:bg-white/10">Get involved</a>
         </nav>
-        <a href="#involved" class="rounded-full border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-white/10">Get involved</a>
+
+        <details class="relative md:hidden">
+          <summary class="grid h-11 w-11 cursor-pointer place-items-center rounded-full border-[1.5px] border-white/45 text-white" aria-label="Open menu">${I_MENU}</summary>
+          <div class="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-56 rounded-2xl border border-white/15 bg-[#0f2e27]/95 p-2 font-display text-sm font-bold text-white shadow-2xl backdrop-blur">
+            <a href="#what" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">What we do</a>
+            <a href="#need" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">The need</a>
+            <a href="#how" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">How it works</a>
+            <a href="#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Stories</a>
+            <a href="#faq" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">FAQ</a>
+            <a href="#involved" class="mt-1 block rounded-lg bg-orange px-4 py-2.5 text-center text-white">Get involved</a>
+          </div>
+        </details>
       </div>
 
       <div class="flex max-w-2xl flex-1 flex-col justify-center py-12 md:py-16">
-        <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp should be for every kid</p>
-        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-6xl">Every child deserves the chance to go to <span class="text-orange">summer camp.</span></h1>
+        <p class="mb-4 ${eyebrow} text-flame">Camp should be for every kid</p>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Every child deserves the chance to go to <span class="text-orange">summer camp.</span></h1>
         <p class="mt-6 max-w-prose text-lg text-white/85">
           Camp Match Kids Society removes the cost barrier that keeps kids out of summer camp.
           We partner with camps to open free and subsidized spaces, and bring donors and
@@ -59,8 +81,8 @@ document.querySelector('#app').innerHTML = `
           confidence, and fun.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="${mail('Join the movement')}" class="rounded-full bg-orange-deep px-6 py-3 font-extrabold text-white shadow-lg shadow-black/20 transition hover:brightness-95">Join the movement</a>
-          <a href="#how" class="rounded-full border-2 border-white/40 px-6 py-3 font-extrabold text-white transition hover:bg-white/10">See how it works</a>
+          <a href="${mail('Join the movement')}" class="${btnPrimary}">Join the movement</a>
+          <a href="#how" class="${btnGhostDark}">See how it works</a>
         </div>
         <p class="mt-7 max-w-prose text-sm text-white/70">
           Camp Match Kids Society is being established as a BC nonprofit. While incorporation
@@ -71,13 +93,13 @@ document.querySelector('#app').innerHTML = `
     </div>
   </header>
 
-  <main>
-    <section id="status" class="bg-[#eaf0ec]">
-      <div class="mx-auto max-w-[1180px] px-5 pb-[84px] pt-[76px]">
+  <main id="main">
+    <section id="status" class="bg-sage">
+      <div class="mx-auto max-w-[1180px] px-6 pb-[84px] pt-[76px] md:px-12">
         <div class="mx-auto max-w-[760px] text-center">
-          <p class="text-[14px] font-extrabold uppercase tracking-[0.18em] text-[#2c7a64]">Where we are now</p>
-          <h2 class="mt-4 text-4xl leading-[1.08] text-[#103029] md:text-5xl">New — but not starting from zero</h2>
-          <p class="mt-4 text-[19px] text-[#5c6b64]">The foundation of a real organization is already in place.</p>
+          <p class="${eyebrow} text-eyebrow">Where we are now</p>
+          <h2 class="mt-4 ${h2cls} text-ink">New — but not starting from zero</h2>
+          <p class="mt-4 text-[19px] text-muted">The foundation of a real organization is already in place.</p>
         </div>
         <div class="relative isolate mt-[58px]">
           <div class="grid gap-[30px] md:grid-cols-3">
@@ -88,11 +110,11 @@ document.querySelector('#app').innerHTML = `
             ]
               .map(
                 ([ic, n, t, p]) => `
-            <div class="group relative z-10 mt-[34px] flex flex-col items-center rounded-[18px] border border-[#e2e9e4] bg-white px-6 pb-[38px] pt-[54px] text-center transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:border-[rgba(206,93,31,0.4)] hover:shadow-[0_22px_46px_-22px_rgba(16,48,41,0.34)]">
-              <span class="absolute left-1/2 top-0 grid h-[68px] w-[68px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[5px] border-[#eaf0ec] bg-[#ce5d1f] text-white shadow-[0_10px_24px_-6px_rgba(206,93,31,0.55)]">${ic}</span>
-              <span class="text-sm font-extrabold tracking-wider text-[#ce5d1f]">${n}</span>
-              <h3 class="mt-2 text-[23px] font-bold leading-tight text-[#103029]">${t}</h3>
-              <p class="mx-auto mt-3 max-w-[230px] text-[16px] leading-[1.6] text-[#5c6b64]">${p}</p>
+            <div class="group relative z-10 mt-[34px] flex flex-col items-center rounded-[18px] border border-[#e2e9e4] bg-white px-6 pb-[38px] pt-[54px] text-center transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:border-[rgba(226,98,42,0.4)] hover:shadow-[0_22px_46px_-22px_rgba(15,46,39,0.34)]">
+              <span class="absolute left-1/2 top-0 grid h-[68px] w-[68px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[5px] border-sage bg-orange text-white shadow-[0_10px_24px_-6px_rgba(226,98,42,0.55)]">${ic}</span>
+              <span class="font-display text-sm font-extrabold tracking-wider text-orange">${n}</span>
+              <h3 class="mt-2 text-[23px] font-bold leading-tight text-ink">${t}</h3>
+              <p class="mx-auto mt-3 max-w-[230px] text-[16px] leading-[1.6] text-muted">${p}</p>
             </div>`
               )
               .join('')}
@@ -101,127 +123,136 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
-    <section id="what" class="mx-auto max-w-6xl px-5 py-16 md:py-24">
-      <div class="mx-auto max-w-2xl text-center">
-        <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">What we do</p>
-        <h2 class="text-3xl text-ink md:text-4xl">We make camp reachable</h2>
-        <p class="mt-4 text-lg text-muted">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
-      </div>
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-        ${[
-          [I_HEART, 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
-          [I_TENT, 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every summer.'],
-          [I_DOOR, 'Keep it kind', "Families come to us about their kid's summer — never to prove they're in need. An open door, not an application."],
-        ]
-          .map(
-            ([ic, t, p]) => `
-          <article class="rounded-2xl border border-line bg-white p-7 shadow-sm">
-            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-teal/10 text-teal-deep">${ic}</span>
-            <h3 class="mt-4 text-xl text-ink">${t}</h3>
-            <p class="mt-2 text-muted">${p}</p>
-          </article>`
-          )
-          .join('')}
-      </div>
-    </section>
-
-    <section id="need" class="bg-hero-dark text-white">
-      <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="mb-3 text-sm font-bold uppercase tracking-widest text-white/60">The need</p>
-          <h2 class="text-3xl text-white md:text-4xl">For too many kids, camp is out of reach</h2>
-          <p class="mt-6 text-lg text-white/80">
-            Summer camp is where kids make friends, build confidence, and discover what they're
-            capable of. But for many families, the cost simply isn't there — and a child misses a
-            summer that could have shaped their whole year.
-          </p>
-          <p class="mt-4 text-lg text-white/80">
-            It's rarely about wanting it less. It's about cost becoming a wall between a kid and the
-            kind of summer every child deserves.
-          </p>
-          <p class="mt-8 text-2xl font-extrabold leading-snug text-orange md:text-3xl">
-            Cost shouldn't decide which kids get a summer worth remembering.
-          </p>
+    <section id="what" class="bg-cream">
+      <div class="${wrap} ${sectionY}">
+        <div class="mx-auto max-w-[760px] text-center">
+          <p class="${eyebrow} text-eyebrow">What we do</p>
+          <h2 class="mt-3 ${h2cls} text-ink">We make camp reachable</h2>
+          <p class="mt-4 text-lg text-sand">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="how" class="border-y border-line bg-surface">
-      <div class="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div class="mx-auto max-w-2xl text-center">
-          <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">How it works</p>
-          <h2 class="text-3xl text-ink md:text-4xl">A simple path to camp</h2>
-          <p class="mt-4 text-lg text-muted">Three steps, built around the kid.</p>
-        </div>
-        <ol class="mt-12 grid gap-8 md:grid-cols-3">
-          ${[
-            [I_USERS, 'Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
-            [I_HEART, 'We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
-            [I_SUN, 'A kid gets their summer', 'Friendships, confidence, new experiences — a summer that sticks with them.'],
-          ]
-            .map(
-              ([ic, t, p], i) => `
-            <li class="relative rounded-2xl border border-line bg-white p-7 shadow-sm">
-              <div class="flex items-center gap-3">
-                <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-teal text-sm font-extrabold text-white">${i + 1}</span>
-                <span class="text-teal-deep">${ic}</span>
-              </div>
-              <h3 class="mt-4 text-xl text-ink">${t}</h3>
-              <p class="mt-2 text-muted">${p}</p>
-            </li>`
-            )
-            .join('')}
-        </ol>
-      </div>
-    </section>
-
-    <section id="stories" class="mx-auto max-w-6xl px-5 py-16 md:py-24">
-      <div class="grid items-center gap-10 md:grid-cols-2">
-        <img
-          src="${img('1638202951770-2240942c7d1c', 900)}"
-          srcset="${img('1638202951770-2240942c7d1c', 700)} 700w, ${img('1638202951770-2240942c7d1c', 1100)} 1100w"
-          sizes="(max-width: 768px) 92vw, 46vw"
-          alt="Kids relaxing together in a hammock among the trees at camp"
-          loading="lazy"
-          class="aspect-[5/4] w-full rounded-3xl object-cover shadow-xl"
-        />
-        <div>
-          <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">Why it matters</p>
-          <h2 class="text-3xl text-ink md:text-4xl">A summer at camp can change a kid's whole year</h2>
-          <p class="mt-4 text-lg text-muted">
-            Friendships, confidence, new experiences, a place to belong — and somewhere safe and
-            joyful while parents work. Every kid deserves a summer like that.
-          </p>
-          <ul class="mt-6 space-y-3">
+        <div class="mt-12 rounded-[28px] bg-white p-[30px] shadow-[0_40px_80px_-40px_rgba(15,46,39,0.28)]">
+          <div class="grid gap-6 md:grid-cols-3">
             ${[
-              'Every child deserves camp.',
-              'Every friendship matters.',
-              'Every summer should make memories.',
+              [I_HEART, '01', 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
+              [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every summer.'],
+              [I_DOOR, '03', 'Keep it kind', "Families come to us about their kid's summer — never to prove they're in need. An open door, not an application."],
             ]
               .map(
-                (t) => `
-            <li class="flex items-center gap-3">
-              <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-orange-deep text-white">${I_CHECK}</span>
-              <span class="font-bold text-ink">${t}</span>
+                ([ic, n, t, p]) => `
+            <article class="group relative overflow-hidden rounded-2xl bg-[#faf6ec] p-7 transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:shadow-[0_22px_46px_-22px_rgba(15,46,39,0.3)]">
+              <span class="pointer-events-none absolute right-4 top-1 font-display text-6xl font-extrabold text-ink/[0.06]">${n}</span>
+              <span class="grid h-14 w-14 place-items-center rounded-2xl bg-[#dde8e1] text-teal-deep">${ic}</span>
+              <h3 class="mt-5 text-xl text-ink">${t}</h3>
+              <p class="mt-2 text-sand">${p}</p>
+              <span class="mt-5 block h-1 w-8 rounded-full bg-orange transition-all duration-300 group-hover:w-16"></span>
+            </article>`
+              )
+              .join('')}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="need" class="relative isolate overflow-hidden bg-ink text-white">
+      <div class="pointer-events-none absolute -right-20 -top-20 -z-10 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(226,98,42,0.22),transparent_70%)]"></div>
+      <div class="${wrap} ${sectionY}">
+        <div class="grid gap-8 md:grid-cols-2 md:items-start md:gap-14">
+          <div>
+            <p class="${eyebrow} text-flame">The need</p>
+            <h2 class="mt-3 ${h2cls} text-white">For too many kids, camp is out of reach</h2>
+          </div>
+          <div class="space-y-4 text-lg text-mist">
+            <p>Summer camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses a summer that could have shaped their whole year.</p>
+            <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the kind of summer every child deserves.</p>
+          </div>
+        </div>
+        <div class="mt-12 flex items-start gap-5 rounded-2xl border-l-[5px] border-orange bg-white/[0.04] p-7 md:p-9">
+          <span class="shrink-0 text-orange">${I_QUOTE}</span>
+          <p class="font-display text-2xl font-extrabold leading-snug text-orange md:text-[31px]">Cost shouldn't decide which kids get a summer worth remembering.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="bg-sage">
+      <div class="${wrap} ${sectionY}">
+        <div class="mx-auto max-w-[760px] text-center">
+          <p class="${eyebrow} text-eyebrow">How it works</p>
+          <h2 class="mt-3 ${h2cls} text-ink">A simple path to camp</h2>
+          <p class="mt-4 text-lg text-muted">Three steps, built around the kid.</p>
+        </div>
+        <div class="relative isolate mt-[60px]">
+          <ol class="grid gap-[30px] md:grid-cols-3">
+            ${[
+              ['Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
+              ['We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
+              ['A kid gets their summer', 'Friendships, confidence, new experiences — a summer that sticks with them.'],
+            ]
+              .map(
+                ([t, p], i) => `
+            <li class="group relative z-10 mt-[36px] flex flex-col items-center rounded-[18px] border border-[#e2e9e4] bg-white px-6 pb-[38px] pt-[58px] text-center transition duration-[250ms] ease-out hover:-translate-y-1.5 hover:shadow-[0_22px_46px_-22px_rgba(15,46,39,0.34)]">
+              <span class="absolute left-1/2 top-0 grid h-[72px] w-[72px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[5px] border-sage bg-step font-display text-2xl font-extrabold text-white shadow-[0_10px_24px_-6px_rgba(15,88,74,0.5)]">${i + 1}</span>
+              <h3 class="text-[23px] font-bold leading-tight text-ink">${t}</h3>
+              <p class="mx-auto mt-3 max-w-[240px] text-[16px] leading-[1.6] text-muted">${p}</p>
             </li>`
               )
               .join('')}
-          </ul>
+          </ol>
         </div>
       </div>
-      <p class="mx-auto mt-12 max-w-2xl text-center text-muted">
-        Soon, this is where you'll meet the families and camps making it happen — their stories
-        are just beginning.
-      </p>
     </section>
 
-    <section id="faq" class="border-t border-line bg-surface">
-      <div class="mx-auto max-w-3xl px-5 py-16 md:py-24">
-        <div class="text-center">
-          <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">FAQ</p>
-          <h2 class="text-3xl text-ink md:text-4xl">Questions, answered</h2>
+    <section id="stories" class="bg-cream">
+      <div class="${wrap} ${sectionY}">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div class="relative">
+            <img
+              src="${img('1638202951770-2240942c7d1c', 900)}"
+              srcset="${img('1638202951770-2240942c7d1c', 700)} 700w, ${img('1638202951770-2240942c7d1c', 1100)} 1100w"
+              sizes="(max-width: 768px) 92vw, 46vw"
+              alt="Kids relaxing together in a hammock among the trees at camp"
+              loading="lazy"
+              class="h-[470px] w-full rounded-[22px] object-cover shadow-xl"
+            />
+            <div class="absolute -bottom-5 right-5 max-w-[220px] rounded-2xl bg-orange px-5 py-4 font-display font-extrabold leading-tight text-white shadow-lg shadow-orange/30">A summer they'll carry for years.</div>
+          </div>
+          <div>
+            <p class="${eyebrow} text-eyebrow">Why it matters</p>
+            <h2 class="mt-3 ${h2cls} text-ink">A summer at camp can change a kid's whole year</h2>
+            <p class="mt-4 text-lg text-sand">
+              Friendships, confidence, new experiences, a place to belong — and somewhere safe and
+              joyful while parents work. Every kid deserves a summer like that.
+            </p>
+            <ul class="mt-7 space-y-4">
+              ${[
+                'Every child deserves camp.',
+                'Every friendship matters.',
+                'Every summer should make memories.',
+              ]
+                .map(
+                  (t) => `
+              <li class="flex items-center gap-3">
+                <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-orange text-white">${I_CHECK}</span>
+                <span class="font-display text-lg font-bold text-ink">${t}</span>
+              </li>`
+                )
+                .join('')}
+            </ul>
+            <p class="mt-7 rounded-xl bg-[#f3ecdc] px-5 py-4 text-sm italic text-sand">
+              Soon, this is where you'll meet the families and camps making it happen — their stories
+              are just beginning.
+            </p>
+          </div>
         </div>
-        <div class="mt-10 space-y-3">
+      </div>
+    </section>
+
+    <section id="faq" class="bg-sage">
+      <div class="${wrap} ${sectionY}">
+        <div class="text-center">
+          <p class="${eyebrow} text-eyebrow">FAQ</p>
+          <h2 class="mt-3 ${h2cls} text-ink">Questions, answered</h2>
+        </div>
+        <div class="mx-auto mt-10 max-w-[820px] space-y-3">
           ${[
             [
               'Who is Camp Match Kids Society for?',
@@ -250,10 +281,10 @@ document.querySelector('#app').innerHTML = `
           ]
             .map(
               ([q, a]) => `
-          <details class="group rounded-2xl border border-line bg-white p-5 open:shadow-sm">
-            <summary class="flex items-center justify-between gap-4 text-lg font-bold text-ink">
+          <details class="group rounded-2xl bg-white px-6 py-5 shadow-sm">
+            <summary class="flex items-center justify-between gap-4 font-display text-[18.5px] font-semibold text-ink">
               <span>${q}</span>
-              <span class="text-teal-deep">${I_CHEV}</span>
+              <span class="text-orange">${I_CHEV}</span>
             </summary>
             <p class="mt-3 text-muted">${a}</p>
           </details>`
@@ -263,71 +294,48 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
-    <section id="involved" class="mx-auto max-w-6xl px-5 py-16 md:py-24">
-      <div class="rounded-3xl bg-gradient-to-br from-teal to-teal-deep px-6 py-14 text-center text-white md:px-12">
-        <h2 class="text-3xl md:text-4xl">Be part of the first summer</h2>
-        <p class="mx-auto mt-4 max-w-xl text-lg text-white/90">Parents, camps, and early supporters can all help shape it. Join the movement and we'll keep you posted.</p>
-        <form id="cmSignup" class="mx-auto mt-8 flex max-w-lg flex-wrap justify-center gap-3" novalidate>
-          <input id="cmEmail" type="email" required placeholder="Enter your email address" aria-label="Enter your email address" class="min-w-0 flex-1 rounded-full px-5 py-3 text-ink" />
-          <button type="submit" class="rounded-full bg-orange-deep px-7 py-3 font-extrabold text-white transition hover:brightness-95">Join the movement</button>
-        </form>
-        <div class="mx-auto mt-6 flex max-w-xl flex-col items-center gap-2">
-          <span class="inline-flex cursor-not-allowed items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-extrabold text-white/70" aria-disabled="true" title="Coming soon">${I_GIFT}<span>Donate — coming soon</span></span>
-          <p class="text-sm text-white/75">Tax-deductible giving opens once our charitable registration is complete.</p>
+    <section id="involved" class="bg-cream">
+      <div class="${wrap} ${sectionY}">
+        <div class="relative isolate overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#11463a,#1c7a63)] px-6 py-16 text-center text-white md:px-14 md:py-20">
+          <div class="pointer-events-none absolute -left-16 -top-16 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(226,98,42,0.28),transparent_70%)]"></div>
+          <div class="pointer-events-none absolute -bottom-16 -right-10 -z-10 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_70%)]"></div>
+          <h2 class="text-3xl text-white md:text-[46px]">Be part of the first summer</h2>
+          <p class="mx-auto mt-4 max-w-xl text-lg text-white/85">Parents, camps, and early supporters can all help shape it. Join the movement and we'll keep you posted.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="${mail('Join the movement')}" class="${btnPrimary}">Join the movement</a>
+            <a href="#what" class="${btnGhostDark}">Learn more</a>
+          </div>
         </div>
-        <p class="mx-auto mt-8 max-w-xl border-t border-white/20 pt-6 text-sm text-white/85">
-          Tell us who you are:
-          <a href="${mail('I run a camp — Camp Match Kids Society')}" class="font-bold underline">I run a camp</a> ·
-          <a href="${mail('I want to help — Camp Match Kids Society')}" class="font-bold underline">I want to help</a>
+        <p class="mx-auto mt-6 max-w-2xl text-center text-sm text-sand">
+          Run a camp or want to help?
+          <a href="${mail('I run a camp — Camp Match Kids Society')}" class="font-bold text-teal-deep underline">I run a camp</a> ·
+          <a href="${mail('I want to help — Camp Match Kids Society')}" class="font-bold text-teal-deep underline">I want to help</a>
+          · Tax-deductible giving opens once our charitable registration is complete.
         </p>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-line">
-    <div class="mx-auto max-w-6xl px-5 py-12">
-      <div class="grid gap-10 md:grid-cols-3">
-        <div>
-          <img src="${base}logo.png" alt="Camp Match Kids Society" class="h-14 w-auto" />
-          <p class="mt-4 max-w-sm text-sm text-muted">
-            Helping more kids in BC get to summer camp by removing the cost barrier — with camps,
-            donors, and communities.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-sm font-extrabold uppercase tracking-widest text-ink">Explore</h3>
-          <ul class="mt-4 space-y-2 text-sm text-muted">
-            <li><a href="#what" class="transition hover:text-teal-deep">What we do</a></li>
-            <li><a href="#need" class="transition hover:text-teal-deep">The need</a></li>
-            <li><a href="#how" class="transition hover:text-teal-deep">How it works</a></li>
-            <li><a href="#stories" class="transition hover:text-teal-deep">Stories</a></li>
-            <li><a href="#faq" class="transition hover:text-teal-deep">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-sm font-extrabold uppercase tracking-widest text-ink">Get in touch</h3>
-          <ul class="mt-4 space-y-2 text-sm text-muted">
-            <li><a href="${mail('Hello from your website')}" class="font-bold text-teal-deep">hello@campmatchkidssociety.ca</a></li>
-            <li><a href="#involved" class="transition hover:text-teal-deep">Join the movement →</a></li>
-          </ul>
-        </div>
+  <footer class="bg-ink text-white">
+    <div class="mx-auto max-w-[1180px] px-6 py-12 md:px-12">
+      <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+        <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
+          <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-10 w-auto" />
+        </a>
+        <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 font-display text-sm font-bold text-mist" aria-label="Footer">
+          <a href="#what" class="transition hover:text-white">What we do</a>
+          <a href="#need" class="transition hover:text-white">The need</a>
+          <a href="#how" class="transition hover:text-white">How it works</a>
+          <a href="#faq" class="transition hover:text-white">FAQ</a>
+        </nav>
       </div>
-      <div class="mt-10 border-t border-line pt-6 text-sm text-muted">
-        <p class="max-w-3xl">
-          Camp Match Kids Society is being established as a BC nonprofit — the charitable sibling
-          of, but separate from, the for-profit
-          <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-teal-deep">CampMatch.ca</a>.
-          Donations and tax receipts will open once our charitable registration is complete.
+      <div class="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist md:text-left">
+        <p>
+          © 2026 Camp Match Kids Society — a BC nonprofit in formation. Working alongside
+          <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
+          to remove the barriers that keep kids from camp.
         </p>
-        <p class="mt-4">© 2026 Camp Match Kids Society. Made with care in British Columbia.</p>
       </div>
     </div>
   </footer>
 `
-
-document.querySelector('#cmSignup')?.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const email = document.querySelector('#cmEmail')?.value || ''
-  const body = `Please keep me posted about Camp Match Kids Society.%0D%0AMy email: ${encodeURIComponent(email)}`
-  window.location.href = `mailto:hello@campmatchkidssociety.ca?subject=${encodeURIComponent('Join the movement')}&body=${body}`
-})
