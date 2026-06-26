@@ -1,8 +1,7 @@
 import './style.css'
+import { base, mail, siteFooter } from './shared.js'
 
-const base = import.meta.env.BASE_URL
 const img = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
-const mail = (s) => `mailto:hello@campmatchkidssociety.ca?subject=${encodeURIComponent(s)}`
 
 const svg = (p) =>
   `<svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
@@ -11,7 +10,6 @@ const I_MENU = svg('<path d="M4 6h16M4 12h16M4 18h16"/>')
 const I_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
-const I_CHEV = `<svg aria-hidden="true" class="chev shrink-0" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`
 const I_QUOTE = `<svg aria-hidden="true" viewBox="0 0 24 24" width="36" height="36" fill="currentColor" stroke="none"><path d="M9.6 6C6.6 6 4.5 8.3 4.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3C9.9 19.3 12 16.4 12 12.5 12 8.7 11.1 6 9.6 6Zm9 0C15.6 6 13.5 8.3 13.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3c3.1-1.1 5.2-4 5.2-7.9C21 8.7 20.1 6 18.6 6Z"/></svg>`
 const svg30 = (p) =>
   `<svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
@@ -59,7 +57,7 @@ document.querySelector('#app').innerHTML = `
           <a href="#need" class="transition hover:text-white">The need</a>
           <a href="#how" class="transition hover:text-white">How it works</a>
           <a href="#stories" class="transition hover:text-white">Stories</a>
-          <a href="#faq" class="transition hover:text-white">FAQ</a>
+          <a href="${base}faq/" class="transition hover:text-white">FAQ</a>
           <a href="#involved" class="rounded-full border-[1.5px] border-white/45 px-5 py-2.5 font-extrabold text-white transition hover:bg-white/10">Get involved</a>
         </nav>
 
@@ -70,7 +68,7 @@ document.querySelector('#app').innerHTML = `
             <a href="#need" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">The need</a>
             <a href="#how" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">How it works</a>
             <a href="#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Stories</a>
-            <a href="#faq" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">FAQ</a>
+            <a href="${base}faq/" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">FAQ</a>
             <a href="#involved" class="mt-1 block rounded-lg bg-orange px-4 py-2.5 text-center text-white">Get involved</a>
           </div>
         </details>
@@ -253,54 +251,6 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
-    <section id="faq" class="bg-sage">
-      <div class="${wrap} ${sectionY}">
-        <div class="text-center">
-          <p class="${eyebrow} text-eyebrow">FAQ</p>
-          <h2 class="mt-3 ${h2cls} text-ink">Questions, answered</h2>
-        </div>
-        <div class="mx-auto mt-10 max-w-[820px] space-y-3">
-          ${[
-            [
-              'Who is Camp Match Kids Society for?',
-              "Any family for whom the cost of summer camp is a barrier. We keep it an open door — you come to us about your kid's summer, never to prove you're in need.",
-            ],
-            [
-              'How do families take part?',
-              "We're building our first summer now. Join the list and we'll reach out as spaces open — then we match your child to a partner camp and cover the cost.",
-            ],
-            [
-              'How are camps involved?',
-              "Partner camps offer free and subsidized spaces. If you run a camp and want to open spots for more kids, we'd love to talk.",
-            ],
-            [
-              'How can businesses and individuals help?',
-              'Supporters help fund camp spaces and remove the cost barrier. Right now the best way to help is to join the movement — donation options are coming soon.',
-            ],
-            [
-              'Is my donation tax-deductible?',
-              'Not yet. Tax-deductible receipts will open once our charitable registration is complete. Until then, we are gathering supporters who want to be first.',
-            ],
-            [
-              'How is this related to CampMatch.ca?',
-              'We are the charitable sibling of CampMatch.ca — a separate organization, built on the same belief that every kid deserves camp.',
-            ],
-          ]
-            .map(
-              ([q, a]) => `
-          <details class="group rounded-2xl bg-white px-6 py-5 shadow-sm">
-            <summary class="flex items-center justify-between gap-4 font-display text-[18.5px] font-semibold text-ink">
-              <span>${q}</span>
-              <span class="text-orange">${I_CHEV}</span>
-            </summary>
-            <p class="mt-3 text-muted">${a}</p>
-          </details>`
-            )
-            .join('')}
-        </div>
-      </div>
-    </section>
-
     <section id="involved" class="bg-cream">
       <div class="${wrap} ${sectionY}">
         <div class="relative isolate overflow-hidden rounded-[28px] bg-[linear-gradient(120deg,#11463a,#1c7a63)] px-6 py-16 text-center text-white md:px-14 md:py-20">
@@ -323,26 +273,5 @@ document.querySelector('#app').innerHTML = `
     </section>
   </main>
 
-  <footer class="bg-ink text-white">
-    <div class="mx-auto max-w-[1180px] px-6 py-12 md:px-12">
-      <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-        <a href="#top" class="flex items-center" aria-label="Camp Match Kids Society home">
-          <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-10 w-auto" />
-        </a>
-        <nav class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 font-display text-sm font-bold text-mist" aria-label="Footer">
-          <a href="#what" class="transition hover:text-white">What we do</a>
-          <a href="#need" class="transition hover:text-white">The need</a>
-          <a href="#how" class="transition hover:text-white">How it works</a>
-          <a href="#faq" class="transition hover:text-white">FAQ</a>
-        </nav>
-      </div>
-      <div class="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist md:text-left">
-        <p>
-          © 2026 Camp Match Kids Society — a BC nonprofit in formation. Working alongside
-          <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
-          to remove the barriers that keep kids from camp.
-        </p>
-      </div>
-    </div>
-  </footer>
+  ${siteFooter()}
 `
