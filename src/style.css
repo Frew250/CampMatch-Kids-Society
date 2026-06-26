@@ -30,4 +30,9 @@
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
+  /* Visible keyboard focus for all interactive elements (links, buttons, input). */
+  :focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 2px;
+  }
 }

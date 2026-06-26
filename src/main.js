@@ -38,14 +38,14 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="flex max-w-xl flex-1 flex-col justify-center py-10 md:py-16">
-        <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp for every kid</p>
-        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
+        <p class="mb-4 text-sm font-bold uppercase tracking-widest text-white/70">Camp should be for every kid</p>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-6xl">Helping more kids get a summer that <span class="text-orange">sticks with them.</span></h1>
         <p class="mt-5 max-w-prose text-lg text-white/85">
           We help kids whose families can't swing the cost get to summer camp — covering
           fees, and working with camps to open up free and discounted spots.
         </p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <a href="${mail('Keep me posted')}" class="rounded-full bg-orange px-6 py-3 font-extrabold text-white shadow-lg shadow-black/20 transition hover:bg-orange-deep">Keep me posted</a>
+          <a href="${mail('Keep me posted')}" class="rounded-full bg-orange-deep px-6 py-3 font-extrabold text-white shadow-lg shadow-black/20 transition hover:brightness-95">Keep me posted</a>
           <a href="#how" class="rounded-full border-2 border-white/40 px-6 py-3 font-extrabold text-white transition hover:bg-white/10">See how it works</a>
         </div>
         <p class="mt-6 text-sm text-white/65">
@@ -54,7 +54,7 @@ document.querySelector('#app').innerHTML = `
         </p>
       </div>
 
-      <ul class="mb-10 grid gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur sm:grid-cols-3 md:mb-14">
+      <ul class="mb-10 grid gap-4 rounded-2xl border border-white/15 bg-hero-dark/70 p-5 backdrop-blur sm:grid-cols-3 md:mb-14">
         ${[
           ['A board in place', 'ready to incorporate as a BC nonprofit'],
           ['Camps on board', 'already offering spots'],
@@ -64,7 +64,7 @@ document.querySelector('#app').innerHTML = `
             ([t, s]) => `
           <li class="flex items-start gap-3">
             <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-orange text-white">${I_CHECK}</span>
-            <p><span class="font-extrabold text-white">${t}</span> <span class="text-white/70">— ${s}.</span></p>
+            <p><span class="font-extrabold text-white">${t}</span> <span class="text-white/80">— ${s}.</span></p>
           </li>`
           )
           .join('')}
@@ -144,8 +144,8 @@ document.querySelector('#app').innerHTML = `
         <h2 class="text-3xl md:text-4xl">Tell us where you fit</h2>
         <p class="mx-auto mt-4 max-w-xl text-white/90">Parents, camps, and early supporters can all help shape the first summer. Leave your email and we'll keep you posted.</p>
         <form id="cmSignup" class="mx-auto mt-8 flex max-w-lg flex-wrap justify-center gap-3" novalidate>
-          <input id="cmEmail" type="email" required placeholder="Enter your email address" aria-label="Enter your email address" class="min-w-0 flex-1 rounded-full px-5 py-3 text-ink outline-none" />
-          <button type="submit" class="rounded-full bg-orange px-7 py-3 font-extrabold text-white transition hover:bg-orange-deep">Keep me posted</button>
+          <input id="cmEmail" type="email" required placeholder="Enter your email address" aria-label="Enter your email address" class="min-w-0 flex-1 rounded-full px-5 py-3 text-ink" />
+          <button type="submit" class="rounded-full bg-orange-deep px-7 py-3 font-extrabold text-white transition hover:brightness-95">Keep me posted</button>
         </form>
         <p class="mt-6 text-sm text-white/85">
           Tell us who you are:
