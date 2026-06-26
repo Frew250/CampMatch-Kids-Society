@@ -18,8 +18,8 @@ const I_CHEV = `<svg class="chev shrink-0" viewBox="0 0 24 24" width="22" height
 document.querySelector('#app').innerHTML = `
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img
-      src="${base}vitolda-klein-tyV_ftXkEZc-unsplash.jpg"
-      alt="A child leaping joyfully off a dock into the sea on a sunny summer day"
+      src="${base}society-hero.png"
+      alt="Kids canoeing together on a calm mountain lake at summer camp"
       class="absolute inset-0 -z-10 h-full w-full object-cover opacity-90"
       fetchpriority="high"
     />
