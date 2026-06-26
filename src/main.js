@@ -28,6 +28,11 @@ const btnPrimary =
   'inline-flex items-center justify-center rounded-full bg-orange px-[34px] py-[17px] font-display font-extrabold text-white shadow-lg shadow-orange/30 transition hover:-translate-y-0.5 hover:bg-orange-deep'
 const btnGhostDark =
   'inline-flex items-center justify-center rounded-full border-[1.5px] border-white/45 px-[34px] py-[17px] font-display font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10'
+const needFigure = (extra) =>
+  `<figure class="relative ${extra}">
+    <img src="${base}society-hero.png" alt="Kids canoeing together on a lake at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
+    <span class="pointer-events-none absolute inset-0 rounded-[24px] bg-gradient-to-t from-ink/25 via-transparent to-orange/10"></span>
+  </figure>`
 
 document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
@@ -156,15 +161,17 @@ document.querySelector('#app').innerHTML = `
     <section id="need" class="relative isolate overflow-hidden bg-ink text-white">
       <div class="pointer-events-none absolute -right-20 -top-20 -z-10 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(226,98,42,0.22),transparent_70%)]"></div>
       <div class="${wrap} ${sectionY}">
-        <div class="grid gap-8 md:grid-cols-2 md:items-start md:gap-14">
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,460px)] lg:items-center lg:gap-16">
           <div>
             <p class="${eyebrow} text-flame">The need</p>
             <h2 class="mt-3 ${h2cls} text-white">For too many kids, camp is out of reach</h2>
+            ${needFigure('mt-7 lg:hidden')}
+            <div class="mt-7 space-y-4 text-lg text-mist">
+              <p>Summer camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses a summer that could have shaped their whole year.</p>
+              <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the kind of summer every child deserves.</p>
+            </div>
           </div>
-          <div class="space-y-4 text-lg text-mist">
-            <p>Summer camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses a summer that could have shaped their whole year.</p>
-            <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the kind of summer every child deserves.</p>
-          </div>
+          ${needFigure('hidden lg:block')}
         </div>
         <div class="mt-12 flex items-start gap-5 rounded-2xl border-l-[5px] border-orange bg-white/[0.04] p-7 md:p-9">
           <span class="shrink-0 text-orange">${I_QUOTE}</span>
