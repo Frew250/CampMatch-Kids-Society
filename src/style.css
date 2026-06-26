@@ -35,4 +35,30 @@
     outline: 3px solid var(--color-orange);
     outline-offset: 2px;
   }
+
+  /* Smooth in-page navigation (motion-safe only). */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  /* Account for any anchored sections so jumps don't sit flush to the top. */
+  [id] {
+    scroll-margin-top: 1.5rem;
+  }
+
+  /* FAQ accordion: clean summary, rotating chevron. */
+  summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .chev {
+    transition: transform 0.2s ease;
+  }
+  details[open] .chev {
+    transform: rotate(180deg);
+  }
 }
