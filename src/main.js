@@ -16,10 +16,13 @@ document.querySelector('#app').innerHTML = `
     <img
       src="${base}vitolda-klein-tyV_ftXkEZc-unsplash.jpg"
       alt="A child leaping joyfully off a dock into the sea on a sunny summer day"
-      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-45"
+      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-90"
       fetchpriority="high"
     />
-    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-hero-dark/90 via-hero-dark/72 to-hero-dark/90"></div>
+    <!-- Left-heavy gradient: strong behind the text, clears toward the sunlit right -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-hero-dark via-hero-dark/75 to-hero-dark/15"></div>
+    <!-- Gentle top & bottom tint so the nav and facts bar stay legible over the brighter areas -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-hero-dark/40 via-transparent to-hero-dark/55"></div>
 
     <div class="mx-auto flex min-h-screen max-w-6xl flex-col px-5">
       <div class="flex items-center justify-between gap-4 py-4">
