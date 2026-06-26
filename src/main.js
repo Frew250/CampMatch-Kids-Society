@@ -10,7 +10,6 @@ const I_MENU = svg('<path d="M4 6h16M4 12h16M4 18h16"/>')
 const I_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
-const I_QUOTE = `<svg aria-hidden="true" viewBox="0 0 24 24" width="36" height="36" fill="currentColor" stroke="none"><path d="M9.6 6C6.6 6 4.5 8.3 4.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3C9.9 19.3 12 16.4 12 12.5 12 8.7 11.1 6 9.6 6Zm9 0C15.6 6 13.5 8.3 13.5 11.4c0 2.6 1.8 4.5 4.2 4.5.6 0 1.1-.1 1.4-.2-.5 1.7-2.1 3-4 3.5l.7 1.3c3.1-1.1 5.2-4 5.2-7.9C21 8.7 20.1 6 18.6 6Z"/></svg>`
 const svg30 = (p) =>
   `<svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
 const I_BUILDING = svg30('<path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M10 8h.01M14 8h.01M10 12h.01M14 12h.01M10 16h3"/>')
@@ -170,10 +169,6 @@ document.querySelector('#app').innerHTML = `
             </div>
           </div>
           ${needFigure('hidden lg:block')}
-        </div>
-        <div class="mt-12 flex items-start gap-5 rounded-2xl border-l-[5px] border-orange bg-white/[0.04] p-7 md:p-9">
-          <span class="shrink-0 text-orange">${I_QUOTE}</span>
-          <p class="font-display text-2xl font-extrabold leading-snug text-orange md:text-[31px]">Cost shouldn't decide which kids get a summer worth remembering.</p>
         </div>
       </div>
     </section>
