@@ -29,7 +29,7 @@ export const FAQ_ITEMS = [
   ],
   [
     'How is this related to CampMatch.ca?',
-    'We are the charitable sibling of CampMatch.ca — a separate organization, built on the same belief that every kid deserves camp.',
+    "We are the charitable sibling of CampMatch.ca — a separate organization, built on the same belief that cost shouldn't keep a kid from camp.",
   ],
 ]
 

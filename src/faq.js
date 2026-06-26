@@ -17,7 +17,7 @@ document.querySelector('#app').innerHTML = `
         ${navLink(`${base}#what`, 'What we do')}
         ${navLink(`${base}#need`, 'The need')}
         ${navLink(`${base}#how`, 'How it works')}
-        ${navLink(`${base}#stories`, 'Stories')}
+        ${navLink(`${base}#stories`, 'Why it matters')}
         <span class="text-white" aria-current="page">FAQ</span>
         <a href="${base}#involved" class="rounded-full border-[1.5px] border-white/45 px-5 py-2.5 font-extrabold text-white transition hover:bg-white/10">Get involved</a>
       </nav>
@@ -28,7 +28,7 @@ document.querySelector('#app').innerHTML = `
           <a href="${base}#what" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">What we do</a>
           <a href="${base}#need" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">The need</a>
           <a href="${base}#how" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">How it works</a>
-          <a href="${base}#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Stories</a>
+          <a href="${base}#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Why it matters</a>
           <a href="${base}faq/" class="block rounded-lg bg-white/10 px-4 py-2.5">FAQ</a>
           <a href="${base}#involved" class="mt-1 block rounded-lg bg-orange px-4 py-2.5 text-center text-white">Get involved</a>
         </div>

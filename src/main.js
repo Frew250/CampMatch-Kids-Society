@@ -56,7 +56,7 @@ document.querySelector('#app').innerHTML = `
           <a href="#what" class="transition hover:text-white">What we do</a>
           <a href="#need" class="transition hover:text-white">The need</a>
           <a href="#how" class="transition hover:text-white">How it works</a>
-          <a href="#stories" class="transition hover:text-white">Stories</a>
+          <a href="#stories" class="transition hover:text-white">Why it matters</a>
           <a href="${base}faq/" class="transition hover:text-white">FAQ</a>
           <a href="#involved" class="rounded-full border-[1.5px] border-white/45 px-5 py-2.5 font-extrabold text-white transition hover:bg-white/10">Get involved</a>
         </nav>
@@ -67,7 +67,7 @@ document.querySelector('#app').innerHTML = `
             <a href="#what" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">What we do</a>
             <a href="#need" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">The need</a>
             <a href="#how" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">How it works</a>
-            <a href="#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Stories</a>
+            <a href="#stories" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">Why it matters</a>
             <a href="${base}faq/" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">FAQ</a>
             <a href="#involved" class="mt-1 block rounded-lg bg-orange px-4 py-2.5 text-center text-white">Get involved</a>
           </div>
@@ -75,8 +75,8 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="flex max-w-2xl flex-1 flex-col justify-center py-12 md:py-16">
-        <p class="mb-4 ${eyebrow} text-flame">Camp should be for every kid</p>
-        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Every child deserves the chance to go to <span class="text-orange">summer camp.</span></h1>
+        <p class="mb-4 ${eyebrow} text-flame">When cost is the only thing in the way</p>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Cost shouldn't keep a kid from <span class="text-orange">summer camp.</span></h1>
         <p class="mt-6 max-w-prose text-lg text-white/85">
           Camp Match Kids Society removes the cost barrier that keeps kids out of summer camp.
           We partner with camps to open free and subsidized spaces, and bring donors and
@@ -166,7 +166,7 @@ document.querySelector('#app').innerHTML = `
             ${needFigure('mt-7 lg:hidden')}
             <div class="mt-7 space-y-4 text-lg text-mist">
               <p>Summer camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses a summer that could have shaped their whole year.</p>
-              <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the kind of summer every child deserves.</p>
+              <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the summer they were hoping for.</p>
             </div>
           </div>
           ${needFigure('hidden lg:block')}
@@ -225,13 +225,13 @@ document.querySelector('#app').innerHTML = `
             <h2 class="mt-3 ${h2cls} text-ink">A summer at camp can change a kid's whole year</h2>
             <p class="mt-4 text-lg text-sand">
               Friendships, confidence, new experiences, a place to belong — and somewhere safe and
-              joyful while parents work. Every kid deserves a summer like that.
+              joyful while parents work. When a family wants that for their kid, cost shouldn't be what stops them.
             </p>
             <ul class="mt-7 space-y-4">
               ${[
-                'Every child deserves camp.',
-                'Every friendship matters.',
-                'Every summer should make memories.',
+                'No kid should miss out over cost.',
+                'A chance at friendships and confidence.',
+                'A summer to look back on.',
               ]
                 .map(
                   (t) => `
