@@ -25,13 +25,14 @@ document.querySelector('#app').innerHTML = `
     <img
       src="${base}society-hero-2.png"
       alt="A group of kids playing soccer together on a sunny field with mountains behind"
-      class="absolute inset-0 -z-10 h-full w-full object-cover opacity-90"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
       fetchpriority="high"
     />
-    <!-- Left-heavy gradient: strong behind the text, clears toward the sunlit right -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-hero-dark via-hero-dark/75 to-hero-dark/15"></div>
-    <!-- Gentle top & bottom tint so the nav and copy stay legible over the brighter areas -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-hero-dark/40 via-transparent to-hero-dark/60"></div>
+    <!-- Warm left-to-right gradient: dark enough across the text column, then clears to full
+         natural colour on the right so the kids, grass and sky stay bright and alive. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent"></div>
+    <!-- Gentle, warm top & bottom tint so the nav and lower copy stay legible. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
 
     <div class="mx-auto flex min-h-screen max-w-6xl flex-col px-5">
       <div class="flex items-center justify-between gap-4 py-4">
@@ -55,7 +56,7 @@ document.querySelector('#app').innerHTML = `
           Camp Match Kids Society removes the cost barrier that keeps kids out of summer camp.
           We partner with camps to open free and subsidized spaces, and bring donors and
           communities together to fund them — so more kids in BC get a summer of friendship,
-          confidence, and the outdoors.
+          confidence, and fun.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="${mail('Join the movement')}" class="rounded-full bg-orange-deep px-6 py-3 font-extrabold text-white shadow-lg shadow-black/20 transition hover:brightness-95">Join the movement</a>
@@ -156,7 +157,7 @@ document.querySelector('#app').innerHTML = `
           ${[
             [I_USERS, 'Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
             [I_HEART, 'We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
-            [I_SUN, 'A kid gets their summer', 'Friendships, confidence, time outside — a summer that sticks with them.'],
+            [I_SUN, 'A kid gets their summer', 'Friendships, confidence, new experiences — a summer that sticks with them.'],
           ]
             .map(
               ([ic, t, p], i) => `
@@ -188,7 +189,7 @@ document.querySelector('#app').innerHTML = `
           <p class="mb-3 text-sm font-bold uppercase tracking-widest text-teal-deep">Why it matters</p>
           <h2 class="text-3xl text-ink md:text-4xl">A summer at camp can change a kid's whole year</h2>
           <p class="mt-4 text-lg text-muted">
-            Friendships, confidence, time outside, a place to belong — and somewhere safe and
+            Friendships, confidence, new experiences, a place to belong — and somewhere safe and
             joyful while parents work. Every kid deserves a summer like that.
           </p>
           <ul class="mt-6 space-y-3">
