@@ -26,7 +26,7 @@ document.querySelector('#app').innerHTML = `
 
       <div class="flex max-w-2xl flex-1 flex-col justify-center py-10 md:py-16">
         <p class="mb-4 ${eyebrow} text-flame">When cost is the only thing in the way</p>
-        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Cost shouldn't keep a kid from <span class="text-orange">camp.</span></h1>
+        <h1 class="text-4xl leading-[1.05] text-white md:text-5xl lg:text-[66px]">Every hopeful kid should get to go to <span class="text-orange">camp.</span></h1>
         <p class="mt-6 max-w-prose text-lg text-white/85">
           Camp Match Kids Society removes the cost barrier that keeps kids out of camp.
           We partner with camps to open free and subsidized spaces, and bring donors and
