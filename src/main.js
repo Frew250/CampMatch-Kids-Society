@@ -19,7 +19,7 @@ document.querySelector('#app').innerHTML = `
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
         </a>
         <nav class="hidden items-center gap-7 font-display text-sm font-bold text-white/85 md:flex" aria-label="Primary">
-          ${navLinks('')}
+          ${navLinks('home')}
         </nav>
         ${mobileMenu()}
       </div>

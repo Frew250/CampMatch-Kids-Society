@@ -38,6 +38,7 @@ const skipLink = `<a href="#main" class="sr-only focus:not-sr-only focus:absolut
 
 // Primary nav, shared by the home hero and the sub-page header.
 const NAV = [
+  ['home', 'Home', `${base}`],
   ['mission', 'Our mission', `${base}mission/`],
   ['faq', 'FAQ', `${base}faq/`],
 ]
