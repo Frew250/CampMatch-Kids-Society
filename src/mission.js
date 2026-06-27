@@ -1,6 +1,6 @@
 import './style.css'
 import {
-  base, mail, eyebrow, h2cls, wrap, sectionY,
+  base, mail, eyebrow, h2cls, wrap, sectionY, btnPrimary,
   siteHeader, siteFooter, ctaCard,
   I_HEART, I_TENT, I_DOOR, I_CHECK,
 } from './shared.js'
@@ -15,12 +15,26 @@ document.querySelector('#app').innerHTML = `
   ${siteHeader('mission')}
 
   <main id="main">
+    <section class="relative isolate flex min-h-[68vh] items-center overflow-hidden bg-hero-dark text-white">
+      <!-- Gradient placeholder — drop a right-side photo in here later (img absolute inset-0 -z-10). -->
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#0f2e27,#17463a)]"></div>
+      <!-- Right-heavy overlay so the right-justified copy stays readable; clears left for a future photo. -->
+      <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/92 from-25% via-[#0f2e27]/55 via-60% to-transparent"></div>
+      <div class="${wrap} w-full">
+        <div class="ml-auto flex max-w-xl flex-col items-end py-16 text-right md:py-24">
+          <p class="${eyebrow} text-flame">Our mission</p>
+          <h1 class="mt-3 text-4xl leading-[1.05] text-white md:text-5xl lg:text-[60px]">We make camp <span class="text-orange">reachable.</span></h1>
+          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
+          <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
+        </div>
+      </div>
+    </section>
+
     <section id="what" class="bg-cream">
       <div class="${wrap} ${sectionY}">
         <div class="mx-auto max-w-[760px] text-center">
-          <p class="${eyebrow} text-eyebrow">Our mission</p>
-          <h1 class="mt-3 ${h2cls} text-ink">We make camp reachable</h1>
-          <p class="mt-4 text-lg text-sand">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
+          <p class="${eyebrow} text-eyebrow">What we do</p>
+          <h2 class="mt-3 ${h2cls} text-ink">Three ways we help</h2>
         </div>
         <div class="mt-10 rounded-[28px] bg-white p-4 shadow-[0_40px_80px_-40px_rgba(15,46,39,0.28)] sm:p-6 md:mt-12 md:p-[30px]">
           <div class="grid gap-5 md:grid-cols-3 md:gap-6">
