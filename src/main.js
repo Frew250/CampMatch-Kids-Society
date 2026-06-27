@@ -1,8 +1,6 @@
 import './style.css'
 import { base, mail, siteFooter } from './shared.js'
 
-const img = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
-
 const svg = (p) =>
   `<svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
 const I_CHECK = svg('<path d="M20 6 9 17l-5-5"/>')
@@ -27,7 +25,7 @@ const btnGhostDark =
   'inline-flex items-center justify-center rounded-full border-[1.5px] border-white/45 px-[34px] py-[17px] font-display font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10'
 const needFigure = (extra) =>
   `<figure class="relative ${extra}">
-    <img src="${base}kids-playing.jpg" alt="Kids laughing and playing together outdoors at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
+    <img src="${base}kids-parachute.jpg" alt="Kids playing a parachute game together in a field at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
     <span class="pointer-events-none absolute inset-0 rounded-[24px] bg-gradient-to-t from-ink/25 via-transparent to-orange/10"></span>
   </figure>`
 
@@ -206,10 +204,8 @@ document.querySelector('#app').innerHTML = `
         <div class="grid items-center gap-10 md:grid-cols-2 md:gap-12">
           <div class="relative">
             <img
-              src="${img('1638202951770-2240942c7d1c', 900)}"
-              srcset="${img('1638202951770-2240942c7d1c', 700)} 700w, ${img('1638202951770-2240942c7d1c', 1100)} 1100w"
-              sizes="(max-width: 768px) 92vw, 46vw"
-              alt="Kids relaxing together in a hammock among the trees at camp"
+              src="${base}kids-stem.jpg"
+              alt="Kids gathered around a 3D printer at an indoor STEM summer camp"
               loading="lazy"
               class="h-64 w-full rounded-[22px] object-cover shadow-xl sm:h-80 md:h-[470px]"
             />
