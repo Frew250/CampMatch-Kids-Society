@@ -16,10 +16,10 @@ document.querySelector('#app').innerHTML = `
 
   <main id="main">
     <section class="relative isolate flex min-h-[68vh] items-center overflow-hidden bg-hero-dark text-white">
-      <!-- Gradient placeholder — drop a right-side photo in here later (img absolute inset-0 -z-10). -->
-      <div class="absolute inset-0 -z-10 bg-[linear-gradient(120deg,#0f2e27,#17463a)]"></div>
-      <!-- Right-heavy overlay so the right-justified copy stays readable; clears left for a future photo. -->
-      <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/92 from-25% via-[#0f2e27]/55 via-60% to-transparent"></div>
+      <img src="${base}mission-hero.jpg" alt="Three children sitting close together on the grass by the water" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
+      <!-- Right-heavy overlay so the right-justified copy stays readable; the left keeps the photo. -->
+      <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/94 from-20% via-[#0f2e27]/62 via-58% to-[#0f2e27]/15"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/25 via-transparent to-[#0f2e27]/30"></div>
       <div class="${wrap} w-full">
         <div class="ml-auto flex max-w-xl flex-col items-end py-16 text-right md:py-24">
           <p class="${eyebrow} text-flame">Our mission</p>
