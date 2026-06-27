@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
   ${siteHeader('mission')}
 
   <main id="main">
-    <section class="relative isolate flex min-h-[68vh] items-center overflow-hidden bg-hero-dark text-white">
+    <section class="relative isolate flex min-h-[calc(100svh-5.5rem)] items-center overflow-hidden bg-hero-dark text-white">
       <img src="${base}mission-hero.jpg" alt="Three children sitting close together on the grass by the water" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
       <!-- Right-heavy overlay so the right-justified copy stays readable; the left keeps the photo. -->
       <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/94 from-20% via-[#0f2e27]/62 via-58% to-[#0f2e27]/15"></div>
