@@ -14,7 +14,7 @@ document.querySelector('#app').innerHTML = `
         <div class="mx-auto max-w-[760px] text-center">
           <p class="${eyebrow} text-eyebrow">Get involved</p>
           <h1 class="mt-3 ${h2cls} text-ink">Help open the door to camp</h1>
-          <p class="mt-4 text-lg text-sand">We're building our first summer now. Camps, supporters, and businesses can all help make it happen.</p>
+          <p class="mt-4 text-lg text-sand">We're building our first camps now. Camps, supporters, and businesses can all help make it happen.</p>
         </div>
       </div>
     </section>
@@ -56,7 +56,7 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-3">
           ${[
-            [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this summer.', 'Talk to us', mail('I run a camp — Camp Match Kids Society'), ''],
+            [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp — Camp Match Kids Society'), ''],
             [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child — Camp Match Kids Society'), 'Donations coming soon'],
             [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word — Camp Match Kids Society'), ''],
           ]

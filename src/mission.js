@@ -1,35 +1,48 @@
 import './style.css'
 import {
   base, mail, eyebrow, h2cls, wrap, sectionY, btnPrimary,
-  siteHeader, siteFooter, ctaCard,
+  navLinks, mobileMenu, siteFooter, ctaCard,
   I_HEART, I_TENT, I_DOOR, I_CHECK,
 } from './shared.js'
 
 const needFigure = (extra) =>
   `<figure class="relative ${extra}">
-    <img src="${base}kids-parachute.jpg" alt="Kids playing a parachute game together in a field at summer camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
+    <img src="${base}kids-parachute.jpg" alt="Kids playing a parachute game together in a field at camp" loading="lazy" class="aspect-[4/3] w-full rounded-[24px] object-cover shadow-[0_34px_70px_-34px_rgba(0,0,0,0.7)] ring-1 ring-white/15" />
     <span class="pointer-events-none absolute inset-0 rounded-[24px] bg-gradient-to-t from-ink/25 via-transparent to-orange/10"></span>
   </figure>`
 
 document.querySelector('#app').innerHTML = `
-  ${siteHeader('mission')}
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
+  <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
+    <img src="${base}mission-hero.jpg" alt="Three children sitting close together on the grass by the water" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
+    <!-- Right-heavy overlay so the right-justified copy stays readable; the left keeps the photo. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/94 from-20% via-[#0f2e27]/62 via-58% to-[#0f2e27]/15"></div>
+    <!-- Stronger top tint so the transparent nav over the photo stays legible. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/55 via-transparent to-[#0f2e27]/30"></div>
 
-  <main id="main">
-    <section class="relative isolate flex min-h-[calc(100svh-5.5rem)] items-center overflow-hidden bg-hero-dark text-white">
-      <img src="${base}mission-hero.jpg" alt="Three children sitting close together on the grass by the water" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
-      <!-- Right-heavy overlay so the right-justified copy stays readable; the left keeps the photo. -->
-      <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/94 from-20% via-[#0f2e27]/62 via-58% to-[#0f2e27]/15"></div>
-      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/25 via-transparent to-[#0f2e27]/30"></div>
-      <div class="${wrap} w-full">
-        <div class="ml-auto flex max-w-xl flex-col items-end py-16 text-right md:py-24">
+    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
+      <div class="flex items-center justify-between gap-4 py-5">
+        <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
+          <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
+        </a>
+        <nav class="hidden items-center gap-7 font-display text-sm font-bold text-white/85 md:flex" aria-label="Primary">
+          ${navLinks('mission')}
+        </nav>
+        ${mobileMenu()}
+      </div>
+
+      <div class="flex flex-1 items-center">
+        <div class="ml-auto flex max-w-xl flex-col items-end py-10 text-right md:py-16">
           <p class="${eyebrow} text-flame">Our mission</p>
           <h1 class="mt-3 text-4xl leading-[1.05] text-white md:text-5xl lg:text-[60px]">We make camp <span class="text-orange">reachable.</span></h1>
-          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make the right summer possible — and we keep it kind.</p>
+          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make camp possible — and we keep it kind.</p>
           <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
         </div>
       </div>
-    </section>
+    </div>
+  </header>
 
+  <main id="main">
     <section id="what" class="bg-cream">
       <div class="${wrap} ${sectionY}">
         <div class="mx-auto max-w-[760px] text-center">
@@ -40,8 +53,8 @@ document.querySelector('#app').innerHTML = `
           <div class="grid gap-5 md:grid-cols-3 md:gap-6">
             ${[
               [I_HEART, '01', 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
-              [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every summer.'],
-              [I_DOOR, '03', 'Keep it kind', "Families come to us about their kid's summer — never to prove they're in need. An open door, not an application."],
+              [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every season.'],
+              [I_DOOR, '03', 'Keep it kind', "Families come to us about getting their kid to camp — never to prove they're in need. An open door, not an application."],
             ]
               .map(
                 ([ic, n, t, p]) => `
@@ -68,8 +81,8 @@ document.querySelector('#app').innerHTML = `
             <h2 class="mt-3 ${h2cls} text-white">For too many kids, camp is out of reach</h2>
             ${needFigure('mt-7 lg:hidden')}
             <div class="mt-7 space-y-4 text-lg text-mist">
-              <p>Summer camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses a summer that could have shaped their whole year.</p>
-              <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the summer they were hoping for.</p>
+              <p>Camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses out on a chance that could shape their whole year.</p>
+              <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the camp they were hoping for.</p>
             </div>
           </div>
           ${needFigure('hidden lg:block')}
@@ -83,15 +96,15 @@ document.querySelector('#app').innerHTML = `
           <div class="relative">
             <img
               src="${base}kids-stem.jpg"
-              alt="Kids gathered around a 3D printer at an indoor STEM summer camp"
+              alt="Kids gathered around a 3D printer at an indoor STEM camp"
               loading="lazy"
               class="h-64 w-full rounded-[22px] object-cover shadow-xl sm:h-80 md:h-[470px]"
             />
-            <div class="absolute -bottom-5 right-5 max-w-[220px] rounded-2xl bg-orange px-5 py-4 font-display font-extrabold leading-tight text-white shadow-lg shadow-orange/30">A summer they'll carry for years.</div>
+            <div class="absolute -bottom-5 right-5 max-w-[220px] rounded-2xl bg-orange px-5 py-4 font-display font-extrabold leading-tight text-white shadow-lg shadow-orange/30">Memories they'll carry for years.</div>
           </div>
           <div>
             <p class="${eyebrow} text-eyebrow">Why it matters</p>
-            <h2 class="mt-3 ${h2cls} text-ink">A summer at camp can change a kid's whole year</h2>
+            <h2 class="mt-3 ${h2cls} text-ink">Camp can change a kid's whole year</h2>
             <p class="mt-4 text-lg text-sand">
               Friendships, confidence, new experiences, a place to belong — and somewhere safe and
               joyful while parents work. When a family wants that for their kid, cost shouldn't be what stops them.
@@ -100,7 +113,7 @@ document.querySelector('#app').innerHTML = `
               ${[
                 'No kid should miss out over cost.',
                 'A chance at friendships and confidence.',
-                'A summer to look back on.',
+                'Memories to look back on.',
               ]
                 .map(
                   (t) => `
@@ -132,7 +145,7 @@ document.querySelector('#app').innerHTML = `
             ${[
               ['Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
               ['We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
-              ['A kid gets their summer', 'Friendships, confidence, new experiences — a summer that sticks with them.'],
+              ['A kid gets to camp', 'Friendships, confidence, new experiences — and memories that stick.'],
             ]
               .map(
                 ([t, p], i) => `
