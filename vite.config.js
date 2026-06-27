@@ -11,6 +11,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
+        mission: 'mission/index.html',
+        involved: 'involved/index.html',
         faq: 'faq/index.html',
       },
     },
