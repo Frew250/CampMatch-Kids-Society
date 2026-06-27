@@ -40,15 +40,17 @@ const skipLink = `<a href="#main" class="sr-only focus:not-sr-only focus:absolut
 const NAV = [
   ['home', 'Home', `${base}`],
   ['mission', 'Our mission', `${base}mission/`],
+  ['involved', 'Get involved', `${base}involved/`],
   ['faq', 'FAQ', `${base}faq/`],
 ]
 
-// Desktop nav markup (text links + Get involved pill). active = current page key.
+// Desktop nav markup — all plain text links so every page reads as a navigable option.
 export function navLinks(active = '') {
   const cur = (k) => (active === k ? ' aria-current="page"' : '')
-  const txt = NAV.map(([k, label, href]) => `<a href="${href}" class="transition hover:text-white"${cur(k)}>${label}</a>`).join('\n          ')
-  return `${txt}
-          <a href="${base}involved/" class="rounded-full border-[1.5px] border-white/45 px-5 py-2.5 font-extrabold text-white transition hover:bg-white/10"${cur('involved')}>Get involved</a>`
+  return NAV.map(
+    ([k, label, href]) =>
+      `<a href="${href}" class="transition hover:text-white ${active === k ? 'text-white' : ''}"${cur(k)}>${label}</a>`
+  ).join('\n          ')
 }
 
 // Mobile dropdown menu markup.

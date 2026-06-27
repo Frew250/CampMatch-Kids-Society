@@ -14,11 +14,10 @@ const needFigure = (extra) =>
 document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
-    <img src="${base}mission-hero.jpg" alt="Three children sitting close together on the grass by the water" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
-    <!-- Right-heavy overlay so the right-justified copy stays readable; the left keeps the photo. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#0f2e27]/94 from-20% via-[#0f2e27]/62 via-58% to-[#0f2e27]/15"></div>
-    <!-- Stronger top tint so the transparent nav over the photo stays legible. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/55 via-transparent to-[#0f2e27]/30"></div>
+    <img src="${base}mission-hero.jpg" alt="A laughing child running through a sprinkler in warm golden light" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
+    <!-- Same warm treatment as the home hero, mirrored: dark across the right text column, clearing to the left photo. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
 
     <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
