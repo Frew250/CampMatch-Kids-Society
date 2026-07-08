@@ -14,10 +14,12 @@ const needFigure = (extra) =>
 document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
-    <img src="${base}mission-hero.jpg" alt="A boy paddleboarding on a calm lake at camp" class="absolute inset-0 -z-10 h-full w-full object-cover object-[center_40%]" fetchpriority="high" />
-    <!-- Same warm treatment as the home hero, mirrored: dark across the right text column, clearing to the left photo. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent"></div>
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
+    <img src="${base}mission-hero.jpg" alt="A boy paddleboarding on a calm lake at camp" class="absolute inset-0 -z-10 h-full w-full object-cover object-[46%_28%] md:object-[center_40%]" fetchpriority="high" />
+    <!-- Mobile: dark bottom so the centered copy pops; photo shows up top, nav stays legible. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/92 via-[#0f2e27]/25 to-[#0f2e27]/40 md:hidden"></div>
+    <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
 
     <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
@@ -30,12 +32,12 @@ document.querySelector('#app').innerHTML = `
         ${mobileMenu()}
       </div>
 
-      <div class="flex flex-1 items-center">
-        <div class="ml-auto flex max-w-xl flex-col items-end py-10 text-right md:py-16">
+      <div class="flex flex-1 items-end md:items-center">
+        <div class="flex w-full flex-col items-center pb-6 text-center md:ml-auto md:w-auto md:max-w-xl md:items-end md:py-16 md:text-right">
           <p class="${eyebrow} text-flame">Our mission</p>
           <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
-          <p class="mt-5 text-lg text-white/85">That's our first goal.</p>
-          <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
+          <p class="mt-4 text-lg text-white/85 md:mt-5">That's our first goal.</p>
+          <div class="mt-7 md:mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
         </div>
       </div>
     </div>
