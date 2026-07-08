@@ -24,24 +24,20 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="flex flex-1 flex-col py-8 md:max-w-2xl md:justify-center md:py-16">
-        <div>
-          <p class="mb-4 ${eyebrow} text-flame">When cost is the only thing in the way</p>
-          <h1 class="text-[2rem] leading-[1.08] text-white sm:text-4xl md:text-5xl lg:text-[58px]">What if a kid is desperate for camp, but their family <span class="text-orange">can't afford it?</span></h1>
-          <p class="mt-6 hidden max-w-prose text-lg text-white/85 md:block">
-            For too many families, cost puts camp out of reach. Camp Match Kids Society makes sure that's never the reason a kid misses out: we cover the fees, work with camps to open free and subsidized spaces, and bring communities together to fund them.
-          </p>
+        <p class="mb-auto ${eyebrow} text-flame md:mb-4">When cost is the only thing in the way</p>
+        <h1 class="text-[2rem] leading-[1.08] text-white sm:text-4xl md:text-5xl lg:text-[58px]">What if a kid is desperate for camp, but their family <span class="text-orange">can't afford it?</span></h1>
+        <p class="mt-6 hidden max-w-prose text-lg text-white/85 md:block">
+          For too many families, cost puts camp out of reach. Camp Match Kids Society makes sure that's never the reason a kid misses out: we cover the fees, work with camps to open free and subsidized spaces, and bring communities together to fund them.
+        </p>
+        <div class="mt-7 flex flex-wrap justify-center gap-3 md:mt-8 md:justify-start">
+          <a href="${mail('Join the movement')}" class="${btnPrimary}">Join the movement</a>
+          <span class="hidden md:inline-block"><a href="${base}mission/" class="${btnGhostDark}">Our mission</a></span>
         </div>
-        <div class="mt-auto pt-8 md:mt-8 md:pt-0">
-          <div class="flex flex-wrap gap-3">
-            <a href="${mail('Join the movement')}" class="${btnPrimary}">Join the movement</a>
-            <span class="hidden md:inline-block"><a href="${base}mission/" class="${btnGhostDark}">Our mission</a></span>
-          </div>
-          <p class="mt-7 hidden max-w-prose text-sm text-white/70 md:block">
-            Camp Match Kids Society is being established as a BC nonprofit. While incorporation
-            is completed, we're already working alongside <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
-            and our founding partners to remove the barriers that keep kids from camp.
-          </p>
-        </div>
+        <p class="mt-7 hidden max-w-prose text-sm text-white/70 md:block">
+          Camp Match Kids Society is being established as a BC nonprofit. While incorporation
+          is completed, we're already working alongside <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
+          and our founding partners to remove the barriers that keep kids from camp.
+        </p>
       </div>
     </div>
   </header>
