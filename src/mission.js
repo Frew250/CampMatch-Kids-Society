@@ -33,8 +33,8 @@ document.querySelector('#app').innerHTML = `
       <div class="flex flex-1 items-center">
         <div class="ml-auto flex max-w-xl flex-col items-end py-10 text-right md:py-16">
           <p class="${eyebrow} text-flame">Our mission</p>
-          <h1 class="mt-3 text-4xl leading-[1.05] text-white md:text-5xl lg:text-[60px]">We make camp <span class="text-orange">reachable.</span></h1>
-          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make camp possible, and we keep it kind.</p>
+          <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
+          <p class="mt-5 text-lg text-white/85">That's our first goal.</p>
           <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
         </div>
       </div>
