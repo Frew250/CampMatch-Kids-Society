@@ -33,7 +33,7 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="flex flex-1 items-end md:items-center">
-        <div class="flex w-full flex-col items-center pb-6 text-center md:ml-auto md:w-auto md:max-w-xl md:items-end md:py-16 md:text-right">
+        <div class="mb-6 flex w-full flex-col items-center rounded-3xl border border-white/10 bg-ink/50 px-6 py-7 text-center shadow-2xl backdrop-blur-sm md:mb-0 md:ml-auto md:w-auto md:max-w-xl md:items-end md:rounded-none md:border-0 md:bg-transparent md:px-0 md:py-16 md:text-right md:shadow-none md:backdrop-blur-none">
           <p class="${eyebrow} text-flame">Our mission</p>
           <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
           <p class="mt-4 text-lg text-white/85 md:mt-5">That's our first goal.</p>
