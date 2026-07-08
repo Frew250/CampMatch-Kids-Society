@@ -1,8 +1,7 @@
 import './style.css'
-import { base, mail, eyebrow, btnPrimary, btnGhostDark, wrap, sectionY, navLinks, mobileMenu, ctaCard, siteFooter } from './shared.js'
+import { base, mail, eyebrow, btnPrimary, btnGhostDark, navLinks, mobileMenu, siteFooter } from './shared.js'
 
 document.querySelector('#app').innerHTML = `
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img
       src="${base}hero-3.png"
@@ -45,20 +44,6 @@ document.querySelector('#app').innerHTML = `
       </div>
     </div>
   </header>
-
-  <main id="main">
-    <section class="bg-cream">
-      <div class="${wrap} ${sectionY}">
-        ${ctaCard({ label: 'Our mission', href: `${base}mission/` })}
-        <p class="mx-auto mt-6 max-w-2xl text-center text-sm text-sand">
-          Run a camp or want to help?
-          <a href="${mail('I run a camp — Camp Match Kids Society')}" class="font-bold text-teal-deep underline">I run a camp</a> ·
-          <a href="${mail('I want to help — Camp Match Kids Society')}" class="font-bold text-teal-deep underline">I want to help</a>
-          · Tax-deductible giving opens once our charitable registration is complete.
-        </p>
-      </div>
-    </section>
-  </main>
 
   ${siteFooter()}
 `
