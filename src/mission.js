@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
     <!-- Top scrim so the logo and nav stay legible against the bright sky. -->
     <div class="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-[#0f2e27]/75 via-[#0f2e27]/30 to-transparent"></div>
 
-    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
+    <div class="mx-auto flex min-h-dvh max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
         <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />

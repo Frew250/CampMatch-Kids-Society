@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
     <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent"></div>
     <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42"></div>
 
-    <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
+    <div class="mx-auto flex min-h-dvh max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
         <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
