@@ -2,7 +2,7 @@ import './style.css'
 import {
   base, mail, eyebrow, h2cls, wrap, sectionY, btnPrimary,
   navLinks, mobileMenu, siteFooter, ctaCard,
-  I_HEART, I_TENT, I_DOOR, I_CHECK,
+  I_HEART, I_TENT, I_DOOR,
 } from './shared.js'
 
 const needFigure = (extra) =>
@@ -85,49 +85,6 @@ document.querySelector('#app').innerHTML = `
             </div>
           </div>
           ${needFigure('hidden lg:block')}
-        </div>
-      </div>
-    </section>
-
-    <section id="stories" class="bg-cream">
-      <div class="${wrap} ${sectionY}">
-        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-12">
-          <div class="relative">
-            <img
-              src="${base}kids-stem.jpg"
-              alt="Kids gathered around a 3D printer at an indoor STEM camp"
-              loading="lazy"
-              class="h-64 w-full rounded-[22px] object-cover shadow-xl sm:h-80 md:h-[470px]"
-            />
-            <div class="absolute -bottom-5 right-5 max-w-[220px] rounded-2xl bg-orange px-5 py-4 font-display font-extrabold leading-tight text-white shadow-lg shadow-orange/30">Memories they'll carry for years.</div>
-          </div>
-          <div>
-            <p class="${eyebrow} text-eyebrow">Why it matters</p>
-            <h2 class="mt-3 ${h2cls} text-ink">Camp can change a kid's whole year</h2>
-            <p class="mt-4 text-lg text-sand">
-              Friendships, confidence, new experiences, a place to belong, and somewhere safe and
-              joyful while parents work. When a family wants that for their kid, cost shouldn't be what stops them.
-            </p>
-            <ul class="mt-7 space-y-4">
-              ${[
-                'No kid should miss out over cost.',
-                'A chance at friendships and confidence.',
-                'Memories to look back on.',
-              ]
-                .map(
-                  (t) => `
-              <li class="flex items-center gap-3">
-                <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-orange text-white">${I_CHECK}</span>
-                <span class="font-display text-lg font-bold text-ink">${t}</span>
-              </li>`
-                )
-                .join('')}
-            </ul>
-            <p class="mt-7 rounded-xl bg-[#f3ecdc] px-5 py-4 text-sm italic text-sand">
-              Soon, this is where you'll meet the families and camps making it happen. Their stories
-              are just beginning.
-            </p>
-          </div>
         </div>
       </div>
     </section>
