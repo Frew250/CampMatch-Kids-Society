@@ -16,7 +16,7 @@ document.querySelector('#app').innerHTML = `
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img src="${base}mission-hero.jpg" alt="Two children exploring a golden meadow at sunset" class="absolute inset-0 -z-10 h-full w-full object-cover object-[38%_42%] md:object-[35%_45%]" fetchpriority="high" />
     <!-- Mobile: dark bottom so the centered copy pops; photo shows up top, nav stays legible. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/92 via-[#0f2e27]/25 to-[#0f2e27]/40 md:hidden"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/96 from-5% via-[#0f2e27]/55 via-45% to-[#0f2e27]/25 md:hidden"></div>
     <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
@@ -35,7 +35,7 @@ document.querySelector('#app').innerHTML = `
       </div>
 
       <div class="flex flex-1 items-end md:items-center">
-        <div class="flex w-full flex-col items-center pb-6 text-center md:ml-auto md:w-auto md:max-w-xl md:items-end md:py-16 md:text-right">
+        <div class="flex w-full flex-col items-start pb-6 text-left md:ml-auto md:w-auto md:max-w-xl md:items-end md:py-16 md:text-right">
           <p class="${eyebrow} text-flame">Our mission</p>
           <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
           <p class="mt-4 text-lg text-white/85 md:mt-5">That's our first goal.</p>
