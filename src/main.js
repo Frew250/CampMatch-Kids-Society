@@ -23,9 +23,9 @@ document.querySelector('#app').innerHTML = `
         ${mobileMenu()}
       </div>
 
-      <div class="flex flex-1 flex-col py-8 md:max-w-2xl md:justify-center md:py-16">
+      <div class="flex flex-1 flex-col pb-8 pt-2 md:max-w-2xl md:justify-center md:py-16">
         <p class="mb-auto ${eyebrow} text-flame md:mb-4">When cost is the only thing in the way</p>
-        <h1 class="text-[2rem] leading-[1.08] text-white sm:text-4xl md:text-5xl lg:text-[58px]">What if a kid is desperate for camp, but their family <span class="text-orange">can't afford it?</span></h1>
+        <h1 class="text-[2rem] leading-[1.08] text-white sm:text-4xl md:text-5xl lg:text-[58px]">What if a kid is desperate for camp, but their family <br /><span class="text-orange">can't afford&nbsp;it?</span></h1>
         <p class="mt-6 hidden max-w-prose text-lg text-white/85 md:block">
           For too many families, cost puts camp out of reach. Camp Match Kids Society makes sure that's never the reason a kid misses out: we cover the fees, work with camps to open free and subsidized spaces, and bring communities together to fund them.
         </p>
