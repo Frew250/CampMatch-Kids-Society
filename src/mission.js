@@ -53,7 +53,7 @@ document.querySelector('#app').innerHTML = `
             ${[
               [I_HEART, '01', 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
               [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places, opening more room for more kids, every season.'],
-              [I_DOOR, '03', 'Keep it kind', "Families come to us about getting their kid to camp, never to prove they're in need. An open door, not an application."],
+              [I_DOOR, '03', 'Keep it kind', 'We work with Parent Advisory Councils to identify families who could benefit from a scholarship, so support reaches kids kindly, without anyone having to prove their need.'],
             ]
               .map(
                 ([ic, n, t, p]) => `
