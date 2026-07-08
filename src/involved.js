@@ -57,7 +57,7 @@ document.querySelector('#app').innerHTML = `
         <div class="mt-12 grid gap-6 md:grid-cols-3">
           ${[
             [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp'), ''],
-            [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child'), 'Donations coming soon'],
+            [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child'), ''],
             [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word'), ''],
           ]
             .map(
