@@ -20,6 +20,8 @@ document.querySelector('#app').innerHTML = `
     <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
+    <!-- Top scrim so the logo and nav stay legible against the bright sky. -->
+    <div class="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-[#0f2e27]/75 via-[#0f2e27]/30 to-transparent"></div>
 
     <div class="mx-auto flex min-h-screen max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
