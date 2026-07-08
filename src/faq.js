@@ -17,7 +17,7 @@ document.querySelector('#app').innerHTML = `
 
         <div class="mx-auto mt-12 max-w-[820px] rounded-[22px] bg-white p-6 text-center shadow-sm md:p-9">
           <h2 class="text-2xl text-ink">Still have a question?</h2>
-          <p class="mx-auto mt-2 max-w-md text-muted">We'd love to hear from you — whether you run a camp, want to help, or just want to learn more.</p>
+          <p class="mx-auto mt-2 max-w-md text-muted">We'd love to hear from you, whether you run a camp, want to help, or just want to learn more.</p>
           <div class="mt-6 flex flex-wrap justify-center gap-3">
             <a href="${mail('Hello from your website')}" class="${btnPrimary}">Get in touch</a>
             <a href="${base}involved/" class="${btnGhostLight}">Get involved</a>

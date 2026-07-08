@@ -45,7 +45,7 @@ const NAV = [
   ['faq', 'FAQ', `${base}faq/`],
 ]
 
-// Desktop nav markup — all plain text links so every page reads as a navigable option.
+// Desktop nav markup: all plain text links so every page reads as a navigable option.
 export function navLinks(active = '') {
   const cur = (k) => (active === k ? ' aria-current="page"' : '')
   return NAV.map(
@@ -134,11 +134,11 @@ export function ctaCard(secondary) {
 export const FAQ_ITEMS = [
   [
     'Who is Camp Match Kids Society for?',
-    "Any family for whom the cost of camp is a barrier. We keep it an open door — you come to us about getting your kid to camp, never to prove you're in need.",
+    "Any family for whom the cost of camp is a barrier. We keep it an open door. You come to us about getting your kid to camp, never to prove you're in need.",
   ],
   [
     'How do families take part?',
-    "We're building our first camps now. Join the list and we'll reach out as spaces open — then we match your child to a partner camp and cover the cost.",
+    "We're building our first camps now. Join the list and we'll reach out as spaces open, then we match your child to a partner camp and cover the cost.",
   ],
   [
     'How are camps involved?',
@@ -146,7 +146,7 @@ export const FAQ_ITEMS = [
   ],
   [
     'How can businesses and individuals help?',
-    'Supporters help fund camp spaces and remove the cost barrier. Right now the best way to help is to join the movement — donation options are coming soon.',
+    'Supporters help fund camp spaces and remove the cost barrier. Right now the best way to help is to join the movement. Donation options are coming soon.',
   ],
   [
     'Is my donation tax-deductible?',
@@ -154,7 +154,7 @@ export const FAQ_ITEMS = [
   ],
   [
     'How is this related to CampMatch.ca?',
-    "We are the charitable sibling of CampMatch.ca — a separate organization, built on the same belief that cost shouldn't keep a kid from camp.",
+    "We are the charitable sibling of CampMatch.ca, a separate organization built on the same belief that cost shouldn't keep a kid from camp.",
   ],
 ]
 
@@ -191,7 +191,7 @@ export function siteFooter() {
       </div>
       <div class="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist md:text-left">
         <p>
-          © 2026 Camp Match Kids Society — a BC nonprofit in formation. Working alongside
+          © 2026 Camp Match Kids Society, a BC nonprofit in formation, working alongside
           <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
           to remove the barriers that keep kids from camp.
         </p>

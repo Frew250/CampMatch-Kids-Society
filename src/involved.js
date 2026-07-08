@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
       <div class="${wrap} py-12 md:py-[88px]">
         <div class="mx-auto max-w-[760px] text-center">
           <p class="${eyebrow} text-eyebrow">Where we are now</p>
-          <h2 class="mt-3 ${h2cls} text-ink">New — but not starting from zero</h2>
+          <h2 class="mt-3 ${h2cls} text-ink">New, but not starting from zero</h2>
           <p class="mt-4 text-[19px] text-muted">The foundation of a real organization is already in place.</p>
         </div>
         <div class="relative isolate mt-12 md:mt-[58px]">
@@ -56,9 +56,9 @@ document.querySelector('#app').innerHTML = `
         </div>
         <div class="mt-12 grid gap-6 md:grid-cols-3">
           ${[
-            [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp — Camp Match Kids Society'), ''],
-            [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child — Camp Match Kids Society'), 'Donations coming soon'],
-            [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word — Camp Match Kids Society'), ''],
+            [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp'), ''],
+            [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child'), 'Donations coming soon'],
+            [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word'), ''],
           ]
             .map(
               ([ic, t, p, cta, href, badge]) => `

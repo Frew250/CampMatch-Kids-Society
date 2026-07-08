@@ -34,7 +34,7 @@ document.querySelector('#app').innerHTML = `
         <div class="ml-auto flex max-w-xl flex-col items-end py-10 text-right md:py-16">
           <p class="${eyebrow} text-flame">Our mission</p>
           <h1 class="mt-3 text-4xl leading-[1.05] text-white md:text-5xl lg:text-[60px]">We make camp <span class="text-orange">reachable.</span></h1>
-          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make camp possible — and we keep it kind.</p>
+          <p class="mt-5 max-w-prose text-lg text-white/85">Cost should not be the thing that keeps a kid from camp. We work with families and camps to make camp possible, and we keep it kind.</p>
           <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
         </div>
       </div>
@@ -52,8 +52,8 @@ document.querySelector('#app').innerHTML = `
           <div class="grid gap-5 md:grid-cols-3 md:gap-6">
             ${[
               [I_HEART, '01', 'Cover the fees', "We raise funds to pay camp fees families can't, so cost stops being the reason a kid stays home."],
-              [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places — more room for more kids, every season.'],
-              [I_DOOR, '03', 'Keep it kind', "Families come to us about getting their kid to camp — never to prove they're in need. An open door, not an application."],
+              [I_TENT, '02', 'Open up spots', 'We work with camps to create free and discounted places, opening more room for more kids, every season.'],
+              [I_DOOR, '03', 'Keep it kind', "Families come to us about getting their kid to camp, never to prove they're in need. An open door, not an application."],
             ]
               .map(
                 ([ic, n, t, p]) => `
@@ -80,7 +80,7 @@ document.querySelector('#app').innerHTML = `
             <h2 class="mt-3 ${h2cls} text-white">For too many kids, camp is out of reach</h2>
             ${needFigure('mt-7 lg:hidden')}
             <div class="mt-7 space-y-4 text-lg text-mist">
-              <p>Camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there — and a child misses out on a chance that could shape their whole year.</p>
+              <p>Camp is where kids make friends, build confidence, and discover what they're capable of. But for many families, the cost simply isn't there, and a child misses out on a chance that could shape their whole year.</p>
               <p>It's rarely about wanting it less. It's about cost becoming a wall between a kid and the camp they were hoping for.</p>
             </div>
           </div>
@@ -105,7 +105,7 @@ document.querySelector('#app').innerHTML = `
             <p class="${eyebrow} text-eyebrow">Why it matters</p>
             <h2 class="mt-3 ${h2cls} text-ink">Camp can change a kid's whole year</h2>
             <p class="mt-4 text-lg text-sand">
-              Friendships, confidence, new experiences, a place to belong — and somewhere safe and
+              Friendships, confidence, new experiences, a place to belong, and somewhere safe and
               joyful while parents work. When a family wants that for their kid, cost shouldn't be what stops them.
             </p>
             <ul class="mt-7 space-y-4">
@@ -124,7 +124,7 @@ document.querySelector('#app').innerHTML = `
                 .join('')}
             </ul>
             <p class="mt-7 rounded-xl bg-[#f3ecdc] px-5 py-4 text-sm italic text-sand">
-              Soon, this is where you'll meet the families and camps making it happen — their stories
+              Soon, this is where you'll meet the families and camps making it happen. Their stories
               are just beginning.
             </p>
           </div>
@@ -143,8 +143,8 @@ document.querySelector('#app').innerHTML = `
           <ol class="grid gap-7 md:grid-cols-3 md:gap-[30px]">
             ${[
               ['Communities step up', 'Camps offer spaces. Donors and supporters fund them. Everyone plays a part in opening the door.'],
-              ['We make the match', "We connect each child to the right partner camp and cover the cost — no family asked to prove they're in need."],
-              ['A kid gets to camp', 'Friendships, confidence, new experiences — and memories that stick.'],
+              ['We make the match', "We connect each child to the right partner camp and cover the cost, with no family asked to prove they're in need."],
+              ['A kid gets to camp', 'Friendships, confidence, new experiences, and memories that stick.'],
             ]
               .map(
                 ([t, p], i) => `
