@@ -11,6 +11,7 @@ export const svg30 = (p) =>
   `<svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`
 export const I_CHECK = svg('<path d="M20 6 9 17l-5-5"/>')
 export const I_MENU = svg('<path d="M4 6h16M4 12h16M4 18h16"/>')
+export const I_CLOSE = svg('<path d="M18 6 6 18M6 6l12 12"/>')
 export const I_HEART = svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>')
 export const I_TENT = svg('<path d="M3 20h18M12 4 4 20M12 4l8 16M12 9l-6 11M12 9l6 11"/>')
 export const I_DOOR = svg('<path d="M14 3H5a2 2 0 0 0-2 2v16h11V3ZM14 3l5 2v16h-5M10 12h.01"/>')
@@ -53,19 +54,44 @@ export function navLinks(active = '') {
   ).join('\n          ')
 }
 
-// Mobile dropdown menu markup.
+// Mobile slide-in sidebar. The panel is a fixed, overflow-hidden wrapper so the
+// off-screen drawer never widens the page; toggled by the small handler below.
 export function mobileMenu() {
-  const item = (href, label) => `<a href="${href}" class="block rounded-lg px-4 py-2.5 transition hover:bg-white/10">${label}</a>`
+  const item = (href, label) => `<a href="${href}" class="rounded-xl px-4 py-3 font-display text-lg font-bold text-white/90 transition hover:bg-white/10">${label}</a>`
   return `
-    <details class="relative md:hidden">
-      <summary class="grid h-11 w-11 cursor-pointer place-items-center rounded-full border-[1.5px] border-white/45 text-white" aria-label="Open menu">${I_MENU}</summary>
-      <div class="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-56 rounded-2xl border border-white/15 bg-[#0f2e27]/95 p-2 font-display text-sm font-bold text-white shadow-2xl backdrop-blur">
-        ${item(`${base}`, 'Home')}
-        ${item(`${base}mission/`, 'Our mission')}
-        ${item(`${base}involved/`, 'Get involved')}
-        ${item(`${base}faq/`, 'FAQ')}
+    <button type="button" data-nav-open aria-label="Open menu" class="grid h-11 w-11 place-items-center rounded-full border-[1.5px] border-white/45 text-white md:hidden">${I_MENU}</button>
+    <div data-nav-panel class="fixed inset-0 z-50 overflow-hidden md:hidden">
+      <div data-nav-close data-nav-backdrop class="absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
+      <div data-nav-drawer class="absolute right-0 top-0 flex h-full w-72 max-w-[82%] flex-col bg-hero-dark p-6 shadow-2xl">
+        <div class="mb-6 flex items-center justify-between">
+          <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-9 w-auto" />
+          <button type="button" data-nav-close aria-label="Close menu" class="grid h-9 w-9 place-items-center rounded-full border border-white/30 text-white">${I_CLOSE}</button>
+        </div>
+        <nav class="flex flex-col gap-1" aria-label="Mobile">
+          ${item(`${base}`, 'Home')}
+          ${item(`${base}mission/`, 'Our mission')}
+          ${item(`${base}involved/`, 'Get involved')}
+          ${item(`${base}faq/`, 'FAQ')}
+        </nav>
       </div>
-    </details>`
+    </div>`
+}
+
+// Wire up the mobile drawer (delegated, so it works no matter when the markup renders).
+if (typeof document !== 'undefined') {
+  const setOpen = (open) => {
+    const panel = document.querySelector('[data-nav-panel]')
+    if (!panel) return
+    panel.classList.toggle('is-open', open)
+    document.body.classList.toggle('overflow-hidden', open)
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('[data-nav-open]')) setOpen(true)
+    else if (e.target.closest('[data-nav-close]') || e.target.closest('[data-nav-drawer] a')) setOpen(false)
+  })
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false)
+  })
 }
 
 // Compact dark header for sub-pages (mission, involved, faq).
