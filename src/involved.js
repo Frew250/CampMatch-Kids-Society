@@ -29,7 +29,7 @@ document.querySelector('#app').innerHTML = `
         <div class="relative isolate mt-12 md:mt-[58px]">
           <div class="grid gap-7 md:grid-cols-3 md:gap-[30px]">
             ${[
-              [I_BUILDING, '01', 'Board established', 'Our founding directors are in place, and BC nonprofit incorporation is underway.'],
+              [I_BUILDING, '01', 'Now incorporated', 'Our founding directors are in place, and Camp Match Kids Society is incorporated as a BC nonprofit under the Societies Act.'],
               [I_TENT_W, '02', 'Camp partners', 'We are building a network of camps ready to offer free and subsidized spaces.'],
               [I_HEART_W, '03', 'Community behind us', 'Businesses, families, and supporters are already stepping up to help.'],
             ]
@@ -58,7 +58,7 @@ document.querySelector('#app').innerHTML = `
           ${[
             [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp'), ''],
             [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child'), ''],
-            [I_USERS, 'Become a member', 'Join Camp Match Kids Society as a member and add your voice as we incorporate as a BC nonprofit.', 'Become a member', mail('I want to become a member'), ''],
+            [I_USERS, 'Become a member', 'Join Camp Match Kids Society as a member and add your voice as we grow as a newly incorporated BC nonprofit.', 'Become a member', mail('I want to become a member'), ''],
             [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word'), ''],
           ]
             .map(

@@ -191,7 +191,7 @@ export function siteFooter() {
       </div>
       <div class="mt-8 border-t border-white/10 pt-6 text-center text-sm text-mist md:text-left">
         <p>
-          © 2026 Camp Match Kids Society, a BC nonprofit in formation, working alongside
+          © 2026 Camp Match Kids Society, a BC nonprofit, working alongside
           <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
           to remove the barriers that keep kids from camp.
         </p>

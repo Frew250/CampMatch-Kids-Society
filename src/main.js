@@ -44,8 +44,7 @@ document.querySelector('#app').innerHTML = `
           </div>
         </div>
         <p class="mt-7 hidden max-w-prose text-sm text-white/70 md:block">
-          Camp Match Kids Society is being established as a BC nonprofit. While incorporation
-          is completed, we're already working alongside <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
+          Camp Match Kids Society is incorporated as a BC nonprofit. We're working alongside <a href="https://campmatch.ca" target="_blank" rel="noopener" class="font-bold text-white underline">CampMatch.ca</a>
           and our founding partners to remove the barriers that keep kids from camp.
         </p>
       </div>
