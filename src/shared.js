@@ -50,7 +50,7 @@ export function navLinks(active = '') {
   const cur = (k) => (active === k ? ' aria-current="page"' : '')
   return NAV.map(
     ([k, label, href]) =>
-      `<a href="${href}" class="transition hover:text-white ${active === k ? 'text-white' : ''}"${cur(k)}>${label}</a>`
+      `<a href="${href}" class="transition hover:text-ink ${active === k ? 'text-ink' : ''}"${cur(k)}>${label}</a>`
   ).join('\n          ')
 }
 
@@ -59,7 +59,7 @@ export function navLinks(active = '') {
 export function mobileMenu() {
   const item = (href, label) => `<a href="${href}" class="rounded-xl px-4 py-3 font-display text-lg font-bold text-white/90 transition hover:bg-white/10">${label}</a>`
   return `
-    <button type="button" data-nav-open aria-label="Open menu" class="grid h-11 w-11 place-items-center rounded-full border-[1.5px] border-white/45 text-white md:hidden">${I_MENU}</button>
+    <button type="button" data-nav-open aria-label="Open menu" class="grid h-11 w-11 place-items-center rounded-full border-[1.5px] border-ink/25 text-ink md:hidden">${I_MENU}</button>
     <div data-nav-panel class="fixed inset-0 z-50 overflow-hidden md:hidden">
       <div data-nav-close data-nav-backdrop class="absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
       <div data-nav-drawer class="absolute right-0 top-0 flex h-full w-72 max-w-[82%] flex-col bg-hero-dark p-6 shadow-2xl">
@@ -97,12 +97,12 @@ if (typeof document !== 'undefined') {
 // Compact dark header for sub-pages (mission, involved, faq).
 export function siteHeader(active = '') {
   return `${skipLink}
-  <header class="bg-ink text-white">
+  <header class="border-b border-[#e6ddc9] bg-cream text-ink">
     <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-5 py-5 md:px-12">
       <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
         <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
       </a>
-      <nav class="hidden items-center gap-7 font-display text-sm font-bold text-white/85 md:flex" aria-label="Primary">
+      <nav class="hidden items-center gap-7 font-display text-sm font-bold text-ink/70 md:flex" aria-label="Primary">
           ${navLinks(active)}
       </nav>
       ${mobileMenu()}

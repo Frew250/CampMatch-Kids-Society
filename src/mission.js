@@ -13,22 +13,18 @@ const needFigure = (extra) =>
 
 document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
-  <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
+  <header id="top" class="relative isolate overflow-hidden bg-cream text-ink">
     <img src="${base}mission-soccer.jpg" alt="Kids playing soccer on a sunny field with mountains behind" class="absolute inset-0 -z-10 h-full w-full object-cover object-[35%_62%] md:object-[30%_60%]" fetchpriority="high" />
-    <!-- Mobile: dark top so the top-right copy reads; falls away fast so the photo glows below. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/88 from-2% via-[#0f2e27]/26 via-38% to-transparent to-68% md:hidden"></div>
-    <!-- Desktop: dark enough on the right for the copy, then falls away so the photo glows left. -->
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/88 from-15% via-[#1a3a24]/38 via-55% to-transparent to-85% md:block"></div>
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/16 via-transparent to-[#1a3a24]/28 md:block"></div>
-    <!-- Top scrim so the logo and nav stay legible against the bright sky. -->
-    <div class="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-[#0f2e27]/75 via-[#0f2e27]/30 to-transparent"></div>
+    <!-- Warm cream scrim behind the copy only; fades out before the kids so the photo stays vivid. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#faf3e5]/94 from-0% via-[#faf3e5]/40 via-30% to-transparent to-58% md:hidden"></div>
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#faf3e5]/94 from-0% via-[#faf3e5]/44 via-30% to-transparent to-58% md:block"></div>
 
     <div class="mx-auto flex min-h-dvh max-w-[1180px] flex-col px-5 md:px-12">
       <div class="flex items-center justify-between gap-4 py-5">
         <a href="${base}" class="flex items-center" aria-label="Camp Match Kids Society home">
           <img src="${base}logo-banner.svg" alt="Camp Match Kids Society" class="h-11 w-auto md:h-12" />
         </a>
-        <nav class="hidden items-center gap-7 font-display text-sm font-bold text-white/85 md:flex" aria-label="Primary">
+        <nav class="hidden items-center gap-7 font-display text-sm font-bold text-ink/70 md:flex" aria-label="Primary">
           ${navLinks('mission')}
         </nav>
         ${mobileMenu()}
@@ -38,9 +34,9 @@ document.querySelector('#app').innerHTML = `
         <!-- Mobile: copy pinned top-right over the sky, CTA floated in the middle. -->
         <div class="flex flex-1 flex-col md:hidden">
           <div class="flex flex-col items-end pt-4 text-right">
-            <p class="${eyebrow} text-flame">Our mission</p>
-            <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
-            <p class="mt-4 text-lg text-white/85">That's our first goal.</p>
+            <p class="${eyebrow} text-orange-deep">Our mission</p>
+            <h1 class="mt-3 text-[2rem] leading-[1.1] text-ink sm:text-4xl">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
+            <p class="mt-4 text-lg text-ink/75">That's our first goal.</p>
           </div>
           <div class="flex flex-1 items-end justify-center pb-8">
             <a href="${base}involved/" class="${btnPrimary}">Get involved</a>
@@ -50,9 +46,9 @@ document.querySelector('#app').innerHTML = `
         <!-- Desktop: right-aligned block, vertically centered. -->
         <div class="hidden flex-1 items-center md:flex">
           <div class="ml-auto flex max-w-xl flex-col items-end py-16 text-right">
-            <p class="${eyebrow} text-flame">Our mission</p>
-            <h1 class="mt-3 text-5xl leading-[1.1] text-white lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
-            <p class="mt-5 text-lg text-white/85">That's our first goal.</p>
+            <p class="${eyebrow} text-orange-deep">Our mission</p>
+            <h1 class="mt-3 text-5xl leading-[1.1] text-ink lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
+            <p class="mt-5 text-lg text-ink/75">That's our first goal.</p>
             <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
           </div>
         </div>
