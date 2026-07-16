@@ -42,7 +42,7 @@ document.querySelector('#app').innerHTML = `
             <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
             <p class="mt-4 text-lg text-white/85">That's our first goal.</p>
           </div>
-          <div class="flex flex-1 items-center justify-center py-8">
+          <div class="flex flex-1 items-end justify-center pb-8">
             <a href="${base}involved/" class="${btnPrimary}">Get involved</a>
           </div>
         </div>
