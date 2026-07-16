@@ -15,8 +15,8 @@ document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img src="${base}mission-soccer.jpg" alt="Kids playing soccer on a sunny field with mountains behind" class="absolute inset-0 -z-10 h-full w-full object-cover object-[35%_62%] md:object-[30%_60%]" fetchpriority="high" />
-    <!-- Mobile: dark bottom so the centered copy pops; photo shows up top, nav stays legible. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/96 from-5% via-[#0f2e27]/55 via-45% to-[#0f2e27]/25 md:hidden"></div>
+    <!-- Mobile: dark top so the top-right copy reads; fades down so the kids and grass show. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/90 from-5% via-[#0f2e27]/40 via-45% to-transparent md:hidden"></div>
     <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
     <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
@@ -34,12 +34,27 @@ document.querySelector('#app').innerHTML = `
         ${mobileMenu()}
       </div>
 
-      <div class="flex flex-1 items-end md:items-center">
-        <div class="flex w-full flex-col items-start pb-6 text-left md:ml-auto md:w-auto md:max-w-xl md:items-end md:py-16 md:text-right">
-          <p class="${eyebrow} text-flame">Our mission</p>
-          <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
-          <p class="mt-4 text-lg text-white/85 md:mt-5">That's our first goal.</p>
-          <div class="mt-7 md:mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
+      <div class="flex flex-1 flex-col">
+        <!-- Mobile: copy pinned top-right over the sky, CTA floated in the middle. -->
+        <div class="flex flex-1 flex-col md:hidden">
+          <div class="flex flex-col items-end pt-4 text-right">
+            <p class="${eyebrow} text-flame">Our mission</p>
+            <h1 class="mt-3 text-[2rem] leading-[1.1] text-white sm:text-4xl">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
+            <p class="mt-4 text-lg text-white/85">That's our first goal.</p>
+          </div>
+          <div class="flex flex-1 items-center justify-center py-8">
+            <a href="${base}involved/" class="${btnPrimary}">Get involved</a>
+          </div>
+        </div>
+
+        <!-- Desktop: right-aligned block, vertically centered. -->
+        <div class="hidden flex-1 items-center md:flex">
+          <div class="ml-auto flex max-w-xl flex-col items-end py-16 text-right">
+            <p class="${eyebrow} text-flame">Our mission</p>
+            <h1 class="mt-3 text-5xl leading-[1.1] text-white lg:text-[54px]">Raise <span class="text-orange">$10,000</span> to send <span class="text-orange">30 kids</span> to camp in 2027.</h1>
+            <p class="mt-5 text-lg text-white/85">That's our first goal.</p>
+            <div class="mt-8"><a href="${base}involved/" class="${btnPrimary}">Get involved</a></div>
+          </div>
         </div>
       </div>
     </div>
