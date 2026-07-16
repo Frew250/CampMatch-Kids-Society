@@ -14,7 +14,7 @@ const needFigure = (extra) =>
 document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
-    <img src="${base}mission-hero.jpg" alt="Two children exploring a golden meadow at sunset" class="absolute inset-0 -z-10 h-full w-full object-cover object-[38%_42%] md:object-[35%_45%]" fetchpriority="high" />
+    <img src="${base}mission-soccer.jpg" alt="Kids playing soccer on a sunny field with mountains behind" class="absolute inset-0 -z-10 h-full w-full object-cover object-[35%_62%] md:object-[30%_60%]" fetchpriority="high" />
     <!-- Mobile: dark bottom so the centered copy pops; photo shows up top, nav stays legible. -->
     <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/96 from-5% via-[#0f2e27]/55 via-45% to-[#0f2e27]/25 md:hidden"></div>
     <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
