@@ -11,9 +11,9 @@ document.querySelector('#app').innerHTML = `
     />
     <!-- Mobile: soft bottom-up wash so the copy reads without a harsh left band. -->
     <div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#0f2e27]/92 via-[#0f2e27]/25 to-[#0f2e27]/40 md:hidden"></div>
-    <!-- Desktop: warm left-dark gradient + gentle vertical tint. -->
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-r from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
+    <!-- Desktop: dark enough on the left for the copy, then falls away so the photo glows right. -->
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-r from-[#1a3a24]/88 from-15% via-[#1a3a24]/38 via-55% to-transparent to-85% md:block"></div>
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/16 via-transparent to-[#1a3a24]/28 md:block"></div>
     <!-- Top scrim so the logo and nav stay legible against a bright sky. -->
     <div class="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-[#0f2e27]/75 via-[#0f2e27]/30 to-transparent"></div>
 

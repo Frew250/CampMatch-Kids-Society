@@ -15,11 +15,11 @@ document.querySelector('#app').innerHTML = `
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>
   <header id="top" class="relative isolate overflow-hidden bg-hero-dark text-white">
     <img src="${base}mission-soccer.jpg" alt="Kids playing soccer on a sunny field with mountains behind" class="absolute inset-0 -z-10 h-full w-full object-cover object-[35%_62%] md:object-[30%_60%]" fetchpriority="high" />
-    <!-- Mobile: dark top so the top-right copy reads; fades down so the kids and grass show. -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/90 from-5% via-[#0f2e27]/40 via-45% to-transparent md:hidden"></div>
-    <!-- Desktop: warm right-dark gradient (mirrored home treatment) + gentle vertical tint. -->
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/90 from-25% via-[#1a3a24]/58 via-60% to-transparent md:block"></div>
-    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/28 via-transparent to-[#1a3a24]/42 md:block"></div>
+    <!-- Mobile: dark top so the top-right copy reads; falls away fast so the photo glows below. -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f2e27]/88 from-2% via-[#0f2e27]/26 via-38% to-transparent to-68% md:hidden"></div>
+    <!-- Desktop: dark enough on the right for the copy, then falls away so the photo glows left. -->
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-l from-[#1a3a24]/88 from-15% via-[#1a3a24]/38 via-55% to-transparent to-85% md:block"></div>
+    <div class="absolute inset-0 -z-10 hidden bg-gradient-to-b from-[#1a3a24]/16 via-transparent to-[#1a3a24]/28 md:block"></div>
     <!-- Top scrim so the logo and nav stay legible against the bright sky. -->
     <div class="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-[#0f2e27]/75 via-[#0f2e27]/30 to-transparent"></div>
 
