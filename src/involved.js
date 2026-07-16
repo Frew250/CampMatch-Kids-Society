@@ -2,7 +2,7 @@ import './style.css'
 import {
   base, mail, eyebrow, h2cls, wrap, sectionY,
   siteHeader, siteFooter, ctaCard,
-  I_BUILDING, I_TENT_W, I_HEART_W, I_TENT, I_GIFT, I_SHARE,
+  I_BUILDING, I_TENT_W, I_HEART_W, I_TENT, I_GIFT, I_SHARE, I_USERS,
 } from './shared.js'
 
 document.querySelector('#app').innerHTML = `
@@ -54,10 +54,11 @@ document.querySelector('#app').innerHTML = `
           <p class="${eyebrow} text-eyebrow">Ways to help</p>
           <h2 class="mt-3 ${h2cls} text-ink">Find where you fit</h2>
         </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           ${[
             [I_TENT, 'Run a camp', 'Offer free or subsidized spaces and help open the door for more kids this season.', 'Talk to us', mail('I run a camp'), ''],
             [I_GIFT, 'Support a child', 'Help fund camp spaces and remove the cost barrier. Tax-deductible giving opens once our charitable registration is complete.', 'Join the movement', mail('I want to support a child'), ''],
+            [I_USERS, 'Become a member', 'Join Camp Match Kids Society as a member and add your voice as we incorporate as a BC nonprofit.', 'Become a member', mail('I want to become a member'), ''],
             [I_SHARE, 'Spread the word', 'Share Camp Match Kids Society with families, camps, and supporters who care about kids getting to camp.', 'Get in touch', mail('I want to help spread the word'), ''],
           ]
             .map(
