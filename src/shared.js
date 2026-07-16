@@ -134,11 +134,11 @@ export function ctaCard(secondary) {
 export const FAQ_ITEMS = [
   [
     'Who is Camp Match Kids Society for?',
-    "Any family for whom the cost of camp is a barrier. We keep it an open door. You come to us about getting your kid to camp, never to prove you're in need.",
+    "Any child whose family finds the cost of camp out of reach. We reach these families through their school's Parent Advisory Council, so a kid gets to camp without anyone having to come forward or prove they're in need.",
   ],
   [
     'How do families take part?',
-    "We're building our first camps now. Join the list and we'll reach out as spaces open, then we match your child to a partner camp and cover the cost.",
+    "Families don't apply themselves. We partner with school Parent Advisory Councils (PACs), who have an intimate knowledge of the families in their community who could use a hand. They help us reach the kids who'd benefit most, and from there we match each child to a partner camp and cover the cost.",
   ],
   [
     'How are camps involved?',
