@@ -34,6 +34,8 @@ export const btnGhostDark =
   'inline-flex items-center justify-center rounded-full border-[1.5px] border-white/45 px-[34px] py-[17px] font-display font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10'
 export const btnGhostLight =
   'inline-flex items-center justify-center rounded-full border-[1.5px] border-ink/20 px-[34px] py-[17px] font-display font-extrabold text-ink transition hover:-translate-y-0.5 hover:bg-ink/5'
+export const btnSecondary =
+  'inline-flex items-center justify-center rounded-full bg-teal-deep px-[34px] py-[17px] font-display font-extrabold text-white shadow-lg shadow-teal-deep/25 transition hover:-translate-y-0.5 hover:bg-step'
 
 const skipLink = `<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:font-display focus:font-bold focus:text-ink">Skip to content</a>`
 
