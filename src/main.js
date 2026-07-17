@@ -32,11 +32,11 @@ document.querySelector('#app').innerHTML = `
         </p>
         <div class="mt-7 md:mt-8">
           <div class="flex justify-center md:hidden">
-            <a href="${base}mission/" class="${btnSecondary}">Our mission</a>
+            <a href="${base}mission/" class="${btnPrimary}">Our mission</a>
           </div>
           <div class="hidden flex-wrap gap-3 md:flex">
-            <a href="${mail('Join the movement')}" class="${btnPrimary}">Join the movement</a>
-            <a href="${base}mission/" class="${btnSecondary}">Our mission</a>
+            <a href="${mail('Join the movement')}" class="${btnSecondary}">Join the movement</a>
+            <a href="${base}mission/" class="${btnPrimary}">Our mission</a>
           </div>
         </div>
         <p class="mt-7 hidden max-w-prose text-sm text-ink/60 md:block">
